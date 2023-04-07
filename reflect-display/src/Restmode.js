@@ -9,6 +9,12 @@ export function OkButton(props) {
     )
 }
 
+export function Settings(props) {
+    return (
+        <button className="settings"> </button>
+    )
+}
+
 export function Affirmations(props) {
     const msg = "My baby can feel my peace." 
     return (
@@ -22,14 +28,15 @@ function Clock(props) {
     //API
     return(
         <div>
-            Clock
+            <p id="time"> 10:00 </p> 
+            <p id="date"> friday, march 2 </p>
         </div>
     )
 }
 function Weather(props) {
     //API
     return (
-        <div>
+        <div class="weather">
             Weather
         </div>
     )
@@ -41,7 +48,10 @@ export function RestWidget(props) {
         <div id='rest-widget' class='widget'>
             <Clock/>
             <Weather/>
-            <CardButton imgSrc="/public/balance_theme.png" content="balance (Test for CardButton)"/>
+            <div id='theme'>
+                monthly theme
+                <CardButton imgSrc="/public/balance_theme.png" content="balance"/>
+            </div>
         </div>
     )
 }

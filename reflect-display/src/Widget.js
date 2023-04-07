@@ -1,3 +1,5 @@
+import './App.css';
+
 // Group of modules (often placed at top left of screen) - Intend for the Dashboards in prototype
 // Might not be needed
 // - can just add widget at each page

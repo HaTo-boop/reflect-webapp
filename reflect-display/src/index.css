@@ -8,15 +8,16 @@
   font-weight: 500;
   line-height: 47px;
   text-transform: lowercase;
-
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, "Karla", "Helvetica Neue";
+  font-family: "Karla";
+  /*
+  font-family: -apple-system, "Karla";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+  */
 }
 
 code {
