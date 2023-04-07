@@ -102,6 +102,10 @@
   border-radius: 40px;
 }
 
+#ok{
+  color: #FFC288;
+}
+
 .widget {
   display: flex;
   flex-direction: column;

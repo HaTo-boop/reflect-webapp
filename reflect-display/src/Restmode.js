@@ -5,7 +5,7 @@ import './App.css';
 // Components appeared in restmode of the mirror
 export function OkButton(props) {
     return (
-        <button className="okButton">Click Ok to Start</button>
+        <button className="okButton">Click <div id="ok">Ok</div>to Start</button>
     )
 }
 
