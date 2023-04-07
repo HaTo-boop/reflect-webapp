@@ -1,3 +1,4 @@
+import { CardButton } from "./Buttons"
 import { Widget } from "./Widget"
 
 // Components appeared in restmode of the mirror
@@ -36,8 +37,10 @@ function Weather(props) {
 
 export function RestWidget(props) {
     return (
-        <div>
-            <Widget/>
+        <div id='rest-widget' class='widget'>
+            <Clock/>
+            <Weather/>
+            <CardButton imgSrc="/public/balance_theme.png" content="balance (Test for CardButton)"/>
         </div>
     )
 }
