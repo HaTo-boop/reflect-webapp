@@ -1,8 +1,18 @@
 :root {
-  color: #FFFEFC;
+  /* color: #FFFEFC;
   background: #000;
 
   font-family: "Karla";
+  font-style: normal;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 47px;
+  text-transform: lowercase; */
+
+  --letter-color: #FFFEFC; /*global variable*/
+  background: #000;
+
+  --primary-font-family: "Karla";
   font-style: normal;
   font-size: 40px;
   font-weight: 500;
@@ -12,7 +22,7 @@
 
 body {
   margin: 0;
-  font-family: "Karla";
+  font-family: var(--primary-font-family);
   /*
   font-family: -apple-system, "Karla";
   -webkit-font-smoothing: antialiased;
@@ -21,5 +31,5 @@ body {
 }
 
 code {
-  font-family: "Karla";
+  font-family: var(--primary-font-family);
 }
