@@ -1,16 +1,17 @@
 import { Widget } from "./Widget"
+import './App.css';
 
 // Components appeared in restmode of the mirror
 export function OkButton(props) {
     return (
-        <button>Click Ok to Start</button>
+        <button className="okButton">Click Ok to Start</button>
     )
 }
 
 export function Affirmations(props) {
     const msg = "My baby can feel my peace." 
     return (
-        <div>
+        <div className="affirmation">
             {msg}
         </div>
     )
