@@ -6,14 +6,14 @@ import './App.css';
 export function OkButton(props) {
     return (
         <button className="okButton glassmorphism hort-flex">
-            Click<div id="ok">Ok</div>to Start
+            Click<span id="ok"> Ok </span>to Start
         </button>
     )
 }
 
 export function Settings(props) {
     return (
-        <span class="material-symbols-outlined">settings</span>
+        <span class="material-symbols-outlined glassmorphism hort-flex">settings</span>
     )
 }
 

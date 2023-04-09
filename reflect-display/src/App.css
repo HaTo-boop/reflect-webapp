@@ -117,9 +117,6 @@
   width: 169px;
   height: 28px;
 
-  font-family: 'Karla';
-  font-style: normal;
-  font-weight: 500;
   font-size: 24px;
   line-height: 28px;
 }
@@ -156,23 +153,10 @@
 
 .settings {
   background-image: url('/public/settings.png');
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 40px;
-  gap: 20px;
 
   position: absolute;
   width: 133px;
   height: 113px;
   left: 20px;
   top: 848px;
-
-  background: rgba(0, 0, 0, 0.2);
-
-  box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(43px);
-
-  border-radius: 40px;
 }
