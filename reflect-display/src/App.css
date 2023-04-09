@@ -2,6 +2,8 @@
   text-align: center;
 }
 
+/* FROM DEFAULT CREATE-APP - can take as reference
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -21,7 +23,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--main-text-color);
 }
 
 .App-link {
@@ -35,28 +37,11 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
-/* REST MODE */
-
-.affirmation {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 40px;
-  gap: 20px;
-
-  position: absolute;
-  width: 521px;
-  height: 107px;
-  left: 485px;
-  top: 105px;
-
-  /* Glassmorphism */
-
+/* GLASSMORPHISM - shared among multiple boxes */
+.glassmorphism {
   background: rgba(0, 0, 0, 0.2);
-  /* Glassmorphism */
 
   box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(43px);
@@ -64,42 +49,48 @@
 
   border-radius: 40px;
 }
-
-.okButton {
-  /* TEXT -- SIMPLIFY IF FIGURE IT OUT*/
-
-  width: 304px;
-  height: 47px;
-  font-family: 'Karla';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 47px;
-
-  text-align: center;
-  text-transform: lowercase;
-
-  color: #FFFEFC;
-
+/* SHARED STYLING */
+/* Horizontal Flex Box Style - used at e.g. main buttons, content boxes */
+.horz-flex {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 30px 40px;
   gap: 20px;
+}
+
+/* Vertical Flex Box Style - used at e.g. widgets, checkin emoticons, theme choices, etc. */
+.vert-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 40px;
+  gap: 24px;
+}
+
+/* REST MODE */
+
+.affirmation {
+  font-family: var(--primary-font);
+  position: absolute;
+  width: 521px;
+  height: 107px;
+  left: 485px;
+  top: 105px;
+
+  padding: 30px 40px;
+}
+
+.okButton {
+  /* <!> For some reason does not inherit css properties of <body> */
+  color: var(--main-text-color);
 
   position: absolute;
   width: 384px;
   height: 107px;
   left: 564px;
   top: 818px;
-
-  background: rgba(0, 0, 0, 0.2);
-
-  box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(43px);
-
-  border-radius: 40px;
 }
 
 #ok{
@@ -107,23 +98,11 @@
 }
 
 .widget {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px 40px;
-  gap: 24px;
-
   position: absolute;
   width: 279px;
   height: 427px;
   left: 20px;
   top: 20px;
-  background: rgba(0, 0, 0, 0.2);
-
-  box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(43px);
-
-  border-radius: 40px;
 }
 
 #time{

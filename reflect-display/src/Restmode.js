@@ -5,7 +5,9 @@ import './App.css';
 // Components appeared in restmode of the mirror
 export function OkButton(props) {
     return (
-        <button className="okButton">Click <div id="ok">Ok</div>to Start</button>
+        <button className="okButton glassmorphism hort-flex">
+            Click<div id="ok">Ok</div>to Start
+        </button>
     )
 }
 
@@ -18,7 +20,7 @@ export function Settings(props) {
 export function Affirmations(props) {
     const msg = "My baby can feel my peace." 
     return (
-        <div className="affirmation">
+        <div className="affirmation glassmorphism hort-flex">
             {msg}
         </div>
     )
@@ -27,7 +29,7 @@ export function Affirmations(props) {
 function Clock(props) {
     //API
     return(
-        <div>
+        <div className="clock">
             <p id="time"> 10:00 </p> 
             <p id="date"> friday, march 2 </p>
         </div>
@@ -36,7 +38,7 @@ function Clock(props) {
 function Weather(props) {
     //API
     return (
-        <div class="weather">
+        <div className="weather">
             Weather
         </div>
     )
@@ -45,7 +47,7 @@ function Weather(props) {
 
 export function RestWidget(props) {
     return (
-        <div id='rest-widget' class='widget'>
+        <div id='rest-widget' className='widget glassmorphism vert-flex'>
             <Clock/>
             <Weather/>
             <div id='theme'>

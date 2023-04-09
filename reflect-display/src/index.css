@@ -1,28 +1,27 @@
 :root {
-  /* color: #FFFEFC;
-  background: #000;
+  /*global variables*/
+  --main-text-color: #FFFEFC; 
+  --main-bg-color: #000;
 
-  font-family: "Karla";
-  font-style: normal;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 47px;
-  text-transform: lowercase; */
-
-  --letter-color: #FFFEFC; /*global variable*/
-  background: #000;
-
-  --primary-font-family: "Karla";
-  font-style: normal;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 47px;
-  text-transform: lowercase;
+  --primary-font: "Karla";
+  --secondary-font: "Roboto"; /* to vary the style if needed */
+  --def-font-style: normal;   /* not italics or oblique from font-family */
+  --def-font-size: 40px;
+  --def-font-weight: 500;
+  --def-line-height: 47px;
+  --preferred-text-transform: lowercase;
 }
 
 body {
   margin: 0;
-  font-family: var(--primary-font-family);
+  font-family: var(--primary-font);
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-family: var(--primary-font);
+  font-weight: var(--def-font-weight);
+  font-size: var(--def-font-size);
+  line-height: var(--def-line-height);
+  text-transform: var(--preferred-text-transform);
   /*
   font-family: -apple-system, "Karla";
   -webkit-font-smoothing: antialiased;
@@ -31,5 +30,5 @@ body {
 }
 
 code {
-  font-family: var(--primary-font-family);
+  font-family: var(--primary-font);
 }
