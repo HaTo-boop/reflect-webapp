@@ -13,7 +13,7 @@ export function OkButton(props) {
 
 export function Settings(props) {
     return (
-        <button className="settings"> </button>
+        <span class="material-symbols-outlined">settings</span>
     )
 }
 
