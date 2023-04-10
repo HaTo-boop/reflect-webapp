@@ -13,7 +13,9 @@ export function OkButton(props) {
 
 export function Settings(props) {
     return (
-        <span class="material-symbols-outlined glassmorphism hort-flex">settings</span>
+        <div className="settings glassmorphism ">
+            <span class="material-symbols-outlined hort-flex">settings</span>
+        </div>
     )
 }
 
@@ -54,6 +56,17 @@ export function RestWidget(props) {
                 monthly theme
                 <CardButton imgSrc="/public/balance_theme.png" content="balance"/>
             </div>
+        </div>
+    )
+}
+
+export function RESTMODE(props) {
+    return (
+        <div>
+            <RestWidget/>
+            <Affirmations/>
+            <OkButton/>
+            <Settings/>
         </div>
     )
 }
