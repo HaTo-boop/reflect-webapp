@@ -2,22 +2,39 @@ import { CardButton } from "./Buttons"
 import { Widget } from "./Widget"
 import './App.css';
 
+import { Link } from 'react-router-dom'
+
+export function RestMode(props) {
+    return (
+        <div className="restmode">
+            <RestWidget />
+            <Affirmations />
+            <OkButton />
+        </div>
+    )
+}
+
 // Components appeared in restmode of the mirror
-export function OkButton(props) {
+function OkButton(props) {
     return (
-        <button className="okButton glassmorphism hort-flex">
-            Click<span id="ok"> Ok </span>to Start
-        </button>
+        // <button className="okButton glassmorphism hort-flex">
+        //     Click<span id="ok"> Ok </span>to Start
+        // </button>
+        <Link to="checkin">
+            <div className="okButton glassmorphism">
+                Click<span id="ok"> Ok </span>to Start
+            </div>
+        </Link>
     )
 }
 
-export function Settings(props) {
+function Settings(props) {
     return (
-        <span class="material-symbols-outlined glassmorphism hort-flex">settings</span>
+        <span className="material-symbols-outlined glassmorphism hort-flex">settings</span>
     )
 }
 
-export function Affirmations(props) {
+function Affirmations(props) {
     const msg = "My baby can feel my peace." 
     return (
         <div className="affirmation glassmorphism hort-flex">

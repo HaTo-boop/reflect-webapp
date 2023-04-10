@@ -1,15 +1,22 @@
+import { Routes, Route } from 'react-router-dom';
+
 import logo from './logo.svg';
 import './App.css';
 
-import { OkButton, Affirmations, RestWidget } from './Restmode';
+import { OkButton, Affirmations, RestWidget, RestMode } from './Restmode';
 import { CHECKIN } from './Checkin';
+
 
 
 function App() {
   // React components have similar 
   return (
     <div className="App">
-      <CHECKIN/>
+      <Routes>
+        <Route index path="/" element={<RestMode />} />
+        <Route path="checkin" element={<CHECKIN />} />
+      </Routes>
+      
     </div>
   );
 }

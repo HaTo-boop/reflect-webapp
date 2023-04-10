@@ -39,6 +39,8 @@
   }
 } */
 
+
+/* SHARED STYLING */
 /* GLASSMORPHISM - shared among multiple boxes */
 .glassmorphism {
   background: rgba(0, 0, 0, 0.2);
@@ -49,7 +51,7 @@
 
   border-radius: 40px;
 }
-/* SHARED STYLING */
+
 /* Horizontal Flex Box Style - used at e.g. main buttons, content boxes */
 .horz-flex {
   display: flex;
@@ -68,6 +70,7 @@
   padding: 50px 40px;
   gap: 24px;
 }
+
 
 /* REST MODE */
 

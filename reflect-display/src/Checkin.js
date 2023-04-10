@@ -3,6 +3,18 @@ import './App.css';
 
 // Components appeared in the daily checkin of the mirror
 
+export function CHECKIN(props) {
+    return (
+        <div id='daily-checkin' className='glassmorphism vert-flex'>
+            <Greetings/>
+            <div className="checkin-card">
+                <CardButton imgSrc="public/card.png" content=""/>
+            </div>
+            <Skip/>
+        </div>
+    )
+}
+
 function Greetings(props) {
     return (
         <div className="affirmation glassmorphism hort-flex">
@@ -16,17 +28,5 @@ function Skip(props) {
         <button id="skip-button" className="glassmorphism">
             i'll tell you later
         </button>
-    )
-}
-
-export function CHECKIN(props) {
-    return (
-        <div id='daily-checkin' className='glassmorphism vert-flex'>
-            <Greetings/>
-            <div className="checkin-card">
-                <CardButton imgSrc="public/card.png" content=""/>
-            </div>
-            <Skip/>
-        </div>
     )
 }
