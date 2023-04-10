@@ -1,6 +1,4 @@
 import { CardButton } from "./Buttons"
-import { Widget } from "./Widget"
-import { Affirmations, RestWidget, Settings } from "./Restmode"
 import { Exit } from "./Home"
 import './App.css';
 
