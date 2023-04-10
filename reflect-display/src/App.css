@@ -73,14 +73,18 @@
 
 /*also use for welcome, greetings, etc*/
 .affirmation {
-  font-family: var(--primary-font);
-  position: absolute;
-  width: 521px;
-  height: 107px;
-  left: 485px;
-  top: 105px;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   padding: 30px 40px;
+  gap: 20px;
+  
+  position: absolute;
+  width: 622px;
+  height: 107px;
+  left: 445px;
+  top: 86px;
 }
 
 .okButton {
@@ -256,3 +260,38 @@ Font is not Karla
   top: 848px;
 }
   
+/*EXPOSURE THERAPY*/
+
+.guide{
+  width: 578px;
+  height: 470px;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
+  text-transform: lowercase;
+  color: #FFFEFC;
+
+  flex: none;
+  order: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+  gap: 20px;
+
+  position: absolute;
+  width: 658px;
+  height: 530px;
+  left: 427px;
+  top: 231px;
+}
+
+#timer{
+  width: 136px;
+  height: 137px;
+}
