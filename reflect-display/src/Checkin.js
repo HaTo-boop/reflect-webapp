@@ -1,6 +1,8 @@
 import { CardButton } from "./Buttons"
 import './App.css';
 
+import { Link } from "react-router-dom"
+
 // Components appeared in the daily checkin of the mirror
 
 export function CHECKIN(props) {
@@ -25,8 +27,10 @@ function Greetings(props) {
 
 function Skip(props) {
     return (
-        <button id="skip-button" className="glassmorphism">
-            i'll tell you later
-        </button>
+        <Link to="/home">
+            <button id="skip-button" className="glassmorphism">
+                i'll tell you later
+            </button>
+        </Link>
     )
 }

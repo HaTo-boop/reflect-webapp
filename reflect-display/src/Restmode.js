@@ -4,12 +4,13 @@ import './App.css';
 
 import { Link } from 'react-router-dom'
 
-export function RestMode(props) {
+export function RESTMODE(props) {
     return (
-        <div className="restmode">
-            <RestWidget />
-            <Affirmations />
-            <OkButton />
+        <div>
+            <RestWidget/>
+            <Affirmations/>
+            <OkButton/>
+            <Settings/>
         </div>
     )
 }
@@ -21,20 +22,22 @@ function OkButton(props) {
         //     Click<span id="ok"> Ok </span>to Start
         // </button>
         <Link to="checkin">
-            <div className="okButton glassmorphism">
+            <button className="okButton glassmorphism">
                 Click<span id="ok"> Ok </span>to Start
-            </div>
+            </button>
         </Link>
     )
 }
 
-function Settings(props) {
+export function Settings(props) {
     return (
-        <span className="material-symbols-outlined glassmorphism hort-flex">settings</span>
+        <div className="settings glassmorphism ">
+            <span class="material-symbols-outlined hort-flex">settings</span>
+        </div>
     )
 }
 
-function Affirmations(props) {
+export function Affirmations(props) {
     const msg = "My baby can feel my peace." 
     return (
         <div className="affirmation glassmorphism hort-flex">
