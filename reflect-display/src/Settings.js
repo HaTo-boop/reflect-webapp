@@ -5,14 +5,12 @@ import './App.css';
 
 import { Link } from 'react-router-dom';
 
-export function HOME(props) {
+export function SETTINGS(props) {
     return (
         <div>
             <Affirmations/>
             <RestWidget/>
-            <Link to="/settings">
-                <Settings/>
-            </Link>
+            <Settings/>
             <Features/>
             <Exit/>
         </div>
@@ -50,5 +48,3 @@ export function Exit(props) {
         </Link>
     )
 }
-
-

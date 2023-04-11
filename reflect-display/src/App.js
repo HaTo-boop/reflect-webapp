@@ -7,7 +7,8 @@ import { RESTMODE } from './Restmode';
 import { CHECKIN } from './Checkin';
 import { HOME } from './Home';
 import { THERAPY } from './Therapy';
-
+import { BREATHING } from './Breathing';
+import { SETTINGS } from './Settings';
 
 
 function App() {
@@ -18,8 +19,9 @@ function App() {
         <Route index path="/" element={<RESTMODE />} />
         <Route path="home" element={<HOME />} />
         <Route path="checkin" element={<CHECKIN />} />
-        <Route path="therapy" element={<THERAPY />}/>
-
+        <Route path="therapy" element={<THERAPY />} />
+        {/* <Route path="breathing" element={<BREATHING />} /> */}
+        <Route path="settings" element={<SETTINGS />} />
       </Routes>
     </div>
   );
