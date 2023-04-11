@@ -39,6 +39,11 @@
   }
 } */
 
+button {
+  color: var(--main-text-color);
+  font-family: var(--primary-font);
+  font-size: var(--def-font-size);
+}
 
 /* SHARED STYLING */
 /* GLASSMORPHISM - shared among multiple boxes */
@@ -299,4 +304,75 @@ Font is not Karla
 #timer{
   width: 136px;
   height: 137px;
+}
+
+/*SETTINGS*/
+
+.settings-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+  gap: 20px;
+  
+  position: absolute;
+  width: 234px;
+  height: 107px;
+  left: 639px;
+  top: 86px;
+}
+
+.change-theme{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+  gap: 20px;
+
+  position: absolute;
+  width: 306px;
+  height: 154px;
+  left: 603px;
+  top: 597px;
+}
+
+.preg-row{
+  position: flex;
+  width: 672px;
+  height: 157px;
+  left: 420px;
+  top: 288px;
+}
+
+#preg-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+  gap: 20px;
+  
+  position: absolute;
+  width: 306px;
+  height: 154px;
+  left: 420px;
+  top: 288px;
+  
+}
+
+#postpar-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+  gap: 20px;
+  
+  position: absolute;
+  width: 306px;
+  height: 154px;
+  left: 786px;
+  top: 291px;
 }

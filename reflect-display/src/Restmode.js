@@ -9,23 +9,24 @@ export function RESTMODE(props) {
         <div>
             <RestWidget/>
             <Affirmations/>
-            <OkButton/>
+            <Link to="checkin">
+                <OkButton/>
+            </Link>
+            
             <Settings/>
         </div>
     )
 }
 
 // Components appeared in restmode of the mirror
-function OkButton(props) {
+export function OkButton(props) {
     return (
         // <button className="okButton glassmorphism hort-flex">
         //     Click<span id="ok"> Ok </span>to Start
         // </button>
-        <Link to="checkin">
-            <button className="okButton glassmorphism">
-                Click<span id="ok"> Ok </span>to Start
-            </button>
-        </Link>
+        <button className="okButton glassmorphism">
+            Click<span id="ok"> Ok </span>to Start
+        </button>
     )
 }
 

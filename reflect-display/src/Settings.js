@@ -1,6 +1,5 @@
-import { CardButton } from "./Buttons"
-import { Widget } from "./Widget"
 import { Affirmations, RestWidget, Settings } from "./Restmode"
+import { Exit } from "./Home"
 import './App.css';
 
 import { Link } from 'react-router-dom';
@@ -8,43 +7,42 @@ import { Link } from 'react-router-dom';
 export function SETTINGS(props) {
     return (
         <div>
-            <Affirmations/>
-            <RestWidget/>
-            <Settings/>
-            <Features/>
+            <Title/>
+            <Options/>
+            <ChangeTheme/>
             <Exit/>
         </div>
     )
 }
 
-// Components appear in the homescreen 
-export function Features(props) {
+export function Title(props) {
     return (
-        <div className="feature-col">
-            <button className="feature-button">
-                reflection time
-            </button>
-
-            <Link to="/therapy">
-                <button className="feature-button">
-                    exposure therapy
-                </button>
-            </Link>      
-            
-            <Link to="/breathing">
-                <button className="feature-button">
-                    breathing exercise
-                </button>
-            </Link> 
-
+        <div className="settings-title glassmorphism">
+            settings
         </div>
     )
 }
 
-export function Exit(props) {
+// Components appear in the homescreen 
+export function Options(props) {
     return (
-        <Link to="/">
-            <span className="exit glassmorphism material-symbols-outlined hort-flex">logout</span>
-        </Link>
+        <div className="preg-row">
+            <button className="glassmorphism" id="preg-button">
+                i am pregnant
+            </button>
+
+            <button className="glassmorphism" id="postpar-button">
+                i am postpartum 
+            </button>
+        </div>
     )
 }
+
+export function ChangeTheme(props) {
+    return (
+        <button className="glassmorphism change-theme" >
+            change the theme
+        </button>
+    )
+}
+

@@ -9,6 +9,7 @@ import { HOME } from './Home';
 import { THERAPY } from './Therapy';
 import { BREATHING } from './Breathing';
 import { SETTINGS } from './Settings';
+import { TherapyIntro } from './TherapySessions/TherapyIntro';
 
 
 function App() {
@@ -19,10 +20,13 @@ function App() {
         <Route index path="/" element={<RESTMODE />} />
         <Route path="home" element={<HOME />} />
         <Route path="checkin" element={<CHECKIN />} />
-        <Route path="therapy" element={<THERAPY />} />
-        {/* <Route path="breathing" element={<BREATHING />} /> */}
+        <Route path="therapy" element={<THERAPY />}>
+          <Route path="therapy/intro" element={<TherapyIntro/>} />
+        </Route>
+        <Route path="breathing" element={<BREATHING />} />
         <Route path="settings" element={<SETTINGS />} />
       </Routes>
+      <img src="public\card.png" alt="Happy"/>
     </div>
   );
 }

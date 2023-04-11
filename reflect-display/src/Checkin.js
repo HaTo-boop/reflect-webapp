@@ -10,7 +10,7 @@ export function CHECKIN(props) {
         <div id='daily-checkin' className='glassmorphism vert-flex'>
             <Greetings/>
             <div className="checkin-card">
-                <CardButton imgSrc="public/card.png" content=""/>
+                <img src="public\card.png" alt="Happy"/>
             </div>
             <Skip/>
         </div>

@@ -1,14 +1,33 @@
 import { CardButton } from "./Buttons"
 import { Widget } from "./Widget"
-import { Affirmations, RestWidget, Settings } from "./Restmode"
+import { OkButton, RestWidget, Settings } from "./Restmode"
+import { Exit } from "./Home"
 import './App.css';
 
-export function BREATHING() {
+export function BREATHING(props) {
     return (
         <div>
-            <Affirmations/>
-            <RestWidget/>
+            <Welcome/>
+            <UserGuide/>
             <Settings/>
+            <OkButton/>
+            <Exit/>
         </div>
     )
+}
+
+export function Welcome(props) {
+    return (
+        <div className="affirmation glassmorphism">
+            welcome to the breathing exercise 
+        </div>
+    )
+}
+
+export function UserGuide(props) {
+    return (
+        <div className="guide glassmorphism hort-flex">
+            Breathing exercises reduce stress, promote relaxation, and improve mental clarity, lung function, and cardiovascular health.
+        </div>
+     )
 }
