@@ -32,9 +32,11 @@ export function OkButton(props) {
 
 export function Settings(props) {
     return (
-        <div className="settings glassmorphism ">
-            <span class="material-symbols-outlined hort-flex">settings</span>
-        </div>
+        <Link to="/settings">
+            <div className="settings glassmorphism ">
+                <span class="material-symbols-outlined hort-flex">settings</span>
+            </div>
+        </Link>
     )
 }
 

@@ -10,9 +10,7 @@ export function HOME(props) {
         <div>
             <Affirmations/>
             <RestWidget/>
-            <Link to="/settings">
-                <Settings/>
-            </Link>
+            <Settings/>
             <Features/>
             <Exit/>
         </div>
