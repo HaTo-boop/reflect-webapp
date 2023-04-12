@@ -27,7 +27,11 @@ export function TherapyIntro() {
         <div>
             <Welcome/>
             <UserGuide />
-            <Link to="intro">Click here to continue when you're ready</Link>
+            <Link to="prompt1">
+                <div className="okButton">
+                    Continue
+                </div>
+            </Link>
         </div>
     )
 }

@@ -30,7 +30,8 @@ export function TherapyWidget(props) {
 
             <div id='theme'>
                 monthly theme
-                <CardButton imgSrc="/public/balance_theme.png" content="balance"/>
+                {/* <CardButton imgSrc="/public/balance_theme.png" content="balance"/> */}
+                <div style={{ margin:"10px auto" }}><b style={{ fontSize:"35px" }}>balance</b></div>
             </div>
         </div>
     )

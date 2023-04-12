@@ -10,6 +10,7 @@ import { THERAPY } from './Therapy';
 import { BREATHING } from './Breathing';
 import { SETTINGS } from './Settings';
 import { TherapyIntro } from './TherapySessions/TherapyIntro';
+import { TP1 } from './TherapySessions/tp1';
 
 
 function App() {
@@ -21,12 +22,14 @@ function App() {
         <Route path="home" element={<HOME />} />
         <Route path="checkin" element={<CHECKIN />} />
         <Route path="therapy" element={<THERAPY />}>
-          <Route path="therapy/intro" element={<TherapyIntro/>} />
+          <Route path="" element={<TherapyIntro/>} />
+          <Route path="prompt1" element={<TP1/>} />
+
         </Route>
         <Route path="breathing" element={<BREATHING />} />
         <Route path="settings" element={<SETTINGS />} />
       </Routes>
-      <img src="public\card.png" alt="Happy"/>
+      {/* <img src="public\card.png" alt="Happy"/> */}
     </div>
   );
 }
