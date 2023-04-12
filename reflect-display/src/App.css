@@ -181,10 +181,31 @@ button {
 
 /* DAILY CHECKIN*/
 
-.checkin-card{
-  position:fixed;
+.checkin-row{
+  position: absolute;
+  width: 1216px;
+  height: 519px;
+  left: 148px;
+  top: 314px;  
+}
+
+.checkin-card-1{
+  position: absolute;
   left: 0%;
   right: 71.22%;
+  top: 0%;
+  bottom: 15.8%;
+    
+  box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(43px);
+  
+  border-radius: 40px;
+}
+
+.checkin-card-2{
+  position: absolute;
+  left: 35.61%;
+  right: 35.61%;
   top: 0%;
   bottom: 15.8%;
 
@@ -193,6 +214,18 @@ button {
 
   border-radius: 40px;
 }
+
+.checkin-card-3{
+  position: absolute;
+  left: 71.22%;
+  right: 0%;
+  top: 0%;
+  bottom: 15.8%;
+    
+  box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(43px);
+
+  border-radius: 40px;}
 
 /* 
 The words didn't show on screen, have to manually add the word styling in 
