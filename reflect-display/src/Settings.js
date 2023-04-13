@@ -26,7 +26,7 @@ export function Title(props) {
 // Components appear in the homescreen 
 export function Options(props) {
     return (
-        <div className="preg-row">
+        <div className="preg-row horz-flex">
             <button className="glassmorphism" id="preg-button">
                 i am pregnant
             </button>

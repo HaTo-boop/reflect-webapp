@@ -9,7 +9,7 @@ export function RESTMODE(props) {
         <div>
             <RestWidget/>
             <Affirmations/>
-            
+
             <Link to="checkin">
                 <OkButton/>
             </Link>
@@ -59,7 +59,7 @@ function Clock(props) {
 function Weather(props) {
     //API
     return (
-        <div className="weather">
+        <div id="weather">
             Weather
         </div>
     )

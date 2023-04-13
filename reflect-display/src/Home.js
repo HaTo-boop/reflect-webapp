@@ -20,7 +20,7 @@ export function HOME(props) {
 // Components appear in the homescreen 
 export function Features(props) {
     return (
-        <div className="feature-col">
+        <div className="feature-col vert-flex">
             <button className="feature-button">
                 reflection time
             </button>
@@ -44,7 +44,9 @@ export function Features(props) {
 export function Exit(props) {
     return (
         <Link to="/">
-            <span className="exit glassmorphism material-symbols-outlined hort-flex">logout</span>
+            <div className="exit glassmorphism">
+                <span className="material-symbols-outlined hort-flex">logout</span>
+            </div>
         </Link>
     )
 }

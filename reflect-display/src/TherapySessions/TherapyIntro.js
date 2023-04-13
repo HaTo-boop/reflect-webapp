@@ -22,16 +22,20 @@ function UserGuide(props) {
     )
 }
 
+const testArray = ['a', 'b', 'c'];
+
+function nextPrompt() {
+    
+}
+
 export function TherapyIntro() {
     return (
         <div>
             <Welcome/>
             <UserGuide />
-            <Link to="prompt1">
-                <div className="okButton">
-                    Continue
-                </div>
-            </Link>
+            <button className="okButton" onclick={nextPrompt}>
+                Continue
+            </button>
         </div>
     )
 }

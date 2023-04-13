@@ -25,7 +25,7 @@ function Greetings(props) {
 
 function Cards(props) {
     return (
-        <div className="horz-flex" style={{top:"314px"}}>
+        <div className="horz-flex checkin-row">
             <button>
                 <img src="happy.png" />
             </button>
