@@ -25,16 +25,16 @@ function Greetings(props) {
 
 function Cards(props) {
     return (
-        <div className="checkin-row">
-            <button className="checkin-card-1">
+        <div className="horz-flex" style={{top:"314px"}}>
+            <button>
                 <img src="happy.png" />
             </button>
 
-            <button className="checkin-card-2">
+            <button>
                 <img src="inspired.png" />
             </button>
 
-            <button className="checkin-card-3">
+            <button>
                 <img src="focused.png" />
             </button>
         </div>

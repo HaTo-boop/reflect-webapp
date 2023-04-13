@@ -40,9 +40,15 @@
 } */
 
 button {
+  font-family: var(--primary-font);
+  background-color: var(--main-bg-color);
   color: var(--main-text-color);
   font-family: var(--primary-font);
+  font-weight: var(--def-font-weight);
   font-size: var(--def-font-size);
+  line-height: var(--def-line-height);
+  text-transform: var(--preferred-text-transform);
+  
 }
 
 /* SHARED STYLING */
@@ -136,18 +142,9 @@ button {
   line-height: 28px;
 }
 
-/*
 .weather {
-  width: 73px;
-  height: 47px;
-
-  font-family: 'Karla';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 47px;
+  text-align: center;
 }
-*/
 
 #theme {
   width: 142px;
