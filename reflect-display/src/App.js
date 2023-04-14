@@ -20,13 +20,13 @@ function App() {
         <Route index path="/" element={<RESTMODE />} />
         <Route path="/home" element={<HOME />} />
         <Route path="/checkin" element={<CHECKIN />} />
-        <Route path="/therapy" element={<THERAPY />}>
+        <Route path="/therapy/*" element={<THERAPY />}>
           <Route path="" element={<TherapyIntro/>} />
-          <Route path="therapy/therapyTest" element={<PromptContent/>} />
+          <Route path="therapyTest" element={<PromptContent/>} />
         </Route>
         <Route path="/breathing" element={<BREATHING />} />
         <Route path="/settings" element={<SETTINGS />} />
-      </Routes>
+      </Routes> 
       {/* <PromptContent/> */}
     </div>
   );

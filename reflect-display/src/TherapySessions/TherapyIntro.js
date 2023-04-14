@@ -32,7 +32,7 @@ export function TherapyIntro() {
         <div>
             <Welcome/>
             <UserGuide />
-            <Link to="/therapyTest">
+            <Link to="therapyTest">
                 <button className="okButton">
                     Continue
                 </button>
