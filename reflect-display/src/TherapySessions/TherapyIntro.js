@@ -28,22 +28,11 @@ const testArray = ['a', 'b', 'c'];
 
 export function TherapyIntro() {
 
-    // Does not work:
-    //
-    // function nextPrompt(props) {
-    //     return (
-    //         <div className="guide glassmorphism hort-flex">{testArray[0]}</div>
-    //     )
-    // }
-    // rerender the middle part of page
-        // including a <button onclick={nextPromt}>continue</button>
-       
     return (
         <div>
             <Welcome/>
-            {/*using the middle of page*/}
             <UserGuide />
-            <Link to="therapyTest">
+            <Link to="/therapyTest">
                 <button className="okButton">
                     Continue
                 </button>
@@ -89,7 +78,6 @@ export function PromptContent() {
                 <button className="okButton" onClick={nextPrompt}>
                     Continue
                 </button>
-                <PromptContent/>
             </div>
          )
     } else {
