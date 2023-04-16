@@ -11,6 +11,8 @@ import { BREATHING } from './Breathing';
 import { SETTINGS } from './Settings';
 import { PromptContent, TherapyIntro } from './TherapySessions/TherapyIntro';
 import { TP1 } from './TherapySessions/tp1';
+import { Themes } from './Themes';
+
 
 function App() {
   // React components have similar 
@@ -25,7 +27,9 @@ function App() {
           <Route path="therapyTest" element={<PromptContent/>} />
         </Route>
         <Route path="/breathing" element={<BREATHING />} />
-        <Route path="/settings" element={<SETTINGS />} />
+        <Route path="/settings" element={<SETTINGS />}>
+          <Route path="" element={<Themes />} />
+        </Route>
       </Routes> 
       {/* <PromptContent/> */}
     </div>
