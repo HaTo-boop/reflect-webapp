@@ -82,8 +82,19 @@ export function PromptContent() {
          )
     } else {
         return (
-            <div className="guide glassmorphism hort-flex">
-                This is the end of the session. Choose what you want to do next.
+            <div>
+                <div className="guide glassmorphism hort-flex">
+                    This is the end of the session. Choose what you want to do next.
+                </div>
+                <div className="hort-flex">
+                    <Link to="therapyTest">
+                        <button className="okButton">
+                            repeat session
+                        </button>
+                    </Link>
+                    {/* TODO: Create page to choose what therapy session to do */}
+                    
+                </div>
             </div>
         )
     }
