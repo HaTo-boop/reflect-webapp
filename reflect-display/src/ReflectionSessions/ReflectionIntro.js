@@ -9,7 +9,7 @@ import { useState } from 'react';
 function Welcome(props) {
     return (
         <div className="affirmation glassmorphism hort-flex">
-            welcome to exposure therapy
+            welcome to reflection time
         </div>
     )
 }
@@ -26,41 +26,22 @@ function UserGuide(props) {
 
 const testArray = ['a', 'b', 'c'];
 
-export function TherapyIntro() {
+export function ReflectionIntro() {
 
     return (
         <div>
             <Welcome/>
             <UserGuide />
-            <Link to="therapyTest">
+            <Link to="reflectionTest">
                 <button className="okButton">
                     Continue
                 </button>
             </Link>
         </div>
     )
-
-    
-    // First page
-        // TherapyIntro
-        // (Page - choose which therapy to folliow)
-            // Call function nextPrompt (through onclick)
-                // redefine UserGuide - guide content -> prompt text
-                // rerender the page (<div>) 
-                    // without the Welcome
-                    // with new prompt
-                    // (recursion) with Continue button that calls nextPrompt again
-
-
-    // Base case
-        // Ending page - YOu have finish the therapy
-        // 2 buttons
-            // 1. return to home page (link to homepage)
-            // 2. repeat this session or choose another session (link to page after TherapyIntro)
-
 }
 
-export function PromptContent() {
+export function PromptContentReflect() {
     // prog: how far the user is progressing in the session (=index of prompt in array)
     // Initial state: starting from the first prompt
     const [prog, setProg] = useState(0);
@@ -84,10 +65,10 @@ export function PromptContent() {
         return (
             <div>
                 <div className="guide glassmorphism hort-flex">
-                    This is the end of the session. Choose what you want to do next.
+                    Well done! keep up the good work. Im always here to support u. 
                 </div>
                 <div className="hort-flex">
-                    <Link to="therapyTest">
+                    <Link to="reflectionTest">
                         <button className="okButton">
                             repeat session
                         </button>

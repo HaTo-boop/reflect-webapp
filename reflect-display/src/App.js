@@ -9,9 +9,12 @@ import { HOME } from './Home';
 import { THERAPY } from './Therapy';
 import { BREATHING } from './Breathing';
 import { SETTINGS } from './Settings';
-import { PromptContent, TherapyIntro } from './TherapySessions/TherapyIntro';
+import { TherapyIntro, PromptContent } from './TherapySessions/TherapyIntro';
 import { TP1 } from './TherapySessions/tp1';
 import { Themes } from './Themes';
+import { REFLECTION } from './Reflection';
+import { ReflectionIntro, PromptContentReflect } from './ReflectionSessions/ReflectionIntro';
+
 
 
 function App() {
@@ -25,6 +28,10 @@ function App() {
         <Route path="/therapy" element={<THERAPY />}>
           <Route path="" element={<TherapyIntro/>} />
           <Route path="therapyTest" element={<PromptContent/>} />
+        </Route>
+        <Route path="/reflection" element={<REFLECTION />}>
+          <Route path="" element={<ReflectionIntro/>} />
+          <Route path="reflectionTest" element={<PromptContent/>} />
         </Route>
         <Route path="/breathing" element={<BREATHING />} />
         <Route path="/settings" element={<SETTINGS />}>

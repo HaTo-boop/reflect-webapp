@@ -21,9 +21,11 @@ export function HOME(props) {
 export function Features(props) {
     return (
         <div className="feature-col vert-flex">
-            <button className="feature-button">
-                reflection time
-            </button>
+            <Link to="/reflection">
+                <button className="feature-button">
+                    reflection time
+                </button>
+            </Link>
 
             <Link to="/therapy">
                 <button className="feature-button">
