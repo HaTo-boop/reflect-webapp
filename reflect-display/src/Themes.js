@@ -39,19 +39,16 @@ function Carousel() {
   
     return (
       <Slider {...settings} className="horz-flex checkin-row">
-        <button> <img className="glassmorphism" src="/checkin/happy.png" /> </button>
-        <button> <img className="glassmorphism" src="/checkin/inspired.png" /> </button>
-        <button> <img className="glassmorphism" src="/checkin/focused.png" /> </button>
-        <button> <img className="glassmorphism" src="/checkin/happy.png" /> </button>
-        <button> <img className="glassmorphism" src="/checkin/inspired.png" /> </button>
-        <button> <img className="glassmorphism" src="/checkin/focused.png" /> </button>
-        <button> <img className="glassmorphism" src="/checkin/happy.png" /> </button>
-        <button> <img className="glassmorphism" src="/checkin/inspired.png" /> </button>
-        <button> <img className="glassmorphism" src="/checkin/focused.png" /> </button>
-        <button> <img className="glassmorphism" src="/checkin/happy.png" /> </button>
-        <button> <img className="glassmorphism" src="/checkin/inspired.png" /> </button>
-        <button> <img className="glassmorphism" src="/checkin/focused.png" /> </button>
-
+        <button> <img className="" src="/themes/balance.png" /> </button>
+        <button> <img className="" src="/themes/change.png" /> </button>
+        <button> <img className="" src="/themes/confidence.png" /> </button>
+        <button> <img className="" src="/themes/gratitude.png" /> </button>
+        <button> <img className="" src="/themes/growth.png" /> </button>
+        <button> <img className="" src="/themes/health.png" /> </button>
+        <button> <img className="" src="/themes/strength.png" /> </button>
+        <button> <img className="" src="/themes/truth.png" /> </button>
+        <button> <img className="" src="/themes/patience.png" /> </button>
+        <button> <img className="" src="/themes/presence.png" /> </button>
       </Slider>
     );
 }

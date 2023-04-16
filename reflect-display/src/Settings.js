@@ -40,9 +40,11 @@ export function Options(props) {
 
 export function ChangeTheme(props) {
     return (
-        <button className="glassmorphism change-theme" >
-            change the theme
-        </button>
+        <Link to="/themes">
+            <button className="glassmorphism change-theme" >
+                change the theme
+            </button>
+        </Link> 
     )
 }
 
