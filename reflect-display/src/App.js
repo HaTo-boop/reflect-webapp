@@ -9,7 +9,7 @@ import { HOME } from './Home';
 import { THERAPY } from './Therapy';
 import { BREATHING } from './Breathing';
 import { SETTINGS } from './Settings';
-import { TherapyIntro, PromptContent } from './TherapySessions/TherapyIntro';
+import { TherapyIntro, PromptContentTherapy } from './TherapySessions/TherapyIntro';
 import { TP1 } from './TherapySessions/tp1';
 import { Themes } from './Themes';
 import { REFLECTION } from './Reflection';
@@ -27,16 +27,15 @@ function App() {
         <Route path="/checkin" element={<CHECKIN />} />
         <Route path="/therapy" element={<THERAPY />}>
           <Route path="" element={<TherapyIntro/>} />
-          <Route path="therapyTest" element={<PromptContent/>} />
+          <Route path="therapyTest" element={<PromptContentTherapy/>} />
         </Route>
         <Route path="/reflection" element={<REFLECTION />}>
           <Route path="" element={<ReflectionIntro/>} />
-          <Route path="reflectionTest" element={<PromptContent/>} />
+          <Route path="reflectionTest" element={<PromptContentReflect/>} />
         </Route>
         <Route path="/breathing" element={<BREATHING />} />
-        <Route path="/settings" element={<SETTINGS />}>
-          <Route path="" element={<Themes />} />
-        </Route>
+        <Route path="/settings" element={<SETTINGS />} />
+        <Route path="/themes" element={<Themes />} />
       </Routes> 
       {/* <PromptContent/> */}
     </div>

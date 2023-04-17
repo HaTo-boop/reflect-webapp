@@ -40,7 +40,7 @@ export function TherapyIntro() {
         </div>
     )
 
-    
+ // Logic:   
     // First page
         // TherapyIntro
         // (Page - choose which therapy to folliow)
@@ -60,7 +60,7 @@ export function TherapyIntro() {
 
 }
 
-export function PromptContent() {
+export function PromptContentTherapy() {
     // prog: how far the user is progressing in the session (=index of prompt in array)
     // Initial state: starting from the first prompt
     const [prog, setProg] = useState(0);
@@ -87,7 +87,8 @@ export function PromptContent() {
                     This is the end of the session. Choose what you want to do next.
                 </div>
                 <div className="hort-flex">
-                    <Link to="therapyTest">
+                    {/* BUG: Linking not working - intend to link back to begining of  session (with first propmt) but not replaying*/}
+                    <Link to="/therapy/therapyTest">
                         <button className="okButton">
                             repeat session
                         </button>

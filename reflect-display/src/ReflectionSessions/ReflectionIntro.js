@@ -24,7 +24,7 @@ function UserGuide(props) {
     )
 }
 
-const testArray = ['a', 'b', 'c'];
+const testArray = ['x', 'y', 'z'];
 
 export function ReflectionIntro() {
 
@@ -68,7 +68,8 @@ export function PromptContentReflect() {
                     Well done! keep up the good work. Im always here to support u. 
                 </div>
                 <div className="hort-flex">
-                    <Link to="reflectionTest">
+                    {/* BUG: Linking not working - intend to link back to begining of  session (with first propmt) but not replaying*/}
+                    <Link to="/reflection/reflectionTest">
                         <button className="okButton">
                             repeat session
                         </button>
