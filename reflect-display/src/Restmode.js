@@ -1,8 +1,7 @@
-import { CardButton } from "./Buttons"
-import { Widget } from "./Widget"
 import './App.css';
 
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
 export function RESTMODE(props) {
     return (
@@ -47,15 +46,6 @@ export function Affirmations(props) {
     )
 }
 
-function Clock(props) {
-    //API
-    return(
-        <div className="clock">
-            <p id="time"> 10:00 </p> 
-            <p id="date"> friday, march 2 </p>
-        </div>
-    )
-}
 function Weather(props) {
     //API
     return (
@@ -69,7 +59,8 @@ function Weather(props) {
 export function RestWidget(props) {
     return (
         <div id='rest-widget' className='widget glassmorphism vert-flex'>
-            <Clock/>
+            {/* <Clock/> */}
+            <Time />
             <Weather/>
             <div id='theme'>
                 monthly theme
@@ -79,3 +70,45 @@ export function RestWidget(props) {
         </div>
     )
 }
+
+function Time() {
+    const [time, setTime] = useState(new Date());
+  
+    useEffect(() => {
+      const timer = setInterval(() => {
+        setTime(new Date());
+      }, 1000);
+      return () => clearInterval(timer);
+    }, []);
+  
+    const timeOptions = {
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true
+    };
+  
+    const dateOptions = {
+      weekday: 'long',
+      month: 'long',
+      day: 'numeric',
+    };
+  
+    return (
+      <div>
+        <p>{time.toLocaleString('en-US', timeOptions)}</p>
+        <p>{time.toLocaleDateString('en-US', dateOptions)}</p>
+      </div>
+    );
+  }
+  
+/*
+function Clock(props) {
+//API
+return(
+    <div className="clock">
+        <p id="time"> 10:00 </p> 
+        <p id="date"> friday, march 2 </p>
+    </div>
+)
+}
+*/
