@@ -46,16 +46,6 @@ export function Affirmations(props) {
     )
 }
 
-function Weather(props) {
-    //API
-    return (
-        <div id="weather">
-            Weather
-        </div>
-    )
-
-}
-
 export function RestWidget(props) {
     return (
         <div id='rest-widget' className='widget glassmorphism vert-flex'>
@@ -101,6 +91,31 @@ function Time() {
     );
   }
   
+  function Weather() {
+    const [temperature, setTemperature] = useState(null);
+  
+    useEffect(() => {
+      const URL = `https://api.open-meteo.com/v1/forecast?latitude=47.61&longitude=-122.33&hourly=temperature_2m&temperature_unit=fahrenheit&forecast_days=1`;
+  
+      fetch(URL)
+        .then(response => response.json())
+        .then(data => {
+          const tempF = data.hourly.temperature_2m[0].value * 1.8 + 32; // convert to Fahrenheit
+          setTemperature(tempF);
+        })
+        .catch(error => {
+          console.error('Error fetching temperature:', error);
+        });
+    }, []);
+  
+    return (
+      <div>
+        <h1>weather</h1>
+        {temperature !== null && <p>{temperature}°F</p>}
+      </div>
+    );
+}
+
 /*
 function Clock(props) {
 //API
@@ -111,4 +126,14 @@ return(
     </div>
 )
 }
+
+function Weather(props) {
+    //API
+    return (
+        <div id="weather">
+            Weather
+        </div>
+    )
+}
+
 */
