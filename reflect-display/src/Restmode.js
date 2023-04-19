@@ -31,7 +31,7 @@ export function Settings(props) {
     return (
         <Link to="/settings">
             <div className="settings glassmorphism ">
-                <span class="material-symbols-outlined hort-flex">settings</span>
+                <span className="material-symbols-outlined hort-flex">settings</span>
             </div>
         </Link>
     )
@@ -92,26 +92,30 @@ function Time() {
   }
   
   function Weather() {
-    const [temperature, setTemperature] = useState(null);
+    // const [temperature, setTemperature] = useState(null);
+    // componentDidMount() {
+    //     const API_KEY = 'a0a00327131618a6c859378f3f0dfeb2';
+    //     const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${API_KEY}`;
+    // }
   
-    useEffect(() => {
-      const URL = `https://api.open-meteo.com/v1/forecast?latitude=47.61&longitude=-122.33&hourly=temperature_2m&temperature_unit=fahrenheit&forecast_days=1`;
+    // useEffect(() => {
+    //   const URL = `https://api.openweathermap.org/data/`;
   
-      fetch(URL)
-        .then(response => response.json())
-        .then(data => {
-          const tempF = data.hourly.temperature_2m[0].value * 1.8 + 32; // convert to Fahrenheit
-          setTemperature(tempF);
-        })
-        .catch(error => {
-          console.error('Error fetching temperature:', error);
-        });
-    }, []);
+    //   fetch(URL)
+    //     .then(response => response.json())
+    //     .then(data => {
+    //       const tempF = data.hourly.temperature_2m[0].value * 1.8 + 32; // convert to Fahrenheit
+    //       setTemperature(tempF);
+    //     })
+    //     .catch(error => {
+    //       console.error('Error fetching temperature:', error);
+    //     });
+    // }, []);
   
     return (
       <div>
         <h1>weather</h1>
-        {temperature !== null && <p>{temperature}°F</p>}
+        {/* {temperature !== null && <p>{temperature}°F</p>} */}
       </div>
     );
 }
