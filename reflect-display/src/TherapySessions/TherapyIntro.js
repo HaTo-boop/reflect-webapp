@@ -1,5 +1,6 @@
 import { CardButton } from "../Buttons"
 import { Exit } from "../Home"
+import { getJSON } from "../App"
 import '../App.css';
 
 import { Link } from 'react-router-dom';
@@ -25,9 +26,10 @@ function UserGuide(props) {
 }
 
 const testArray = ['a', 'b', 'c'];
+const therapyJSON = getJSON("../public/data/reflect-exp-therapy.json");
+const testJSON = getJSON("https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json")
 
 export function TherapyIntro() {
-
     return (
         <div>
             <Welcome/>
@@ -61,6 +63,7 @@ export function TherapyIntro() {
 }
 
 export function PromptContentTherapy() {
+    console.log(testJSON.general);
     // prog: how far the user is progressing in the session (=index of prompt in array)
     // Initial state: starting from the first prompt
     const [prog, setProg] = useState(0);

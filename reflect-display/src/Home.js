@@ -45,7 +45,7 @@ export function Features(props) {
 
 export function Exit(props) {
     return (
-        <Link to="/">
+        <Link to="/home">
             <div className="exit glassmorphism">
                 <span className="material-symbols-outlined hort-flex">logout</span>
             </div>
