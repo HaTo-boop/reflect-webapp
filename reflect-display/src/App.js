@@ -21,15 +21,24 @@ import { ReflectionIntro, PromptContentReflect } from './ReflectionSessions/Refl
 // 2. Tested on a test json file hosted on a web server
 //    - Async function: did not give error, but output is undefined
 //    - then(): return the right json data
-export async function getJSON() {
-  const testJSON = "../public/data/reflect-exp-therapy.json"
-  const testJSON2 = "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
 
-  const response = await fetch(testJSON2)
-  console.log(response.json().data);
-}
+// SOLUTION !!
+// Problem with path of file: https://stackoverflow.com/questions/36369082/relative-paths-with-fetch-in-javascript
+// => Path of file should be relative to html, not the js file where it's called
+//    (not too sure why but here's the given explanation)
+//    fetch('data.json') is requesting http://mydomain.com/data.json - have to be relative to the domain root (assuming the html file)
 
-fetch("https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json")
+// Async function still doesn work
+const testJSON = "/data/reflect-exp-therapy.json";
+const testJSON2 = "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json";
+
+// export async function getJSON() {
+
+//   const response = await fetch(testJSON);
+//   console.log(response.json().data);
+// }
+
+fetch(testJSON)
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error(error));
