@@ -31,7 +31,7 @@ export function TherapyIntro() {
         <div>
             <Welcome/>
             <UserGuide />
-            <Link to="therapyTest">
+            <Link to="sessions">
                 <button className="okButton">
                     Continue
                 </button>

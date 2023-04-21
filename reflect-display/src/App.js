@@ -7,12 +7,14 @@ import { RESTMODE } from './Restmode';
 import { CHECKIN } from './Checkin';
 import { HOME } from './Home';
 import { THERAPY } from './Therapy';
+import { TherapyChoices } from './TherapySessions/TherapyChoices'
 import { BREATHING } from './Breathing';
 import { SETTINGS } from './Settings';
 import { TherapyIntro, PromptContentTherapy } from './TherapySessions/TherapyIntro';
 import { Themes } from './Themes';
 import { REFLECTION } from './Reflection';
 import { ReflectionIntro, PromptContentReflect } from './ReflectionSessions/ReflectionIntro';
+
 
 // Fetching data using async function
 // Trying to fetch JSON data using (1) async function and (2) then() (one line needs to finish execution before moving to next)
@@ -38,10 +40,13 @@ const testJSON2 = "https://mdn.github.io/learning-area/javascript/apis/fetching-
 //   console.log(response.json().data);
 // }
 
-fetch(testJSON)
+// TODO: Revise error handling
+export function fetchJSON(url="") {
+  fetch(url)
   .then(response => response.json())
-  .then(data => console.log(data))
+  .then(data => {return data})
   .catch(error => console.error(error));
+}
 
 function App() {
   // Structure of the main App
@@ -54,6 +59,7 @@ function App() {
         <Route path="/therapy" element={<THERAPY />}>
           <Route path="" element={<TherapyIntro/>} />
           <Route path="therapyTest" element={<PromptContentTherapy/>} />
+          <Route path="sessions" element ={<TherapyChoices/>}/>
         </Route>
         <Route path="/reflection" element={<REFLECTION />}>
           <Route path="" element={<ReflectionIntro/>} />
