@@ -4,8 +4,6 @@ import '../App.css';
 
 import { Link } from 'react-router-dom';
 
-import { useState } from 'react';
-
 function Welcome(props) {
     return (
         <div className="affirmation glassmorphism hort-flex">
@@ -23,8 +21,6 @@ function UserGuide(props) {
         </div>
     )
 }
-
-const testArray = ['a', 'b', 'c'];
 
 export function TherapyIntro() {
     return (
@@ -57,45 +53,4 @@ export function TherapyIntro() {
             // 1. return to home page (link to homepage)
             // 2. repeat this session or choose another session (link to page after TherapyIntro)
 
-}
-
-export function PromptContentTherapy() {
-    // prog: how far the user is progressing in the session (=index of prompt in array)
-    // Initial state: starting from the first prompt
-    const [prog, setProg] = useState(0);
-   
-    const nextPrompt = () => {
-        setProg(prog + 1);
-    }
-
-    if (prog < testArray.length) {
-        return (
-            <div>
-                <div className="guide glassmorphism hort-flex">
-                    {testArray[prog]}
-                </div>
-                <button className="okButton" onClick={nextPrompt}>
-                    Continue
-                </button>
-            </div>
-         )
-    } else {
-        return (
-            <div>
-                <div className="guide glassmorphism hort-flex">
-                    This is the end of the session. Choose what you want to do next.
-                </div>
-                <div className="hort-flex">
-                    {/* BUG: Linking not working - intend to link back to begining of  session (with first propmt) but not replaying*/}
-                    <Link to="/therapy/therapyTest">
-                        <button className="okButton">
-                            repeat session
-                        </button>
-                    </Link>
-                    {/* TODO: Create page to choose what therapy session to do */}
-                    
-                </div>
-            </div>
-        )
-    }
 }

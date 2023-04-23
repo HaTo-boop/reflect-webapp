@@ -6,11 +6,11 @@ import './App.css';
 import { RESTMODE } from './Restmode';
 import { CHECKIN } from './Checkin';
 import { HOME } from './Home';
-import { THERAPY } from './Therapy';
-import { TherapyChoices } from './TherapySessions/TherapyChoices'
+import { THERAPY, PromptContentTherapy } from './TherapySessions/Therapy';
+import { FetchJSON, TherapyChoices } from './TherapySessions/TherapyChoices'
 import { BREATHING } from './Breathing';
 import { SETTINGS } from './Settings';
-import { TherapyIntro, PromptContentTherapy } from './TherapySessions/TherapyIntro';
+import { TherapyIntro } from './TherapySessions/TherapyIntro';
 import { Themes } from './Themes';
 import { REFLECTION } from './Reflection';
 import { ReflectionIntro, PromptContentReflect } from './ReflectionSessions/ReflectionIntro';
@@ -49,6 +49,7 @@ export function fetchJSON(url="") {
 }
 
 function App() {
+  TherapyChoices();
   // Structure of the main App
   return (
     <div className="App">
@@ -59,7 +60,7 @@ function App() {
         <Route path="/therapy" element={<THERAPY />}>
           <Route path="" element={<TherapyIntro/>} />
           <Route path="therapyTest" element={<PromptContentTherapy/>} />
-          <Route path="sessions" element ={<TherapyChoices/>}/>
+          {/* <Route path="sessions" element ={<TherapyChoices/>}/> */}
         </Route>
         <Route path="/reflection" element={<REFLECTION />}>
           <Route path="" element={<ReflectionIntro/>} />
