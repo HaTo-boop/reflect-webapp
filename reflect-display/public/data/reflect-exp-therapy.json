@@ -1,6 +1,6 @@
 ﻿[
     {
-        "session": 1,
+        "session": "ses1",
         "title": "Guided non-judgmental mirror exposure therapy",
         "intention": "focus on describing body parts using non-judgemental language",
         "prompts": [
@@ -33,7 +33,7 @@
         
     },
     {
-        "session": 2,
+        "session": "ses2",
         "title": "Pure mirror exposure therapy",
         "intention": "comment about emotions looking at body",
         "prompts": [
@@ -60,7 +60,7 @@
         ]
     },
     {
-        "session": 3,
+        "session": "ses3",
         "title": "Mirror exposure with a positive focus",
         "intention": "saying 'I love' statements about your body",
         "prompts": [

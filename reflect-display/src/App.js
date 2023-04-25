@@ -34,20 +34,6 @@ import { ReflectionIntro, PromptContentReflect } from './ReflectionSessions/Refl
 const testJSON = "/data/reflect-exp-therapy.json";
 const testJSON2 = "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json";
 
-// export async function getJSON() {
-
-//   const response = await fetch(testJSON);
-//   console.log(response.json().data);
-// }
-
-// TODO: Revise error handling
-export function fetchJSON(url="") {
-  fetch(url)
-  .then(response => response.json())
-  .then(data => {return data})
-  .catch(error => console.error(error));
-}
-
 function App() {
   TherapyChoices();
   // Structure of the main App
@@ -60,7 +46,7 @@ function App() {
         <Route path="/therapy" element={<THERAPY />}>
           <Route path="" element={<TherapyIntro/>} />
           <Route path="therapyTest" element={<PromptContentTherapy/>} />
-          {/* <Route path="sessions" element ={<TherapyChoices/>}/> */}
+          <Route path="sessions" element ={<TherapyChoices/>}/>
         </Route>
         <Route path="/reflection" element={<REFLECTION />}>
           <Route path="" element={<ReflectionIntro/>} />

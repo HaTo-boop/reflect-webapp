@@ -7,69 +7,78 @@ import { useState,useEffect } from 'react';
  let therapyData = [];
 
  // Buttons to choose sessions
-export async function TherapyChoices() {
-    let data;
-
-    const response = await fetch("/data/reflect-exp-therapy.json");
-
-    data = await response.json();
-    console.log("in TherapyChoices:", data);
+export function TherapyChoices() {
+    const [session, setSession] = useState(null);
+    const [prompts, setPrompts] = useState([]);  //to pass JSON data from fetch
+    
+    console.log('render')
+    // hook only run when there is a change in session
+    useEffect(() => {
+        fetch('/data/reflect-exp-therapy.json')
+            .then(response => response.json())
+            .then(json => {
+                setPrompts(json)
+                console.log("inside fetch", prompts);
+            })
+    }, [session])
+    console.log("this is prompts outside of fetch", prompts);
 
     return (
         <div className='hort-flex'> 
-            <button className="therapy-session glassmorphism" id="sesh1">
+            <button className="therapy-session glassmorphism" onClick={() => setSession('ses1')}>
                 Sessions 1
             </button>
 
-            <button className="therapy-session glassmorphism" id="sesh2">
+            <button className="therapy-session glassmorphism" onClick={() => setSession('ses2')}>
                 Sessions 2
             </button>
 
-            <button className="therapy-session glassmorphism" id="sesh3">
+            <button className="therapy-session glassmorphism" onClick={() => setSession('ses3')}>
                 Sessions 3
             </button>
         </div>
+        
     )
 }
 
  // Getting exposure therapy data
 //  Option 1: use Promise (with fetch())
-therapyData = fetch("/data/reflect-exp-therapy.json")
-     .then(response => response.json())
-     .then(data => {
-        console.log("Printing within then:\n", data)
-        // therapyData = data.map((x) => x); // assign to therapyData & create a deep copy of data (value)
-        return data;
-     })
-     .then()
-     .catch(error => console.error(error));
-console.log("Printing therapyData outside series of then\n",therapyData);
+// therapyData = fetch("/data/reflect-exp-therapy.json")
+//      .then(response => response.json())
+//      .then(data => {
+//         console.log("Printing within then:\n", data)
+//         // therapyData = data.map((x) => x); // assign to therapyData & create a deep copy of data (value)
+//         return data;
+//      })
+//      .then()
+//      .catch(error => console.error(error));
+// console.log("Printing therapyData outside series of then\n",therapyData);
 
-// Option 2: async function with await
-export async function FetchJSON() {
-    let data;
+// // Option 2: async function with await
+// export async function FetchJSON() {
+//     let data;
 
-    const response = await fetch("/data/reflect-exp-therapy.json");
+//     const response = await fetch("/data/reflect-exp-therapy.json");
 
-    data = await response.json();
+//     data = await response.json();
 
     
-    // Handling onclick
-    // IMPROVE: use if-else to condense to 1 function
-    return (
-        <div className='hort-flex'> 
-            <button className="therapy-session glassmorphism" id="sesh1">
-                Sessions 1
-            </button>
+//     // Handling onclick
+//     // IMPROVE: use if-else to condense to 1 function
+//     return (
+//         <div className='hort-flex'> 
+//             <button className="therapy-session glassmorphism" id="sesh1">
+//                 Sessions 1
+//             </button>
 
-            <button className="therapy-session glassmorphism" id="sesh2">
-                Sessions 2
-            </button>
+//             <button className="therapy-session glassmorphism" id="sesh2">
+//                 Sessions 2
+//             </button>
 
-            <button className="therapy-session glassmorphism" id="sesh3">
-                Sessions 3
-            </button>
-        </div>
-    )
+//             <button className="therapy-session glassmorphism" id="sesh3">
+//                 Sessions 3
+//             </button>
+//         </div>
+//     )
     
- }
+//  }
