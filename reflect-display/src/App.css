@@ -81,15 +81,6 @@ button {
   gap: 24px;
 }
 
-/* Widget */
-.widget {
-  position: absolute;
-  width: 279px;
-  height: 427px;
-  left: 20px;
-  top: 20px;
-}
-
 /* REST MODE */
 
 /*also use for welcome, greetings, etc*/
@@ -125,24 +116,42 @@ button {
   color: #FFC288;
 }
 
-#time{
-  width: 162px;
-  height: 75px;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 75px;
+.widget{
+  position: absolute;
+  width: 518px;
+  height: 47px;
+  left: 50px;
+  top: 20px;
 }
 
-#date{
-  width: 169px;
-  height: 28px;
+.date-time{
+  position: absolute;
+  width: 340px;
+  height: 47px;
+  left: 50px;
+  top: 20px;
 
-  font-size: 24px;
-  line-height: 28px;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
 }
 
-#weather {
-  text-align: center;
+.widget{
+  position: fixed;
+  width: 518px;
+  height: 47px;
+  left: 50px;
+  top: 20px;
+}
+
+.weather {
+  position: absolute;
+  width: 114px;
+  height: 47px;
+  left: 454px;
+  top: 20px;
 }
 
 #theme {
@@ -342,4 +351,100 @@ button {
   padding: 30px 40px;
   gap: 20px;
   top: 20%; 
+}
+
+/* New styling starting with intro page */
+
+.intro-guide-frame{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+  gap: 20px;
+  position: absolute;
+  width: 880px;
+  height: 268px;
+  left: 100px;
+  top: 240px;
+  border-radius: 40px;
+}
+
+.intro-guide-text{
+  width: 800px;
+  height: 208px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 104px;
+  font-feature-settings: 'salt' on; 
+  color: #FFFEFC;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.pink-text{
+  color: #F87A8F;
+}
+
+.inform{
+  position: absolute;
+  width: 700px;
+  height: 195px;
+  left: 190px;
+  top: 782px;
+
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+  text-align: center;
+}
+
+.material-symbols-outlined{
+  position: absolute;
+  width: 90px;
+  height: 45px;
+  left: 495px;
+  top: 620px;
+}
+
+.button-outer-frame{
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  left: 420px;
+  top: 1290px;
+  border-radius: 50%;
+  background: #645CAA;
+}
+
+.button-inner-frame{
+  position: absolute;
+  left: 9.33%;
+  right: 9.33%;
+  top: 9.67%;
+  bottom: 9%;
+  border-radius: 50%;
+  background: rgba(32, 32, 32, 0.2);
+}
+
+.button-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+  gap: 10px;
+
+  position: absolute;
+  left: 8.33%;
+  right: 8.33%;
+  top: 8.33%;
+  bottom: 8.33%;
+
+  border-radius: 40px;
 }

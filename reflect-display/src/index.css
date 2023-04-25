@@ -10,6 +10,7 @@
   --def-font-weight: 500;
   --def-line-height: 47px;
   --preferred-text-transform: lowercase;
+  --align-text-align: center;
 }
 
 body {
@@ -22,6 +23,7 @@ body {
   font-size: var(--def-font-size);
   line-height: var(--def-line-height);
   text-transform: var(--preferred-text-transform);
+  text-align: var(--align-text-align);
   /*
   font-family: -apple-system, "Karla";
   -webkit-font-smoothing: antialiased;

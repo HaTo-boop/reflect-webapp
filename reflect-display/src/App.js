@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
+import { INTRO } from './Intro';
 import { RESTMODE } from './Restmode';
 import { CHECKIN } from './Checkin';
 import { HOME } from './Home';
@@ -40,6 +41,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
+        <Route index path="/intro" element={<INTRO />} />
         <Route index path="/" element={<RESTMODE />} />
         <Route path="/home" element={<HOME />} />
         <Route path="/checkin" element={<CHECKIN />} />

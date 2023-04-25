@@ -21,15 +21,13 @@ export function RESTMODE(props) {
 
 export function RestWidget(props) {
   return (
-      <div id='rest-widget' className='widget glassmorphism vert-flex'>
-          {/* <Clock/> */}
-          <Time />
-          <Weather />
-          <div id='theme'>
-              monthly theme
-              {/* <CardButton imgSrc="/public/balance_theme.png" content="balance"/> */}
-              <div style={{ margin:"10px auto" }}><b style={{ fontSize:"35px" }}>balance</b></div>
-          </div>
+      <div className='widget horz-flex'>
+        <div className=''> <Time /> </div>
+        <div className=''> <Weather /> </div>
+        <div id='theme'>
+          monthly theme
+            <div style={{ margin:"10px auto" }}><b style={{ fontSize:"35px" }}>balance</b></div>
+        </div>
       </div>
   )
 }
@@ -64,7 +62,7 @@ export function Affirmations(props) {
 
 
 
-function Time() {
+export function Time() {
     const [time, setTime] = useState(new Date());
   
     useEffect(() => {
@@ -87,15 +85,14 @@ function Time() {
     };
   
     return (
-      <div>
-        <p>{time.toLocaleString('en-US', timeOptions)}</p>
-        <p>{time.toLocaleDateString('en-US', dateOptions)}</p>
+      <div className='horx-flex'>
+        {time.toLocaleDateString('en-US', dateOptions)}  {time.toLocaleString('en-US', timeOptions)}
       </div>
     );
   }
 
 // Get the weather API
-function Weather() {
+export function Weather() {
   const [weatherData, setWeatherData] = useState(null);
   const API_KEY = 'bf9dd0c1c9eaa101b363ce544816179b';
   const CITY = 'Seattle';
@@ -115,9 +112,7 @@ function Weather() {
     <div>
       {weatherData && (
         <div>
-          <h2>{weatherData.name}</h2>
-          <p>{weatherData.main.temp} °F</p>
-          {/* <p>Conditions: {weatherData.weather[0].description}</p> */}
+          {weatherData.main.temp} °F
         </div>
       )}
     </div>
