@@ -51,6 +51,7 @@ export function TherapyWidget(props) {
 
 const testArray = ['a', 'b', 'c'];
 
+// Function to update prompts - prompts appear in succession
 export function PromptContentTherapy(promptsArray) {
     // prog: how far the user is progressing in the session (=index of prompt in array)
     // Initial state: starting from the first prompt
