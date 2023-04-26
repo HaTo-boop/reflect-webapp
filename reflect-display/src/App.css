@@ -389,6 +389,10 @@ button {
   color: #F87A8F;
 }
 
+.yellow-text{
+  color: #FFC288;
+}
+
 .inform{
   position: absolute;
   width: 700px;

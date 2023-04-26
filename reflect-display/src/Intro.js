@@ -10,19 +10,25 @@ export function INTRO(){
         <div>
             <Time />
             <Weather />
-            <div className="hort-flex intro-guide-frame">
-                <div className='intro-guide-text'>
-                    hello there, <br></br> welcome to <div className="pink-text">reflect</div>
-                </div>
-            </div>
+            <Heading />
             <span class="material-symbols-outlined">expand_more</span>
-            <Information/>
+            <SubHeading/>
             <Button />
         </div>
     )
 }
 
-export function Information(){
+export function Heading(){
+    return(
+        <div className="hort-flex intro-guide-frame">
+            <div className='intro-guide-text'>
+                hello there, <br></br> welcome to <div className="pink-text">reflect</div>
+            </div>
+        </div>
+    )
+}
+
+export function SubHeading(){
     return(
         <div className="inform">
             i will be your new personal reflection companion during this exciting time of your life 
@@ -32,10 +38,12 @@ export function Information(){
 
 export function Button(){
     return (
-        <div className="button-outer-frame">
-            <div className="button-inner-frame">
-                <div className='button-text'>start journey</div>
-            </div>
-        </div>
+        <Link to="/intro-continue">
+            <button className="button-outer-frame">
+                <div className="button-inner-frame">
+                    <div className='button-text'>start journey</div>
+                </div>
+            </button>
+        </Link>
     )
 }
