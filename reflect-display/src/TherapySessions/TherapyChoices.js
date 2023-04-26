@@ -3,11 +3,11 @@ import '../App.css';
 import { Link } from 'react-router-dom';
 import { useState,useEffect } from 'react';
 
- // Page displaying buttons to choose exposure therapy session
+ // React Component: displaying buttons to choose exposure therapy session
  // NOTE: Not used in this project to avoid adding another layer of choice for user
  // - prompts: array of chosen session's prompts
  // - title, intention: strings, chosen session's title and intention
- //  [!]: Does not connect to specific session page. Not display title and intention of each session
+ //  [!]: Does not connect to specific session page. Not tdisplay title and intention of each session
  //  [!]: css not updated
 export function TherapyChoices() {
     const [session, setSession] = useState(null);
@@ -40,7 +40,6 @@ export function TherapyChoices() {
                     }
                 });
                 
-                // console.log("inside fetch", prompts);
                 console.log("Chosen session's object: ", chosen);
 
                 // IMPROVE? setState to set multiple state at once
