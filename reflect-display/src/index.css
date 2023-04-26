@@ -3,7 +3,7 @@
   --main-text-color: #FFFEFC; 
   --main-bg-color: #000;
 
-  --primary-font: "Karla";
+  --primary-font: "DM Sans";
   --secondary-font: "Roboto"; /* to vary the style if needed */
   --def-font-style: normal;   /* not italics or oblique from font-family */
   --def-font-size: 40px;
@@ -11,6 +11,7 @@
   --def-line-height: 47px;
   --preferred-text-transform: lowercase;
   --align-text-align: center;
+  --font-feature-settings: 'salt' on;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
   line-height: var(--def-line-height);
   text-transform: var(--preferred-text-transform);
   text-align: var(--align-text-align);
+  font-feature-settings: var(--font-feature-settings);
   /*
   font-family: -apple-system, "Karla";
   -webkit-font-smoothing: antialiased;

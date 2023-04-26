@@ -9,12 +9,9 @@ export function RESTMODE(props) {
         <div>
             <RestWidget/>
             <Affirmations/>
-
             <Link to="checkin">
-                <OkButton/>
+                <StartButton/>
             </Link>
-            
-            <Settings/>
         </div>
     )
 }
@@ -22,45 +19,35 @@ export function RESTMODE(props) {
 export function RestWidget(props) {
   return (
       <div className='widget horz-flex'>
-        <div className=''> <Time /> </div>
-        <div className=''> <Weather /> </div>
-        <div id='theme'>
+        <Time />
+        <Weather />
+        {/* <div id='theme'>
           monthly theme
             <div style={{ margin:"10px auto" }}><b style={{ fontSize:"35px" }}>balance</b></div>
+        </div> */}
+      </div>
+  )
+}
+
+export function Affirmations(props) {
+  const msg = "\"my baby can feel my peace.\"" 
+  return (
+      <div className="affirmation-frame hort-flex">
+        <div className='affirmation-text'>
+          {msg}
         </div>
       </div>
   )
 }
 
 // Components appeared in restmode of the mirror
-export function OkButton(props) {
+export function StartButton(props) {
     return (
-        <button className="okButton glassmorphism">
-            click<span id="ok"> ok </span>to start
+        <button className="start-btn-frame">
+          <div className="start-btn-text">press anywhere on remote to start</div>
         </button>
     )
 }
-
-export function Settings(props) {
-    return (
-        <Link to="/settings">
-            <div className="settings glassmorphism ">
-                <span className="material-symbols-outlined hort-flex">settings</span>
-            </div>
-        </Link>
-    )
-}
-
-export function Affirmations(props) {
-    const msg = "My baby can feel my peace." 
-    return (
-        <div className="affirmation glassmorphism hort-flex">
-            {msg}
-        </div>
-    )
-}
-
-
 
 export function Time() {
     const [time, setTime] = useState(new Date());
@@ -117,4 +104,17 @@ export function Weather() {
       )}
     </div>
   );
+}
+
+
+
+//Currently not using
+export function Settings(props) {
+  return (
+      <Link to="/settings">
+          <div className="settings glassmorphism ">
+              <span className="material-symbols-outlined hort-flex">settings</span>
+          </div>
+      </Link>
+  )
 }

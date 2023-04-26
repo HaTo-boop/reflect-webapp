@@ -1,6 +1,6 @@
 import { CardButton } from "./Buttons"
 import { Widget } from "./Widget"
-import { OkButton, RestWidget, Settings } from "./Restmode"
+import { StartButton, RestWidget, Settings } from "./Restmode"
 import { Exit } from "./Home"
 import './App.css';
 
@@ -10,7 +10,7 @@ export function BREATHING(props) {
             <Welcome/>
             <UserGuide/>
             <Settings/>
-            <OkButton/>
+            <StartButton/>
             <Exit/>
         </div>
     )

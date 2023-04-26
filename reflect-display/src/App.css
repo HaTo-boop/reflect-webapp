@@ -84,32 +84,52 @@ button {
 /* REST MODE */
 
 /*also use for welcome, greetings, etc*/
-.affirmation {
+.affirmation-frame{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 30px 40px;
   gap: 20px;
-  
   position: absolute;
-  width: 622px;
-  height: 107px;
-  left: 445px;
-  top: 86px;
+  width: 880px;
+  height: 125px;
+  left: 100px;
+  top: 274px;
+  border-radius: 40px;
 }
 
-.okButton {
-  /* <!> For some reason does not inherit css properties of <body> */
-  color: var(--main-text-color);
-  font-family: var(--primary-font);
-  font-size: var(--def-font-size);
+.affirmation {
+  width: 800px;
+  height: 65px;
+  font-size: 50px;
+  line-height: 65px;
+  text-align: center;
+}
 
+.start-btn-frame{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+  gap: 20px;
   position: absolute;
-  width: 384px;
-  height: 107px;
-  left: 564px;
-  top: 818px;
+  width: 800px;
+  height: 150px;
+  left: 140px;
+  top: 1628px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(67.955px);  
+  border-radius: 40px;
+}
+
+.start-btn-text {
+  width: 720px;
+  height: 52px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 52px;
 }
 
 #ok{
@@ -118,8 +138,8 @@ button {
 
 .widget{
   position: absolute;
-  width: 518px;
-  height: 47px;
+  width: 491px;
+  height: 52px;
   left: 50px;
   top: 20px;
 }
@@ -186,21 +206,20 @@ button {
 
 /* DAILY CHECKIN*/
 
-.checkin-row{
+.checkin-col{
   position: absolute;
-  width: 1216px;
-  height: 519px;
-  left: 148px;
-  top: 314px;  
+  width: 354px;
+  height: 1555px;
+  left: 363px;
+  top: 528px;
 }
 
-
-#skip-button{
-  position: absolute;
-  width: 366px;
-  height: 107px;
-  left: 1126px;
-  top: 855px;
+.checkin-card{
+  width: 350px;
+  height: 437px;
+  background: #5A5A5A;
+  backdrop-filter: blur(67.955px);
+  border-radius: 40px;
 }
 
 /* HOME SCREEN STYLING */
@@ -355,7 +374,7 @@ button {
 
 /* New styling starting with intro page */
 
-.intro-guide-frame{
+.heading-frame{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -373,16 +392,10 @@ button {
 .intro-guide-text{
   width: 800px;
   height: 208px;
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 500;
   font-size: 80px;
   line-height: 104px;
+  text-align: center;
   font-feature-settings: 'salt' on; 
-  color: #FFFEFC;
-  flex: none;
-  order: 0;
-  flex-grow: 1;
 }
 
 .pink-text{
@@ -393,14 +406,13 @@ button {
   color: #FFC288;
 }
 
-.inform{
+.subhead{
   position: absolute;
   width: 700px;
   height: 195px;
   left: 190px;
   top: 782px;
 
-  font-family: 'DM Sans';
   font-style: italic;
   font-weight: 500;
   font-size: 50px;
@@ -416,12 +428,30 @@ button {
   top: 620px;
 }
 
+.center-btn{
+  left: 420px;
+  top: 1290px;
+}
+
+
+.bottom-middle-btn{
+  position: absolute;
+  left: 388px;
+  top: 2116px;  
+}
+
+.bottom-right-btn{
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  left: 715px;
+  top: 2195px;
+}
+
 .button-outer-frame{
   position: absolute;
   width: 240px;
   height: 240px;
-  left: 420px;
-  top: 1290px;
   border-radius: 50%;
   background: #645CAA;
 }
@@ -443,12 +473,66 @@ button {
   align-items: center;
   padding: 30px 40px;
   gap: 10px;
-
   position: absolute;
   left: 8.33%;
   right: 8.33%;
   top: 8.33%;
   bottom: 8.33%;
-
   border-radius: 40px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 132px;
+
+  position: absolute;
+  width: 879px;
+  height: 1164px;
+  left: 100px;
+  top: 782px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 65px;
+  
+  width: 879px;
+  height: 300px;
+}
+
+.col-1 {
+  flex-basis: 50%;
+}
+
+.col-2 {
+  text-align: left;
+  width: 514px;
+  height: 260px;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+  text-transform: lowercase;
+  font-feature-settings: 'salt' on;
+}
+
+.head-intro-frame {
+  position: absolute;
+  width: 880px;
+  height: 372px;
+  left: 100px;
+  top: 156px;  
+}
+
+.subhead-intro-frame{
+  position: absolute;
+  width: 700px;
+  height: 65px;
+  left: 190px;
+  top: 603px;
 }

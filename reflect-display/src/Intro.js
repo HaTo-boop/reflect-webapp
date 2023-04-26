@@ -20,7 +20,7 @@ export function INTRO(){
 
 export function Heading(){
     return(
-        <div className="hort-flex intro-guide-frame">
+        <div className="hort-flex heading-frame">
             <div className='intro-guide-text'>
                 hello there, <br></br> welcome to <div className="pink-text">reflect</div>
             </div>
@@ -30,7 +30,7 @@ export function Heading(){
 
 export function SubHeading(){
     return(
-        <div className="inform">
+        <div className="subhead">
             i will be your new personal reflection companion during this exciting time of your life 
         </div>
     )
@@ -39,7 +39,7 @@ export function SubHeading(){
 export function Button(){
     return (
         <Link to="/intro-continue">
-            <button className="button-outer-frame">
+            <button className="center-btn button-outer-frame">
                 <div className="button-inner-frame">
                     <div className='button-text'>start journey</div>
                 </div>
