@@ -1,28 +1,25 @@
-import './App.css';
-import {Time, Weather} from './Restmode';
-
+import '../App.css';
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 
-export function INTRO(){
+
+export function Exercise(props) {
     return (
         <div>
-            <Time />
-            <Weather />
             <Heading />
-            <span class="material-symbols-outlined">expand_more</span>
-            <SubHeading/>
+            <SubHeading />
             <ContinueButton />
+            <Flower />
         </div>
     )
 }
+
 
 export function Heading(){
     return(
         <div className="hort-flex heading-frame">
             <div className='intro-guide-text'>
-                hello there, <br></br> welcome to <div className="pink-text">reflect</div>
+            inhale when the flower expands, and exhale when the flower contracts  
             </div>
         </div>
     )
@@ -30,20 +27,31 @@ export function Heading(){
 
 export function SubHeading(){
     return(
-        <div className="subhead">
-            i will be your new personal reflection companion during this exciting time of your life 
+        <div className="small-subhead">
+            press continue when you feel ready to move on
+        </div>
+    )
+}
+
+export function Flower(){
+    return(
+        <div className="center-btn">
+            
         </div>
     )
 }
 
 export function ContinueButton(){
     return (
-        <Link to="/intro-continue">
+        <Link to="/breathing/intro">
             <button className="bottom-middle-btn button-outer-frame">
                 <div className="button-inner-frame">
-                    <div className='button-text'>start journey</div>
+                    <div className='button-text'>continue</div>
                 </div>
             </button>
         </Link>
     )
 }
+
+
+

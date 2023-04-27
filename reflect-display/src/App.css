@@ -431,6 +431,15 @@ theme-widget-label{
   font-feature-settings: 'salt' on; 
 }
 
+.small-heading-text{
+  width: 800px;
+  height: 260px;
+  font-size: 50px;
+  line-height: 65px;
+  text-align: center;
+  font-feature-settings: 'salt' on;
+}
+
 .pink-text{
   color: #F87A8F;
 }
@@ -451,6 +460,17 @@ theme-widget-label{
   font-size: 50px;
   line-height: 65px;
   text-align: center;
+}
+
+.small-subhead{
+  position: absolute;
+  width: 700px;
+  height: 39px;
+  left: 190px;
+  top: 782px;
+  font-style: italic;
+  font-size: 30px;
+  line-height: 39px;
 }
 
 .material-symbols-outlined{
@@ -650,4 +670,95 @@ theme-widget-label{
   height: 65px;
   left: 190px;
   top: 603px;
+}
+
+.current-feature-frame{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 790px;
+  top: -124px;
+}
+
+.pink-ellipse{
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: #F87A8F;  border-radius: 50%;
+}
+
+.current-feature-text{
+  position: absolute;
+  left: 19%;
+  right: 15%;
+  top: 50%;
+  bottom: 10.67%;
+  width: 183px;
+  height: 94px;
+  font-family: 'Karla';
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
+}
+
+.benefits-container{
+  position: absolute;
+  width: 800px;
+  height: 802px;
+  left: 140px;
+  top: 697px;
+}
+
+.benefit-frame{
+  box-sizing: border-box;
+  flex-direction: row;
+  padding: 30px 40px;
+  gap: 40px;
+  position: absolute;
+  width: 800px;
+  height: 150px;
+  left: 0px;
+  top: 0px;  
+  background: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #5A5A5A;
+  backdrop-filter: blur(67.955px);
+}
+
+.benefit-frame-2{
+  top: 163px;
+}
+
+.benefit-frame-3{
+  top: 326px;
+}
+
+.benefit-frame-4{
+  top: 489px;
+}
+
+.benefit-frame-5{
+  top: 652px;
+}
+
+.benefit-checkbox{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  border: 4px solid #FFFEFC;
+  border-radius: 50%;
+}
+
+.benefit-text{
+  width: 620px;
+  height: 47px;
+  font-family: 'Karla';
+  padding-left: 100px;
 }

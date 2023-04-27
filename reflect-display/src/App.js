@@ -10,13 +10,16 @@ import { CHECKIN } from './Checkin';
 import { HOME } from './Home';
 import { THERAPY, PromptContentTherapy } from './TherapySessions/Therapy';
 import { FetchJSON, TherapyChoices } from './TherapySessions/TherapyChoices'
-import { BREATHING } from './Breathing';
+import { BREATHING } from './Breathing/Breathing';
+import { BreathingIntro } from './Breathing/BreathingIntro';
 import { SETTINGS } from './Settings';
 import { TherapyIntro } from './TherapySessions/TherapyIntro';
 import { Themes } from './Themes';
 import { REFLECTION } from './Reflection';
 import { ReflectionIntro, PromptContentReflect } from './ReflectionSessions/ReflectionIntro';
-
+import { Welcome } from './Breathing/Welcome';
+import { Instruction } from './Breathing/Instruction';
+import { Exercise } from './Breathing/Exercise';
 
 // Fetching data using async function
 // Trying to fetch JSON data using (1) async function and (2) then() (one line needs to finish execution before moving to next)
@@ -56,7 +59,12 @@ function App() {
           <Route path="" element={<ReflectionIntro/>} />
           <Route path="reflectionTest" element={<PromptContentReflect/>} />
         </Route>
-        <Route path="/breathing" element={<BREATHING />} />
+        <Route path="/breathing" element={<BREATHING />}> {/*first 2 comp - want to have in 2 children*/}
+          <Route path="" element={<Welcome />} /> {/* latter 3 comp of BREATHING */}
+          <Route path="intro" element={<BreathingIntro />} /> 
+          <Route path="instruction" element={<Instruction />} /> 
+          <Route path="exercise" element={<Exercise />} /> 
+        </Route>
         <Route path="/settings" element={<SETTINGS />} />
         <Route path="/themes" element={<Themes />} />
       </Routes> 
