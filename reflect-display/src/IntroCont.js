@@ -38,17 +38,26 @@ export function SubHeading(){
 export function AppOverview(){
     return(
         <div className="container">
-            <div className="row">
-                <div className="col-1">breathing exercise</div>
-                <div className="col-2">take a minute to center your breathing</div>
+            <div className="row-1">
+                <img className="col-1" src="breathing.png" alt="breathing exercise" />
+                <div className="col-2-breathing">
+                    <div className="col-2-title">breathing exercise</div>
+                    <div className="col-2-text">take a minute to center your breathing</div>
+                </div>
             </div>
-            <div className="row">
-                <div className="col-1">reflection time</div>
-                <div className="col-2">reflect on your day with thoughtful prompts</div>
+            <div className="row-2">
+                <img className="col-1" src="reflection.png" alt="breathing exercise" />
+                <div className="col-2-reflection">
+                    <div className="col-2-title">reflection time</div>
+                    <div className="col-2-text">reflect on your day with thoughtful prompts</div>
+                </div>
             </div>
-            <div className="row">
-                <div className="col-1">exposure therapy</div>
-                <div className="col-2">build a better relationship with your body using clinically-proven techniques</div>
+            <div className="row-3">
+                <img className="col-1" src="therapy.png" alt="breathing exercise" />
+                <div className="col-2-therapy">
+                    <div className="col-2-title">mirror exposure therapy</div>
+                    <div className="col-2-text-therapy">build a better relationship with your body using clinically-proven techniques</div>
+                </div>
             </div>
         </div> 
     )

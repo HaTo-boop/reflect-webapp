@@ -158,12 +158,45 @@ button {
   line-height: 47px;
 }
 
-.widget{
-  position: fixed;
-  width: 518px;
-  height: 47px;
+.theme-widget{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 13px;
+  position: absolute;
+  width: 564px;
+  height: 72px;
   left: 50px;
   top: 20px;
+}
+
+theme-widget-label{
+  width: 175px;
+  height: 52px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+}
+
+.theme-frame{
+  align-items: flex-start;
+  padding: 10px;
+  gap: 10px;
+  width: 195px;
+  height: 72px;
+  background: #645CAA;
+  border-radius: 20px;
+}
+
+.theme-text{
+  width: 175px;
+  height: 52px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
 }
 
 .weather {
@@ -436,8 +469,10 @@ button {
 
 .bottom-middle-btn{
   position: absolute;
-  left: 388px;
-  top: 2116px;  
+  width: 240px;
+  height: 240px;
+  left: 420px;
+  top: 2185px;  
 }
 
 .bottom-right-btn{
@@ -486,40 +521,120 @@ button {
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-  gap: 132px;
-
+  gap: 100px;
+  
   position: absolute;
-  width: 879px;
-  height: 1164px;
-  left: 100px;
-  top: 782px;
+  width: 927px;
+  height: 1037px;
+  left: 76px;
+  top: 843px;  
 }
 
-.row {
+.row-1 {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0px;
-  gap: 65px;
-  
-  width: 879px;
-  height: 300px;
+  gap: 40px;
+  width: 927px;
+  height: 227px;
+}
+
+.row-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 40px;
+  width: 769px;
+  height: 279px;
+}
+
+.row-3{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 40px;
+  width: 927px;
+  height: 331px;
 }
 
 .col-1 {
-  flex-basis: 50%;
+  width: 150px;
+  height: 150px;
 }
 
-.col-2 {
-  text-align: left;
-  width: 514px;
-  height: 260px;
-  font-weight: 500;
-  font-size: 50px;
-  line-height: 65px;
-  text-transform: lowercase;
-  font-feature-settings: 'salt' on;
+.col-2-reflection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 0px;
+  gap: 40px;
+  width: 579px;
+  height: 279px;
 }
+
+.col-2-breathing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 0px;
+  gap: 40px;
+  width: 737px;
+  height: 227px;
+}
+
+.col-2-title{
+  width: 567px;
+  height: 75px;
+  font-family: 'Karla';
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 75px;
+  text-align: left;
+}
+
+.col-2-text{
+  width: 737px;
+  height: 52px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: left;
+}
+
+.col-2-text-therapy{
+  width: 737px;
+  height: 156px;
+}
+
+.col-2-reflection {
+  width: 450px;
+  height: 75px;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 75px;
+}
+
+.col-2-therapy{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 0px;
+  gap: 40px;
+  width: 737px;
+  height: 331px;
+}
+
+
 
 .head-intro-frame {
   position: absolute;

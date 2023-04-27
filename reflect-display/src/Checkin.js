@@ -13,11 +13,21 @@ import "slick-carousel/slick/slick-theme.css";
 export function CHECKIN(props) {
     return (
         <div>
-            <RestWidget />
+            <DisplayTheme />
             <Greetings/>
             <Carousel />
-            {/* <Cards>/ */}
             <Skip/>
+        </div>
+    )
+}
+
+export function DisplayTheme(){
+    return (
+        <div className="theme-widget hort-flex">
+            <div className="theme-widget-label">monthly intention:</div>
+            <div className="theme-frame">
+                <div className="theme-text">gratitude</div>
+            </div>
         </div>
     )
 }
@@ -45,23 +55,23 @@ function Carousel() {
         <button> <img className="checkin-card" src="/checkin/happy.png" /> </button>
         <button> <img className="checkin-card" src="/checkin/inspired.png" /> </button>
         <button> <img className="checkin-card" src="/checkin/focused.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/happy.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/inspired.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/focused.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/happy.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/inspired.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/focused.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/happy.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/inspired.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/focused.png" /> </button>
+        <button> <img className="checkin-card" src="/checkin/calm.png" /> </button>
+        <button> <img className="checkin-card" src="/checkin/fulfilled.png" /> </button>
+        <button> <img className="checkin-card" src="/checkin/grateful.png" /> </button>
+        <button> <img className="checkin-card" src="/checkin/anxious.png" /> </button>
+        <button> <img className="checkin-card" src="/checkin/frustrated.png" /> </button>
+        <button> <img className="checkin-card" src="/checkin/fearful.png" /> </button>
+        <button> <img className="checkin-card" src="/checkin/sad.png" /> </button>
+        <button> <img className="checkin-card" src="/checkin/exhausted.png" /> </button>
+        <button> <img className="checkin-card" src="/checkin/confused.png" /> </button>
       </Slider>
     );
   }
   
-function Skip(props) {
+export function Skip(props) {
     return (
         <Link to="/home">
-            <button className="bottom-right-btn button-outer-frame">
+            <button className="bottom-middle-btn button-outer-frame">
                 <div className="button-inner-frame">
                     <div className='button-text'>not now</div>
                 </div>
@@ -69,24 +79,3 @@ function Skip(props) {
         </Link>
     )
 }
-
-/*
-function Cards(props) {
-    return (
-        <div className="horz-flex checkin-row">
-            <button>
-                <img src="happy.png" />
-            </button>
-
-            <button>
-                <img src="inspired.png" />
-            </button>
-
-            <button>
-                <img src="focused.png" />
-            </button>
-        </div>
-    )
-}
-*/
-
