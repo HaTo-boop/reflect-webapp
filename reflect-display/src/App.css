@@ -48,6 +48,7 @@ button {
   font-size: var(--def-font-size);
   line-height: var(--def-line-height);
   text-transform: var(--preferred-text-transform);
+  border: none;
 }
 
 /* SHARED STYLING */
