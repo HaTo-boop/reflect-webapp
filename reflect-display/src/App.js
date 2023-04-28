@@ -14,12 +14,17 @@ import { BREATHING } from './Breathing/Breathing';
 import { BreathingIntro } from './Breathing/BreathingIntro';
 import { SETTINGS } from './Settings';
 import { TherapyIntro } from './TherapySessions/TherapyIntro';
-import { Themes } from './Themes';
+import { Themes } from './Themes/ChooseTheme';
 import { REFLECTION } from './Reflection';
 import { ReflectionIntro, PromptContentReflect } from './ReflectionSessions/ReflectionIntro';
 import { Welcome } from './Breathing/Welcome';
 import { Instruction } from './Breathing/Instruction';
 import { Exercise } from './Breathing/Exercise';
+import { Explaination } from './Breathing/Explaination';
+import { End } from './Breathing/End';
+import { THEMES } from './Themes/Themes';
+import { Intention} from './Themes/Intention';
+import { ChooseTheme } from './Themes/ChooseTheme';
 
 // Fetching data using async function
 // Trying to fetch JSON data using (1) async function and (2) then() (one line needs to finish execution before moving to next)
@@ -64,9 +69,14 @@ function App() {
           <Route path="intro" element={<BreathingIntro />} /> 
           <Route path="instruction" element={<Instruction />} /> 
           <Route path="exercise" element={<Exercise />} /> 
+          <Route path="explaination" element={<Explaination />} /> 
+          <Route path="end" element={<End />} /> 
         </Route>
         <Route path="/settings" element={<SETTINGS />} />
-        <Route path="/themes" element={<Themes />} />
+        <Route path="/themes" element={<THEMES />}>
+          <Route path="" element={<Intention />} />
+          <Route path="choose-theme" element={<ChooseTheme/>} />
+        </Route>
       </Routes> 
       {/* <PromptContent/> */}
     </div>

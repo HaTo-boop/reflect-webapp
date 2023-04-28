@@ -21,7 +21,7 @@ export function Heading(){
     return(
         <div className="head-intro-frame">
             <div className='intro-guide-text'>
-                i'm here to help you take some <div className='yellow-text'>time for yourself</div>
+                i'm here to help you take some <div className='orange-text'>time for yourself</div>
             </div>
         </div>
     )

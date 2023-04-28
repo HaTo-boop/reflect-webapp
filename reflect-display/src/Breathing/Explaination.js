@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
 
-export function Exercise(props) {
+export function Explaination(props) {
     return (
         <div>
-            <Heading />
             <SubHeading />
             <ContinueButton />
             <Flower />
@@ -14,21 +13,15 @@ export function Exercise(props) {
     )
 }
 
-
-export function Heading(){
-    return(
-        <div className="hort-flex heading-frame">
-            <div className='intro-guide-text'>
-            inhale when the flower expands, and exhale when the flower contracts  
-            </div>
-        </div>
-    )
-}
-
 export function SubHeading(){
     return(
-        <div className="small-subhead">
-            press continue when you feel ready to move on
+        <div className="hort-flex heading-frame">
+            <div className='small-heading-text'>    
+            after doing this exercise you may notice becoming more relaxed
+                <br></br>
+                <br></br>
+            it happens because when you intentionally slow down your breathing, it calms down neural paths in the brain that are related to the arousal center   
+            </div>
         </div>
     )
 }
@@ -43,7 +36,7 @@ export function Flower(){
 
 export function ContinueButton(){
     return (
-        <Link to="/breathing/explaination">
+        <Link to="/breathing/end">
             <button className="bottom-middle-btn button-outer-frame">
                 <div className="button-inner-frame">
                     <div className='button-text'>continue</div>

@@ -1,5 +1,5 @@
-import { CardButton } from "./Buttons";
-import './App.css';
+import { CardButton } from "../Buttons";
+import '../App.css';
 
 import { Link } from "react-router-dom"
 
@@ -7,11 +7,11 @@ import { Link } from "react-router-dom"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { DisplayTheme, Skip } from "./Checkin";
+import { DisplayTheme, Skip } from "../Checkin";
 
 // Components appeared in the daily checkin of the mirror
 
-export function Themes(props) {
+export function ChooseTheme(props) {
     return (
         <div>
             <DisplayTheme />

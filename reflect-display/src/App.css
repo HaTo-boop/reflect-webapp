@@ -84,6 +84,17 @@ button {
 
 /* REST MODE */
 
+.affirmation-label{
+  position: absolute;
+  width: 185px;
+  height: 31px;
+  left: 250px;
+  top: 258px;
+  font-size: 24px;
+  line-height: 31px;
+  
+}
+
 /*also use for welcome, greetings, etc*/
 .affirmation-frame{
   display: flex;
@@ -116,25 +127,19 @@ button {
   padding: 30px 40px;
   gap: 20px;
   position: absolute;
-  width: 800px;
-  height: 150px;
-  left: 140px;
-  top: 1628px;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(67.955px);  
+  width: 880px;
+  height: 190px;
+  left: 100px;
+  top: 2185px;
   border-radius: 40px;
 }
 
 .start-btn-text {
-  width: 720px;
-  height: 52px;
+  width: 800px;
+  height: 130px;
   font-weight: 500;
   font-size: 40px;
-  line-height: 52px;
-}
-
-#ok{
-  color: #FFC288;
+  line-height: 65px;
 }
 
 .widget{
@@ -445,7 +450,7 @@ theme-widget-label{
   color: #F87A8F;
 }
 
-.yellow-text{
+.orange-text{
   color: #FFC288;
 }
 
@@ -535,6 +540,14 @@ theme-widget-label{
   top: 8.33%;
   bottom: 8.33%;
   border-radius: 40px;
+}
+
+.finish-btn-outer{
+  background: #7BCF7A;
+}
+
+.finish-btn-inner{
+  background: #69AC68;
 }
 
 .container {
@@ -762,4 +775,89 @@ theme-widget-label{
   height: 47px;
   font-family: 'Karla';
   padding-left: 100px;
+}
+
+.left-stars{
+  position: absolute;
+  width: 132px;
+  height: 129px;
+  left: 121px;
+  top: 274px;  
+}
+
+.right-stars{
+  position: absolute;
+  width: 152px;
+  height: 137px;
+  left: 833px;
+  top: 317px;  
+}
+
+.intention-frame{
+  position: absolute;
+  width: 700px;
+  height: 1000px;
+  left: 190px;
+  top: 635px;
+  background: radial-gradient(100% 88.2% at 0% 14.55%, rgba(255, 254, 252, 0.5) 0%, rgba(255, 254, 252, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(81.86% 67.55% at 89.5% 17.95%, #645CAA 0%, rgba(100, 92, 170, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(103% 50.47% at 80.43% 84.15%, #F87A8F 0%, rgba(248, 122, 143, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  border-radius: 40px;
+}
+
+.intention-card{
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: radial-gradient(103.36% 85.45% at 0% 14.55%, rgba(255, 254, 252, 0.5) 0%, rgba(255, 254, 252, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(81.86% 67.55% at 89.5% 17.95%, #645CAA 0%, rgba(100, 92, 170, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(157.79% 77.32% at 88.36% 79.9%, #F87A8F 0%, rgba(248, 122, 143, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  backdrop-filter: blur(67.955px);
+  border-radius: 40px;
+}
+
+.intention-title-frame{
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 88.29%;
+  background: #FFFEFC;
+  border-radius: 40px 40px 0px 0px;
+}
+
+.intention-title{
+  position: absolute;
+  left: 7.57%;
+  right: 7.71%;
+  top: 4.1%;
+  bottom: 92.2%;
+  font-size: 50px;
+  line-height: 65px;
+  display: flex;
+  align-items: center;
+  color: #202020;
+}
+
+.intention-meaning-frame{
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  border-radius: 20px;
+}
+
+.intention-meaning{
+  position: absolute;
+  left: 7.71%;
+  right: 7.57%;
+  top: 15%;
+  bottom: 5%;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 47px;
+  display: flex;
+  align-items: center;
+  text-align: left;
 }

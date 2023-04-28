@@ -8,6 +8,7 @@ export function RESTMODE(props) {
     return (
         <div>
             <RestWidget/>
+            <div className='affirmation-label'>daily affirmation</div>
             <Affirmations/>
             <Link to="checkin">
                 <StartButton/>
@@ -44,7 +45,7 @@ export function Affirmations(props) {
 export function StartButton(props) {
     return (
         <button className="start-btn-frame">
-          <div className="start-btn-text">press anywhere on remote to start</div>
+          <div className="start-btn-text">press <div className='orange-text'>anywhere</div> on remote to start</div>
         </button>
     )
 }
