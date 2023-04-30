@@ -250,14 +250,29 @@ theme-widget-label{
   width: 354px;
   height: 1555px;
   left: 363px;
-  top: 528px;
+  top: 477px;
+}
+
+.checkin-col:hover{
+  position:fixed;
+  width: 394px;
+  height: 1595px;
+  left: 403px;
+  top: 517px;
 }
 
 .checkin-card{
   width: 350px;
   height: 437px;
-  background: #5A5A5A;
-  backdrop-filter: blur(67.955px);
+  background: radial-gradient(100% 88.2% at 0% 14.55%, rgba(255, 254, 252, 0.5) 0%, rgba(255, 254, 252, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(81.86% 67.55% at 89.5% 17.95%, #645CAA 0%, rgba(100, 92, 170, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(103% 50.47% at 80.43% 84.15%, #F87A8F 0%, rgba(248, 122, 143, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  border-radius: 40px;
+}
+
+.checkin-card:hover{
+  width: 410px;
+  height: 497px;
+  box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(43px);
   border-radius: 40px;
 }
 

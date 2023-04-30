@@ -52,18 +52,18 @@ function Carousel() {
   
     return (
       <Slider {...settings} className="checkin-col">
-        <button> <img className="checkin-card" src="/checkin/happy.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/inspired.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/focused.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/calm.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/fulfilled.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/grateful.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/anxious.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/frustrated.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/fearful.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/sad.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/exhausted.png" /> </button>
-        <button> <img className="checkin-card" src="/checkin/confused.png" /> </button>
+        <Link to="/home"><button> <img className="checkin-card" src="/checkin/happy.png" /></button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/checkin/inspired.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/checkin/focused.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/checkin/calm.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/checkin/fulfilled.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/checkin/grateful.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/checkin/anxious.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/checkin/frustrated.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/checkin/fearful.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/checkin/sad.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/checkin/exhausted.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/checkin/confused.png" /> </button></Link>
       </Slider>
     );
   }

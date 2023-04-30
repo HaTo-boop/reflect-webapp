@@ -42,15 +42,15 @@ function Carousel() {
   
     return (
       <Slider {...settings} className="checkin-col">
-        <button> <img className="checkin-card" src="/themes/balance.png" /> </button>
-        <button> <img className="checkin-card" src="/themes/change.png" /> </button>
-        <button> <img className="checkin-card" src="/themes/confidence.png" /> </button>
-        <button> <img className="checkin-card" src="/themes/gratitude.png" /> </button>
-        <button> <img className="checkin-card" src="/themes/growth.png" /> </button>
-        <button> <img className="checkin-card" src="/themes/health.png" /> </button>
-        <button> <img className="checkin-card" src="/themes/strength.png" /> </button>
-        <button> <img className="checkin-card" src="/themes/truth.png" /> </button>
-        <button> <img className="checkin-card" src="/themes/patience.png" /> </button>
+        <Link to="/home"><button> <img className="checkin-card" src="/themes/balance.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/themes/change.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/themes/confidence.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/themes/gratitude.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/themes/growth.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/themes/health.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/themes/strength.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/themes/truth.png" /> </button></Link>
+        <Link to="/home"><button> <img className="checkin-card" src="/themes/patience.png" /> </button></Link>
       </Slider>
     );
 }
