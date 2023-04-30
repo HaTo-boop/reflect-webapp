@@ -263,7 +263,7 @@ theme-widget-label{
 
 /* HOME SCREEN STYLING */
 
-.feature-col {
+/* .feature-col {
   gap: 29px;
   padding: 0px;
   justify-content: center;
@@ -273,6 +273,135 @@ theme-widget-label{
   right: 0.66%;
   top: 20%;
   bottom: 55%;
+} */
+
+.home-feature-frame{
+  position: absolute;
+  width: 1285px;
+  height: 1270px;
+  left: -365px;
+  top: 528px;
+}
+
+.home-ring{
+  position: absolute;
+  left: 0%;
+  right: 6.61%;
+  top: 5.51%;
+  bottom: 0%;
+
+}
+
+.home-ring-ellipse{
+  box-sizing: border-box;
+  position: absolute;
+  left: 0%;
+  right: 6.61%;
+  top: 5.51%;
+  bottom: 0%;
+  background: linear-gradient(360deg, #645CAA -41.81%, rgba(100, 92, 170, 0.989583) -41.8%, rgba(100, 92, 170, 0.974218) -6.37%, rgba(100, 92, 170, 0) 54.03%);
+  border-radius: 50%;
+  border: 100px;
+}
+
+.home-intention-frame{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  position: absolute;
+  left: 32.37%;
+  right: 33.93%;
+  top: 44.65%;
+  bottom: 41.42%;
+  border-radius: 20px;
+}
+
+.home-intention-label{
+  width: 337px;
+  height: 52px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 52px;
+}
+
+.home-intention-text{
+  width: 433px;
+  height: 125px;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 125px;
+}
+
+.home-breathing-position{
+  position: absolute;
+  left: 36.58%;
+  right: 40.08%;
+  top: -1.65%;
+  bottom: 78.03%; 
+  border-radius: 50%; 
+}
+
+.home-reflection-position{
+  position: absolute;
+  left: 76.65%;
+  right: 0%;
+  top: 36.14%;
+  bottom: 40.24%;
+  border-radius: 50%;
+}
+
+.home-therapy-position{
+  position: absolute;
+  left: 49.26%;
+  right: 27.39%;
+  top: 81.26%;
+  bottom: -4.88%;
+  border-radius: 50%;
+}
+
+.pink-btn-outer-frame{
+  background: #F87A8F;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  border-radius: 50%;
+}
+
+.pink-btn-inner-frame{
+  position: absolute;
+  left: 9.33%;
+  right: 9.33%;
+  top: 9.67%;
+  bottom: 9%;
+  background: rgba(32, 32, 32, 0.2);
+  border-radius: 50%;
+}
+
+.pink-btn-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+  gap: 10px;
+  position: absolute;
+  left: 8.33%;
+  right: 8.33%;
+  top: 6%;
+  bottom: 10.67%;
+  border-radius: 40px;
+}
+
+.feature-title{
+  width: 183px;
+  height: 94px;
+  font-family: 'Karla';
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
 }
 
 .feature-button{

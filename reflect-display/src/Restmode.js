@@ -34,7 +34,7 @@ export function Affirmations(props) {
   const msg = "\"my baby can feel my peace.\"" 
   return (
       <div className="affirmation-frame hort-flex">
-        <div className='affirmation-text'>
+        <div className='affirmation'>
           {msg}
         </div>
       </div>
