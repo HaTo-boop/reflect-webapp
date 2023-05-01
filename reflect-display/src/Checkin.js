@@ -34,8 +34,8 @@ export function DisplayTheme(){
 
 function Greetings(props) {
     return (
-        <div className="affirmation-frame hort-flex">
-            <div className="affirmation-text">hello avery, how are you doing, really?</div>
+        <div className="check-in-question-frame">
+            <div className="check-in-question-text">how are you doing? <br />really</div>
         </div>
     )
 }
