@@ -27,33 +27,28 @@ export function Benefits(){
     return(
         <div className="benefits-container">
             <div className='benefit-frame'>
-                <div className='benefit-checkbox'>
-                    <div className='benefit-text'>reduce stress</div>
-                </div>
+                <div className="benefit-bullet"></div>
+                <div className='benefit-text'>reduce stress</div>
             </div>
 
             <div className='benefit-frame benefit-frame-2'>
-                <div className='benefit-checkbox'>
-                    <div className='benefit-text'>promotes relaxation</div>
-                </div>
+            <div className="benefit-bullet"></div>
+                <div className='benefit-text'>promote relaxation</div>
             </div>
 
             <div className='benefit-frame benefit-frame-3'>
-                <div className='benefit-checkbox'>
-                    <div className='benefit-text'>improve mental clarity</div>
-                </div>
+                <div className="benefit-bullet"></div>
+                <div className='benefit-text'>improve mental clarity</div>
             </div>
 
             <div className='benefit-frame benefit-frame-4'>
-                <div className='benefit-checkbox'>
-                    <div className='benefit-text'>better lung functionality</div>
-                </div>
+                <div className="benefit-bullet"></div>
+                <div className='benefit-text'>better lung functionality</div>
             </div>
 
             <div className='benefit-frame benefit-frame-5'>
-                <div className='benefit-checkbox'>
-                    <div className='benefit-text'>improve cardiovascular health</div>
-                </div>
+                <div className="benefit-bullet"></div>
+                <div className='benefit-text'>improve cardiovascular health</div>
             </div>
         </div>
     )
