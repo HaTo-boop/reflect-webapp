@@ -309,13 +309,13 @@ button {
   top: 477px;
 }
 
-.checkin-col:hover{
+/* .checkin-col:hover{
   position:fixed;
   width: 394px;
   height: 1595px;
   left: 403px;
   top: 517px;
-}
+} */
 
 .checkin-card{
   width: 350px;
@@ -325,8 +325,8 @@ button {
 }
 
 .checkin-card:hover{
-  width: 350px;
-  height: 437px;
+  width: 410px;
+  height: 497px;
   box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(43px);
   border-radius: 40px;
@@ -336,18 +336,6 @@ button {
 }
 
 /* HOME SCREEN STYLING */
-
-/* .feature-col {
-  gap: 29px;
-  padding: 0px;
-  justify-content: center;
-  
-  position: absolute;
-  left: 77.78%;
-  right: 0.66%;
-  top: 20%;
-  bottom: 55%;
-} */
 
 .home-feature-frame{
   position: absolute;
@@ -635,6 +623,7 @@ button {
   width: 800px;
   height: 208px;
   font-size: 80px;
+  font-weight: 500;
   line-height: 104px;
   text-align: center;
   font-feature-settings: 'salt' on; 
@@ -989,6 +978,7 @@ button {
   flex: none;
   order: 1;
   flex-grow: 1;
+  text-align: left;
 }
 
 .left-stars{
@@ -1075,3 +1065,19 @@ button {
   align-items: center;
   text-align: left;
 }
+
+.ready-prompt{
+  position: absolute;
+  width: 700px;
+  height: 65px;
+  left: 190px;
+  top: 2032px;
+
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+  text-align: center;
+}
+

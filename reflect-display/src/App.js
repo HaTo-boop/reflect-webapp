@@ -9,15 +9,16 @@ import { RESTMODE } from './Restmode';
 import { CHECKIN } from './Checkin';
 import { HOME } from './Home';
 import { THERAPY, PromptContentTherapy, ToRandSes } from './TherapySessions/Therapy';
+import { TherapyWelcome } from './TherapySessions/TherapyWelcome';
+import { TherapyIntro } from './TherapySessions/TherapyIntro';
 import { FetchJSON, TherapyChoices } from './TherapySessions/TherapyChoices'
 import { BREATHING } from './Breathing/Breathing';
 import { BreathingIntro } from './Breathing/BreathingIntro';
 import { SETTINGS } from './Settings';
-import { TherapyIntro } from './TherapySessions/TherapyIntro';
-import { Themes } from './Themes/ChooseTheme';
-import { REFLECTION } from './Reflection';
-import { ReflectionIntro, PromptContentReflect } from './ReflectionSessions/ReflectionIntro';
-import { Welcome } from './Breathing/Welcome';
+import { REFLECTION } from './ReflectionSessions/Reflection';
+import { ReflectionWelcome, PromptContentReflect } from './ReflectionSessions/ReflectionWelcome';
+import { ReflectionIntro } from './ReflectionSessions/ReflectionIntro';
+import { BreathingWelcome } from './Breathing/Welcome';
 import { Instruction } from './Breathing/Instruction';
 import { Exercise } from './Breathing/Exercise';
 import { Explaination } from './Breathing/Explaination';
@@ -56,28 +57,36 @@ function App() {
         <Route index path="/" element={<RESTMODE />} />
         <Route path="/home" element={<HOME />} />
         <Route path="/checkin" element={<CHECKIN />} />
+
         <Route path="/therapy" element={<THERAPY />}>
-          <Route path="" element={<TherapyIntro/>} />
+          <Route path="" element={<TherapyWelcome/>} />
+          <Route path="intro" element={<TherapyIntro/>} />
           {/* <Route path="therapyTest" element={<PromptContentTherapy/>} /> */}
           <Route path="session" element ={<ToRandSes/>}/>
         </Route>
+
         <Route path="/reflection" element={<REFLECTION />}>
-          <Route path="" element={<ReflectionIntro/>} />
+          <Route path="" element={<ReflectionWelcome/>} />
+          <Route path="intro" element={<ReflectionIntro/>} />
           <Route path="reflectionTest" element={<PromptContentReflect/>} />
         </Route>
+
         <Route path="/breathing" element={<BREATHING />}> {/*first 2 comp - want to have in 2 children*/}
-          <Route path="" element={<Welcome />} /> {/* latter 3 comp of BREATHING */}
+          <Route path="" element={<BreathingWelcome />} /> {/* latter 3 comp of BREATHING */}
           <Route path="intro" element={<BreathingIntro />} /> 
           <Route path="instruction" element={<Instruction />} /> 
           <Route path="exercise" element={<Exercise />} /> 
           <Route path="explaination" element={<Explaination />} /> 
           <Route path="end" element={<End />} /> 
         </Route>
+
         <Route path="/settings" element={<SETTINGS />} />
+        
         <Route path="/themes" element={<THEMES />}>
           <Route path="" element={<Intention />} />
           <Route path="choose-theme" element={<ChooseTheme/>} />
         </Route>
+
       </Routes> 
       {/* <PromptContent/> */}
     </div>
