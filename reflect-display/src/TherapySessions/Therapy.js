@@ -4,8 +4,6 @@ import '../App.css';
 import { Outlet } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-
-import { fetchTherapy } from "../FetchData";
 import { getRandomIndex } from "../App";
 
 // Shared components for Therapy
@@ -112,6 +110,8 @@ export function ToRandSes() {
                 
             })
     }, [sesId]);
+
+
     return (
         <div className="guide hort-flex">
             {/* Session Title: {title}
