@@ -2,7 +2,10 @@ import { CardButton } from "../Buttons"
 import { Exit } from "../Home"
 import '../App.css';
 
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+
+import { ToRandSes } from "./Therapy";
 
 function Welcome(props) {
     return (
@@ -22,35 +25,19 @@ function UserGuide(props) {
     )
 }
 
+// Continue button link to a random therapy session
+// toRandSes defined in Therapy.js
 export function TherapyIntro() {
     return (
         <div>
             <Welcome/>
             <UserGuide />
-            <Link to="sessions">
-                <button className="okButton">
+            <Link to="session">
+                <button className="okButton" onClick={ToRandSes}>
                     Continue
                 </button>
             </Link>
         </div>
     )
-
- // Logic:   
-    // First page
-        // TherapyIntro
-        // (Page - choose which therapy to folliow)
-            // Call function nextPrompt (through onclick)
-                // redefine UserGuide - guide content -> prompt text
-                // rerender the page (<div>) 
-                    // without the Welcome
-                    // with new prompt
-                    // (recursion) with Continue button that calls nextPrompt again
-
-
-    // Base case
-        // Ending page - YOu have finish the therapy
-        // 2 buttons
-            // 1. return to home page (link to homepage)
-            // 2. repeat this session or choose another session (link to page after TherapyIntro)
 
 }

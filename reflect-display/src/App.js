@@ -8,7 +8,7 @@ import { INTRO_CONT } from './IntroCont';
 import { RESTMODE } from './Restmode';
 import { CHECKIN } from './Checkin';
 import { HOME } from './Home';
-import { THERAPY, PromptContentTherapy } from './TherapySessions/Therapy';
+import { THERAPY, PromptContentTherapy, ToRandSes } from './TherapySessions/Therapy';
 import { FetchJSON, TherapyChoices } from './TherapySessions/TherapyChoices'
 import { BREATHING } from './Breathing/Breathing';
 import { BreathingIntro } from './Breathing/BreathingIntro';
@@ -45,20 +45,21 @@ const testJSON = "/data/reflect-exp-therapy.json";
 const testJSON2 = "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json";
 
 function App() {
-  TherapyChoices();
+  console.log(getRandomIndex(5));
+  console.log(getRandomIndex(6));
+  console.log(getRandomIndex(0));
+
   // Structure of the main App
   return (
     <div className="App">
       <Routes>
-        <Route index path="/intro" element={<INTRO />} />
-        <Route index path="/intro-continue" element={<INTRO_CONT />} />
         <Route index path="/" element={<RESTMODE />} />
         <Route path="/home" element={<HOME />} />
         <Route path="/checkin" element={<CHECKIN />} />
         <Route path="/therapy" element={<THERAPY />}>
           <Route path="" element={<TherapyIntro/>} />
-          <Route path="therapyTest" element={<PromptContentTherapy/>} />
-          <Route path="sessions" element ={<TherapyChoices/>}/>
+          {/* <Route path="therapyTest" element={<PromptContentTherapy/>} /> */}
+          <Route path="session" element ={<ToRandSes/>}/>
         </Route>
         <Route path="/reflection" element={<REFLECTION />}>
           <Route path="" element={<ReflectionIntro/>} />
@@ -84,3 +85,15 @@ function App() {
 }
 
 export default App;
+
+// Random generator returning index for an array
+// Used in: Affirmations, Reflection and Therapy
+export function getRandomIndex(arrayLength) {
+  if (arrayLength > 0 ) {
+    return Math.floor(Math.random() * (arrayLength));
+  } else {
+    return 0;
+  }
+  
+}
+
