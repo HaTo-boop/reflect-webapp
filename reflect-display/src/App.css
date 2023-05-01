@@ -142,15 +142,60 @@ button {
   line-height: 65px;
 }
 
-.widget{
+.time-widget-frame{
   position: absolute;
-  width: 491px;
+  width: 600px;
   height: 52px;
   left: 50px;
-  top: 20px;
+  top: 20px; 
 }
 
-.date-time{
+.widget-time{
+  position: absolute;
+  left: 0%;
+  right: 33.4%;
+  top: 0%;
+  bottom: 0%;
+  font-size: 40px;
+  line-height: 52px;
+}
+
+.widget-weather{
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  gap: 12px;
+  position: absolute;
+  left: 75.56%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  display: inline;
+}
+
+.check-in-question-frame{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+  gap: 20px;
+  position: absolute;
+  width: 880px;
+  height: 190px;
+  left: 100px;
+  top: 179px;
+  border-radius: 40px;
+}
+
+.check-in-question-frame{
+  width: 800px;
+  height: 130px;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+}
+/* .date-time{
   position: absolute;
   width: 340px;
   height: 47px;
@@ -162,7 +207,7 @@ button {
   font-weight: 500;
   font-size: 40px;
   line-height: 47px;
-}
+} */
 
 .theme-widget{
   display: flex;
@@ -280,11 +325,14 @@ button {
 }
 
 .checkin-card:hover{
-  width: 410px;
-  height: 497px;
+  width: 350px;
+  height: 437px;
   box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(43px);
   border-radius: 40px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 /* HOME SCREEN STYLING */
@@ -607,6 +655,7 @@ button {
 
 .orange-text{
   color: #FFC288;
+  display: inline;
 }
 
 .subhead{

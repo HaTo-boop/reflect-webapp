@@ -19,9 +19,9 @@ export function RESTMODE(props) {
 
 export function RestWidget(props) {
   return (
-      <div className='widget horz-flex'>
-        <Time />
-        <Weather />
+      <div className='time-widget-frame'>
+        <div className='widget-time'><Time /></div>
+        <div className='widget-weather'><Weather /></div>
         {/* <div id='theme'>
           monthly theme
             <div style={{ margin:"10px auto" }}><b style={{ fontSize:"35px" }}>balance</b></div>
@@ -41,43 +41,22 @@ export function Affirmations(props) {
   )
 }
 
-// Components appeared in restmode of the mirror
-export function StartButton(props) {
-    return (
-        <button className="start-btn-frame">
-          <div className="start-btn-text">press <div className='orange-text'>anywhere</div> on remote to start</div>
-        </button>
-    )
-}
-
 export function Time() {
-    const [time, setTime] = useState(new Date());
-  
-    useEffect(() => {
-      const timer = setInterval(() => {
-        setTime(new Date());
-      }, 1000);
-      return () => clearInterval(timer);
-    }, []);
-  
-    const timeOptions = {
-      hour: 'numeric',
-      minute: 'numeric',
-      hour12: true
-    };
-  
-    const dateOptions = {
-      weekday: 'long',
-      month: 'long',
-      day: 'numeric',
-    };
-  
-    return (
-      <div className='horx-flex'>
-        {time.toLocaleDateString('en-US', dateOptions)}  {time.toLocaleString('en-US', timeOptions)}
-      </div>
-    );
-  }
+  const [formattedDate, setFormattedDate] = useState('');
+
+  useEffect(() => {
+    const currentDate = new Date();
+    const options = { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true };
+    const formattedDate = currentDate.toLocaleDateString('en-US', options);
+    setFormattedDate(formattedDate);
+  }, []);
+
+  return (
+    <div>
+      <p>{formattedDate}</p>
+    </div>
+  );
+}
 
 // Get the weather API
 export function Weather() {
@@ -100,13 +79,51 @@ export function Weather() {
     <div>
       {weatherData && (
         <div>
-          {weatherData.main.temp} °F
+          {weatherData.main.temp.toFixed(0)}°F
         </div>
       )}
     </div>
   );
 }
 
+// Components appeared in restmode of the mirror
+export function StartButton(props) {
+  return (
+      <button className="start-btn-frame">
+        <div className="start-btn-text">press<div className='orange-text'> anywhere </div>on<br /> remote to start</div>
+      </button>
+  )
+}
+
+
+// export function Time() {
+//     const [time, setTime] = useState(new Date());
+  
+//     useEffect(() => {
+//       const timer = setInterval(() => {
+//         setTime(new Date());
+//       }, 1000);
+//       return () => clearInterval(timer);
+//     }, []);
+  
+//     const timeOptions = {
+//       hour: 'numeric',
+//       minute: 'numeric',
+//       hour12: true
+//     };
+  
+//     const dateOptions = {
+//       weekday: 'long',
+//       month: 'long',
+//       day: 'numeric',
+//     };
+  
+//     return (
+//       <div className='horx-flex'>
+//         {time.toLocaleDateString('en-US', dateOptions)}  {time.toLocaleString('en-US', timeOptions)}
+//       </div>
+//     );
+//   }
 
 
 //Currently not using

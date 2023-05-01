@@ -11,7 +11,7 @@ export function INTRO(){
             <Time />
             <Weather />
             <Heading />
-            <span class="material-symbols-outlined">expand_more</span>
+            {/* <span class="material-symbols-outlined">expand_more</span> */}
             <SubHeading/>
             <ContinueButton />
         </div>
