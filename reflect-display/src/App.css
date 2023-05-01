@@ -86,20 +86,19 @@ button {
 
 .affirmation-label{
   position: absolute;
+  align-items: center;
   width: 185px;
   height: 31px;
   left: 250px;
   top: 258px;
   font-size: 24px;
   line-height: 31px;
-  
 }
 
 /*also use for welcome, greetings, etc*/
 .affirmation-frame{
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   padding: 30px 40px;
   gap: 20px;
@@ -384,7 +383,8 @@ button {
   align-items: flex-start;
   padding: 0px;
   position: absolute;
-  left: 32.37%;
+  width: 433px;
+  left: 416px;
   right: 33.93%;
   top: 44.65%;
   bottom: 41.42%;
@@ -405,6 +405,8 @@ button {
   font-weight: 700;
   font-size: 96px;
   line-height: 125px;
+  display: flex;
+  align-items: center;
 }
 
 .home-breathing-position{
@@ -619,7 +621,6 @@ button {
 .heading-frame{
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   padding: 30px 40px;
   gap: 20px;
@@ -637,7 +638,7 @@ button {
   font-size: 80px;
   line-height: 104px;
   text-align: center;
-  font-feature-settings: 'salt' on; 
+  font-feature-settings: 'salt' on;
 }
 
 .small-heading-text{
