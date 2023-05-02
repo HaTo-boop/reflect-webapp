@@ -1,83 +1,68 @@
-import { CardButton } from "../Buttons"
-import { Exit } from "../Home"
 import '../App.css';
-
 import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
-import { useState } from 'react';
-
-function Welcome(props) {
-    return (
-        <div className="affirmation glassmorphism hort-flex">
-            welcome to reflection time
-        </div>
-    )
-}
-
-function UserGuide(props) {
-    return (
-        <div className="guide glassmorphism hort-flex">
-            let’s take some time and reflect on your day. <br/>
-               <br></br>
-            reflection can help you develop greater self-awareness, make more informed decisions, reduce stress and anxiety, promote personal growth, and improve your relationships with others
-        </div>
-    )
-}
-
-const testArray = ['x', 'y', 'z'];
-
-export function ReflectionIntro() {
-
+export function ReflectionIntro(props) {
     return (
         <div>
-            <Welcome/>
-            <UserGuide />
-            <Link to="reflectionTest">
-                <button className="okButton">
-                    Continue
-                </button>
-            </Link>
+            <Heading />
+            <Benefits />
+            <div className='ready-prompt'>are you ready?</div>
+            <ContinueButton />
         </div>
     )
 }
 
-export function PromptContentReflect() {
-    // prog: how far the user is progressing in the session (=index of prompt in array)
-    // Initial state: starting from the first prompt
-    const [prog, setProg] = useState(0);
-   
-    const nextPrompt = () => {
-        setProg(prog + 1);
-    }
-
-    if (prog < testArray.length) {
-        return (
-            <div>
-                <div className="guide glassmorphism hort-flex">
-                    {testArray[prog]}
-                </div>
-                <button className="okButton" onClick={nextPrompt}>
-                    Continue
-                </button>
+export function Heading(){
+    return(
+        <div className="hort-flex heading-frame">
+            <div className='intro-guide-text'>
+                reflection can help you:
             </div>
-         )
-    } else {
-        return (
-            <div>
-                <div className="guide glassmorphism hort-flex">
-                    Well done! keep up the good work. Im always here to support u. 
-                </div>
-                <div className="hort-flex">
-                    {/* BUG: Linking not working - intend to link back to begining of  session (with first propmt) but not replaying*/}
-                    <Link to="/reflection/reflectionTest">
-                        <button className="okButton">
-                            repeat session
-                        </button>
-                    </Link>
-                    {/* TODO: Create page to choose what therapy session to do */}
-                    
-                </div>
-            </div>
-        )
-    }
+        </div>
+    )
 }
+
+export function Benefits(){
+    return(
+        <div className="benefits-container">
+            <div className='benefit-frame'>
+                <div className="benefit-bullet"></div>
+                <div className='benefit-text'>develop grester self-awareness</div>
+            </div>
+
+            <div className='benefit-frame benefit-frame-2'>
+            <div className="benefit-bullet"></div>
+                <div className='benefit-text'>make more informed decision</div>
+            </div>
+
+            <div className='benefit-frame benefit-frame-3'>
+                <div className="benefit-bullet"></div>
+                <div className='benefit-text'>reduce stress and anxiety</div>
+            </div>
+
+            <div className='benefit-frame benefit-frame-4'>
+                <div className="benefit-bullet"></div>
+                <div className='benefit-text'>promote personal growth</div>
+            </div>
+
+            <div className='benefit-frame benefit-frame-5'>
+                <div className="benefit-bullet"></div>
+                <div className='benefit-text'>improve your relationship with others</div>
+            </div>
+        </div>
+    )
+}
+
+export function ContinueButton(){
+    return (
+        <Link to="/home">
+            <button className="bottom-middle-btn button-outer-frame ">
+                <div className="button-inner-frame">
+                    <div className='button-text'>begin</div>
+                </div>
+            </button>
+        </Link>
+    )
+}
+
