@@ -58,9 +58,13 @@ export function Benefits(){
 export function ContinueButton(){
     return (
         <Link to="/therapy/session">
-            <button className="bottom-middle-btn button-outer-frame " onClick={ToRandSes}>
-                <div className="button-inner-frame">
-                    <div className='button-text'>begin</div>
+            <button className="bottom-middle-btn" onClick={ToRandSes}>
+                <div className="button-outer-frame">
+                    <div className="button-inner-frame">
+                        <div className='pink-btn-content'>
+                            <div className='button-text'>begin</div>
+                        </div>
+                    </div>
                 </div>
             </button>
         </Link>

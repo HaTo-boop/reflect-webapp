@@ -37,9 +37,13 @@ export function SubHeading(){
 export function Continue(){
     return (
         <Link to="/reflection/intro">
-            <button className="bottom-middle-btn button-outer-frame">
-                <div className="button-inner-frame">
-                    <div className='button-text'>continue</div>
+            <button className="bottom-middle-btn">
+                <div className="button-outer-frame">
+                    <div className="button-inner-frame">
+                        <div className='pink-btn-content'>
+                            <div className='button-text'>continue</div>
+                        </div>
+                    </div>
                 </div>
             </button>
         </Link>

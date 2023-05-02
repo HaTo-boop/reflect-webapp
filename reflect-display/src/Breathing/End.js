@@ -40,9 +40,13 @@ export function Flower(){
 export function FinishButton(){
     return (
         <Link to="/home">
-            <button className="bottom-middle-btn button-outer-frame finish-btn-outer">
-                <div className="button-inner-frame finish-btn-inner">
-                    <div className='button-text'>finish</div>
+            <button className="bottom-middle-btn">
+                <div className="button-outer-frame finish-btn-outer">
+                    <div className="button-inner-frame finish-btn-inner">
+                        <div className='pink-btn-content'>
+                            <div className='button-text'>finish</div>
+                        </div>
+                    </div>
                 </div>
             </button>
         </Link>

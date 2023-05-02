@@ -79,12 +79,16 @@ export function Features(props) {
 export function Exit(props) {
     return (
         <Link to="/">
-            <button className="bottom-middle-btn button-outer-frame">
-                <div className="button-inner-frame">
-                    <div className='button-text'>sleep</div>
+            <button className="bottom-middle-btn">
+                <div className="button-outer-frame">
+                    <div className="button-inner-frame">
+                        <div className='pink-btn-content'>
+                            <div className='button-text'>sleep</div>
+                        </div>
+                    </div>
                 </div>
             </button>
-        </Link>
+        </Link>   
     )
 }
 
