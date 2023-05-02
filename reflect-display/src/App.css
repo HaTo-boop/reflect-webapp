@@ -346,23 +346,14 @@ button {
 
 .home-ring{
   position: absolute;
-  left: 0%;
+  left: 28%;
   right: 6.61%;
   top: 5.51%;
   bottom: 0%;
-
 }
 
-.home-ring-ellipse{
-  box-sizing: border-box;
-  position: absolute;
-  left: 0%;
-  right: 6.61%;
-  top: 5.51%;
-  bottom: 0%;
-  background: linear-gradient(360deg, #645CAA -41.81%, rgba(100, 92, 170, 0.989583) -41.8%, rgba(100, 92, 170, 0.974218) -6.37%, rgba(100, 92, 170, 0) 54.03%);
-  border-radius: 50%;
-  border: 100px;
+.home-ring:hover{
+  background-image: 'public/home_ring_hover.png';
 }
 
 .home-intention-frame{
@@ -377,6 +368,7 @@ button {
   top: 44.65%;
   bottom: 41.42%;
   border-radius: 20px;
+  background: none;
 }
 
 .home-intention-label{

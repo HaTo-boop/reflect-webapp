@@ -21,58 +21,57 @@ export function HOME(props) {
 export function Features(props) {
     return (
         <div className="home-feature-frame">
-            <div className="home-ring">
-                <div className="home-ring-ellipse">
+
+            <button> <img className='home-ring' src="home_ring.png" /> 
                     
-                    <Link to="/themes">
-                        <button className="home-intention-frame">
-                            <div className="home-intention-label">monthly intention</div>
-                            <div className="home-intention-text">gratitude</div>
-                        </button>
-                    </Link>
+                <Link to="/themes">
+                    <button className="home-intention-frame">
+                        <div className="home-intention-label">monthly intention</div>
+                        <div className="home-intention-text">gratitude</div>
+                    </button>
+                </Link>
 
-                    <Link to="/breathing">
-                        <button className="home-breathing-position">
-                            <div className="pink-btn-outer-frame">
-                                <div className="pink-btn-inner-frame">
-                                    <div className='pink-btn-content'>
-                                        <img className="feature-logo" src="breathing_logo.png" alt="breathing exercise" />
-                                        <div className="feature-title">breathing exercise</div>
-                                    </div>
+                <Link to="/breathing">
+                    <button className="home-breathing-position">
+                        <div className="pink-btn-outer-frame">
+                            <div className="pink-btn-inner-frame">
+                                <div className='pink-btn-content'>
+                                    <img className="feature-logo" src="breathing_logo.png" alt="breathing exercise" />
+                                    <div className="feature-title">breathing exercise</div>
                                 </div>
                             </div>
-                        </button>
-                    </Link> 
+                        </div>
+                    </button>
+                </Link> 
 
-                    <Link to="/reflection">
-                        <button className="home-reflection-position">
-                            <div className="pink-btn-outer-frame">
-                                <div className="pink-btn-inner-frame">
-                                    <div className='pink-btn-content'>
-                                        <img className="feature-logo" src="reflection_logo.png" alt="breathing exercise" />
-                                        <div className="feature-title">reflection time</div>
-                                    </div>
+                <Link to="/reflection">
+                    <button className="home-reflection-position">
+                        <div className="pink-btn-outer-frame">
+                            <div className="pink-btn-inner-frame">
+                                <div className='pink-btn-content'>
+                                    <img className="feature-logo" src="reflection_logo.png" alt="breathing exercise" />
+                                    <div className="feature-title">reflection time</div>
                                 </div>
                             </div>
-                        </button>
-                    </Link>
+                        </div>
+                    </button>
+                </Link>
 
-                    <Link to="/therapy">
-                        <button className="home-therapy-position">
-                            <div className="pink-btn-outer-frame">
-                                <div className="pink-btn-inner-frame">
-                                    <div className='pink-btn-content'>
-                                        <img className="feature-logo" src="reflection_logo.png" alt="breathing exercise" />
-                                        <div className="feature-title">exposure therapy</div>
-                                    </div>
+                <Link to="/therapy">
+                    <button className="home-therapy-position">
+                        <div className="pink-btn-outer-frame">
+                            <div className="pink-btn-inner-frame">
+                                <div className='pink-btn-content'>
+                                    <img className="feature-logo" src="reflection_logo.png" alt="breathing exercise" />
+                                    <div className="feature-title">exposure therapy</div>
                                 </div>
                             </div>
-                        </button>
-                    </Link>
+                        </div>
+                    </button>
+                </Link>
 
-                </div>
-            </div>
-
+            </button>
+            
         </div>
     )
 }
