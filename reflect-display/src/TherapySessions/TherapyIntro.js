@@ -1,43 +1,69 @@
-import { CardButton } from "../Buttons"
-import { Exit } from "../Home"
 import '../App.css';
-
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import React, { useState, useEffect } from 'react';
 import { ToRandSes } from "./Therapy";
 
-function Welcome(props) {
-    return (
-        <div className="affirmation glassmorphism hort-flex">
-            welcome to exposure therapy
-        </div>
-    )
-}
-
-function UserGuide(props) {
-    return (
-        <div className="guide glassmorphism hort-flex">
-            let’s take some time and reflect on your day. <br/>
-               <br></br>
-            reflection can help you develop greater self-awareness, make more informed decisions, reduce stress and anxiety, promote personal growth, and improve your relationships with others
-        </div>
-    )
-}
-
-// Continue button link to a random therapy session
-// toRandSes defined in Therapy.js
-export function TherapyIntro() {
+export function TherapyIntro(props) {
     return (
         <div>
-            <Welcome/>
-            <UserGuide />
-            <Link to="session">
-                <button className="okButton" onClick={ToRandSes}>
-                    Continue
-                </button>
-            </Link>
+            <Heading />
+            <Benefits />
+            <div className='ready-prompt'>are you ready?</div>
+            <ContinueButton />
         </div>
     )
-
 }
+
+export function Heading(){
+    return(
+        <div className="hort-flex heading-frame">
+            <div className='intro-guide-text'>
+                exposure therapy can help you:
+            </div>
+        </div>
+    )
+}
+
+export function Benefits(){
+    return(
+        <div className="benefits-container">
+            <div className='benefit-frame'>
+                <div className="benefit-bullet"></div>
+                <div className='benefit-text'>improve body image</div>
+            </div>
+
+            <div className='benefit-frame benefit-frame-2'>
+            <div className="benefit-bullet"></div>
+                <div className='benefit-text'>make positive changes in yourself-perception</div>
+            </div>
+
+            <div className='benefit-frame benefit-frame-3'>
+                <div className="benefit-bullet"></div>
+                <div className='benefit-text'>increase confidence in social situations</div>
+            </div>
+
+            <div className='benefit-frame benefit-frame-4'>
+                <div className="benefit-bullet"></div>
+                <div className='benefit-text'>become aware of your negative self-talk</div>
+            </div>
+
+            <div className='benefit-frame benefit-frame-5'>
+                <div className="benefit-bullet"></div>
+                <div className='benefit-text'>identify your distorted perceptions</div>
+            </div>
+        </div>
+    )
+}
+
+export function ContinueButton(){
+    return (
+        <Link to="/therapy/session">
+            <button className="bottom-middle-btn button-outer-frame " onClick={ToRandSes}>
+                <div className="button-inner-frame">
+                    <div className='button-text'>begin</div>
+                </div>
+            </button>
+        </Link>
+    )
+}
+

@@ -5,35 +5,29 @@ import { Outlet } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getRandomIndex } from "../App";
+import { DisplayTheme } from "../Checkin";
+import { TherapyEnd } from "./TherapyEnd";
 
 // Shared components for Therapy
 export function THERAPY(props) {
     return (
         <div>
-            <TherapyWidget/>
+            <DisplayTheme />
+            <DisplayFeature />
             <Outlet/>
-            <Exit/>
         </div>
     )
 }
 
-export function TherapyWidget(props) {
+export function DisplayFeature(){
     return (
-        <div id='rest-widget' className='widget glassmorphism vert-flex'>
-            <div id="timer">
-                timer
-            </div>
-
-            <div id='theme'>
-                monthly theme
-                {/* <CardButton imgSrc="/public/balance_theme.png" content="balance"/> */}
-                <div style={{ margin:"10px auto" }}><b style={{ fontSize:"35px" }}>balance</b></div>
+        <div className='current-feature-frame'>
+            <div className='pink-ellipse'>
+                <div className='current-feature-text'>exposure therapy</div>
             </div>
         </div>
     )
 }
-
-
 
 export function PromptContentTherapy(promptsArray) {
     // `prog`: how far the user is progressing in the session (=index of prompt in array)
@@ -47,30 +41,22 @@ export function PromptContentTherapy(promptsArray) {
     if (prog < promptsArray.length) {
         return (
             <div>
-                <div className="guide glassmorphism hort-flex">
-                    {promptsArray[prog]}
+                <div className="hort-flex heading-frame">
+                    <div className='intro-guide-text'>
+                        {promptsArray[prog]}
+                    </div>
                 </div>
-                <button className="okButton" onClick={nextPrompt}>
-                    Continue
+                <button className="bottom-middle-btn button-outer-frame" onClick={nextPrompt}>
+                    <div className="button-inner-frame">
+                        <div className='button-text'>continue</div>
+                    </div>
                 </button>
             </div>
          )
     } else {
         return (
             <div>
-                <div className="guide glassmorphism hort-flex">
-                    This is the end of the session. Choose what you want to do next.
-                </div>
-                <div className="hort-flex">
-                    {/* BUG: Linking not working - intend to link back to begining of  session (with first propmt) but not replaying*/}
-                    <Link to="/therapy/therapyTest">
-                        <button className="okButton">
-                            repeat session
-                        </button>
-                    </Link>
-                    {/* TODO: Create page to choose what therapy session to do */}
-                    
-                </div>
+                <TherapyEnd/>
             </div>
         )
     }
@@ -104,8 +90,8 @@ export function ToRandSes() {
                 console.log("Chosen session's object: ", chosen);
 
                 // IMPROVE? setState to set multiple state at once
-                setTitle(chosen.title);
-                setIntention(chosen.intention);
+                // setTitle(chosen.title);
+                // setIntention(chosen.intention);
                 setPrompts(chosen.prompts);
                 
             })
@@ -113,15 +99,35 @@ export function ToRandSes() {
 
 
     return (
-        <div className="guide hort-flex">
-            {/* Session Title: {title}
-            <br></br>
-            {intention}
-            <button className="okButton" onClick={() => PromptContentTherapy(prompts)}>
-                Continue
-            </button> */}
-            {PromptContentTherapy(prompts)}
+        <div className="hort-flex heading-frame">
+            <div className='intro-guide-text'>
+                {/* Session Title: {title}
+                <br></br>
+                {intention}
+                <button className="okButton" onClick={() => PromptContentTherapy(prompts)}>
+                    Continue
+                </button> */}
+                {PromptContentTherapy(prompts)}
+            </div>
         </div>
     )
 
 }
+
+// export function TherapyWidget(props) {
+//     return (
+//         <div id='rest-widget' className='widget glassmorphism vert-flex'>
+//             <div id="timer">
+//                 timer
+//             </div>
+
+//             <div id='theme'>
+//                 monthly theme
+//                 {/* <CardButton imgSrc="/public/balance_theme.png" content="balance"/> */}
+//                 <div style={{ margin:"10px auto" }}><b style={{ fontSize:"35px" }}>balance</b></div>
+//             </div>
+//         </div>
+//     )
+// }
+
+
