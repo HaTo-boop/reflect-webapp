@@ -104,8 +104,8 @@ export function ToRandSes() {
                 console.log("Chosen session's object: ", chosen);
 
                 // IMPROVE? setState to set multiple state at once
-                setTitle(chosen.title);
-                setIntention(chosen.intention);
+                // setTitle(chosen.title);
+                // setIntention(chosen.intention);
                 setPrompts(chosen.prompts);
                 
             })
