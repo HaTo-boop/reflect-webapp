@@ -89,8 +89,8 @@ button {
   align-items: center;
   width: 185px;
   height: 31px;
-  left: 250px;
-  top: 258px;
+  left: 200px;
+  top: 288px;
   font-size: 24px;
   line-height: 31px;
 }
@@ -151,25 +151,37 @@ button {
 
 .widget-time{
   position: absolute;
+  text-align: center;
   left: 0%;
   right: 33.4%;
   top: 0%;
   bottom: 0%;
   font-size: 40px;
   line-height: 52px;
+  text-transform: capitalize;
+}
+
+.widget-bullet{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 69.86%;
+  right: 27.7%;
+  top: 110%;
+  bottom: 38.46%;
+  background-color: #FFFEFC;
+  border-radius: 50%;
 }
 
 .widget-weather{
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
+  padding: 42.5px;
   gap: 12px;
   position: absolute;
-  left: 75.56%;
+  left: 66.6%;
   right: 0%;
   top: 0%;
   bottom: 0%;
-  display: inline;
+  text-transform: capitalize;
 }
 
 .check-in-question-frame{

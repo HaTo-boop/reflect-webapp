@@ -21,6 +21,7 @@ export function RestWidget(props) {
   return (
       <div className='time-widget-frame'>
         <div className='widget-time'><Time /></div>
+        <div className="widget-bullet"></div>
         <div className='widget-weather'><Weather /></div>
         {/* <div id='theme'>
           monthly theme
