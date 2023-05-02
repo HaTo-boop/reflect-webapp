@@ -438,6 +438,16 @@ button {
   border-radius: 50%;
 }
 
+.pink-btn-outer-frame:hover{
+  background: #F87A8F;
+  position: absolute;
+  left: -6.67%;
+  right: -6.67%;
+  top: -6.67%;
+  bottom: -6.67%;
+  border-radius: 50%;
+}
+
 .pink-btn-inner-frame{
   position: absolute;
   left: 9.33%;
@@ -699,20 +709,21 @@ button {
   top: 2185px;  
 }
 
-.bottom-right-btn{
-  position: absolute;
-  width: 240px;
-  height: 240px;
-  left: 715px;
-  top: 2195px;
-}
-
 .button-outer-frame{
   position: absolute;
-  width: 240px;
-  height: 240px;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
   border-radius: 50%;
   background: #645CAA;
+}
+
+.button-outer-frame:hover{
+  left: -8.33%;
+  right: -8.33%;
+  top: -8.33%;
+  bottom: -8.33%;
 }
 
 .button-inner-frame{

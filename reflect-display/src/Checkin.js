@@ -71,9 +71,13 @@ function Carousel() {
 export function Skip(props) {
     return (
         <Link to="/home">
-            <button className="bottom-middle-btn button-outer-frame">
-                <div className="button-inner-frame">
-                    <div className='button-text'>not now</div>
+            <button className="bottom-middle-btn">
+                <div className="button-outer-frame">
+                    <div className="button-inner-frame">
+                        <div className='pink-btn-content'>
+                            <div className='button-text'>not now</div>
+                        </div>
+                    </div>
                 </div>
             </button>
         </Link>

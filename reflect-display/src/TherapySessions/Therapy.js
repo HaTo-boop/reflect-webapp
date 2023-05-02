@@ -46,9 +46,13 @@ export function PromptContentTherapy(promptsArray) {
                         {promptsArray[prog]}
                     </div>
                 </div>
-                <button className="bottom-middle-btn button-outer-frame" onClick={nextPrompt}>
-                    <div className="button-inner-frame">
-                        <div className='button-text'>continue</div>
+                <button className="bottom-middle-btn" onClick={nextPrompt}>
+                    <div className="button-outer-frame">
+                        <div className="button-inner-frame">
+                            <div className='pink-btn-content'>
+                                <div className='button-text'>continue</div>
+                            </div>
+                        </div>
                     </div>
                 </button>
             </div>
