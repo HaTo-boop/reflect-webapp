@@ -43,8 +43,8 @@ export function PromptContentTherapy(promptsArray) {
             <div>
                 <div className="hort-flex heading-frame">
                     <div className='intro-guide-text'>
-                        {promptsArray[prog]}
-                    </div>
+                    {promptsArray[prog]}
+                </div>
                 </div>
                 <button className="bottom-middle-btn button-outer-frame" onClick={nextPrompt}>
                     <div className="button-inner-frame">
@@ -65,12 +65,9 @@ export function PromptContentTherapy(promptsArray) {
 // Handle continue button click in TherapyIntro.js . Displaying info of random
 export function ToRandSes() {
     const [sesId, setSesId] = useState(0);
-    const [title, setTitle] = useState("");
-    const [intention, setIntention] = useState("");
+    // const [title, setTitle] = useState("");
+    // const [intention, setIntention] = useState("");
     const [prompts, setPrompts] = useState([]);
-
-    // state to separate 
-    // const [start, setStart] = 
 
     console.log('render');
     // hook only run when there is a change in sesId
@@ -101,12 +98,12 @@ export function ToRandSes() {
     return (
         <div className="hort-flex heading-frame">
             <div className='intro-guide-text'>
-                {/* Session Title: {title}
-                <br></br>
-                {intention}
-                <button className="okButton" onClick={() => PromptContentTherapy(prompts)}>
-                    Continue
-                </button> */}
+            {/* Session Title: {title}
+            <br></br>
+            {intention}
+            <button className="okButton" onClick={() => PromptContentTherapy(prompts)}>
+                Continue
+            </button> */}
                 {PromptContentTherapy(prompts)}
             </div>
         </div>

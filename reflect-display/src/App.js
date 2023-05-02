@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 
 import logo from './logo.svg';
 import './App.css';
@@ -46,9 +47,7 @@ const testJSON = "/data/reflect-exp-therapy.json";
 const testJSON2 = "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json";
 
 function App() {
-  console.log(getRandomIndex(5));
-  console.log(getRandomIndex(6));
-  console.log(getRandomIndex(0));
+  const [theme, setTheme] = useState('general');
 
   // Structure of the main App
   return (

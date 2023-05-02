@@ -8,6 +8,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { DisplayTheme, Skip } from "../Checkin";
+import '../App';
 
 // Components appeared in the daily checkin of the mirror
 
