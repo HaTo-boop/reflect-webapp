@@ -100,16 +100,8 @@ export function ToRandSes() {
 
 
     return (
-        <div className="hort-flex heading-frame">
-            <div className='intro-guide-text'>
-            {/* Session Title: {title}
-            <br></br>
-            {intention}
-            <button className="okButton" onClick={() => PromptContentTherapy(prompts)}>
-                Continue
-            </button> */}
-                {PromptContentTherapy(prompts)}
-            </div>
+        <div>
+            {PromptContentTherapy(prompts)}
         </div>
     )
 
