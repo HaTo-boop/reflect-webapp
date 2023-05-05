@@ -1097,3 +1097,45 @@ button {
   text-align: center;
 }
 
+.flower-container{
+  position: absolute;
+  width: 1317px;
+  height: 1480px;
+  left: 345px;
+  top: 50%;
+}
+
+.flower-petal {
+  /* Set the initial position and size of the petal */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  animation-name: breathing-flower;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.flower-container.breathing .flower-petal {
+  /* Add a larger scale factor to the petal when the user breathes in */
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
+  transform-origin: center;
+  animation-name: breathing-flower-breathe-in;
+}
+
+@keyframes breathing-flower {
+  0% {
+    transform: scale(1); /* Start with the petals at their default size */
+    transform: rotate(34.91deg);
+  }
+  50% {
+    transform: scale(2.5); /* Increase the size of the petals halfway through the animation */
+  }
+  100% {
+    transform: scale(5); /* Return the petals to their default size at the end of the animation */
+    transform: rotate(34.91deg);
+  }
+}

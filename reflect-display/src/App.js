@@ -20,9 +20,9 @@ import { REFLECTION } from './ReflectionSessions/Reflection';
 import { ReflectionWelcome, PromptContentReflect } from './ReflectionSessions/ReflectionWelcome';
 import { ReflectionIntro } from './ReflectionSessions/ReflectionIntro';
 import { BreathingWelcome } from './Breathing/Welcome';
-import { Instruction } from './Breathing/Instruction';
+//import { Instruction } from './Breathing/InstructionTrash';
 import { Exercise } from './Breathing/Exercise';
-import { Explaination } from './Breathing/Explaination';
+//import { Explaination } from './Breathing/ExplainationTrash';
 import { End } from './Breathing/End';
 import { THEMES } from './Themes/Themes';
 import { Intention} from './Themes/Intention';
@@ -73,9 +73,7 @@ function App() {
         <Route path="/breathing" element={<BREATHING />}> {/*first 2 comp - want to have in 2 children*/}
           <Route path="" element={<BreathingWelcome />} /> {/* latter 3 comp of BREATHING */}
           <Route path="intro" element={<BreathingIntro />} /> 
-          <Route path="instruction" element={<Instruction />} /> 
           <Route path="exercise" element={<Exercise />} /> 
-          <Route path="explaination" element={<Explaination />} /> 
           <Route path="end" element={<End />} /> 
         </Route>
 

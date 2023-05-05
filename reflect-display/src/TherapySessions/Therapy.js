@@ -44,7 +44,7 @@ export function PromptContentTherapy(promptsArray) {
                 <div className="hort-flex heading-frame">
                     <div className='intro-guide-text'>
                     {promptsArray[prog]}
-                </div>
+                    </div>
                 </div>
                 <button className="bottom-middle-btn" onClick={nextPrompt}>
                     <div className="button-outer-frame">

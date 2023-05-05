@@ -56,7 +56,7 @@ export function Benefits(){
 
 export function ContinueButton(){
     return (
-        <Link to="/breathing/instruction">
+        <Link to="/breathing/exercise">
             <button className="bottom-middle-btn">
                 <div className="button-outer-frame">
                     <div className="button-inner-frame">

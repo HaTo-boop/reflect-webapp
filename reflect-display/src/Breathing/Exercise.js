@@ -8,8 +8,8 @@ export function Exercise(props) {
         <div>
             <Heading />
             <SubHeading />
-            <ContinueButton />
             <Flower />
+            <ContinueButton />
         </div>
     )
 }
@@ -35,15 +35,17 @@ export function SubHeading(){
 
 export function Flower(){
     return(
-        <div className="center-btn">
-            
+        <div className="flower-container">
+            <img className="flower-petal" src="/breathing/Flower1.png" alt="Flower petal" />
+            <img className="flower-petal" src="/breathing/Flower2.png" alt="Flower petal" />
         </div>
+
     )
 }
 
 export function ContinueButton(){
     return (
-        <Link to="/breathing/explaination">
+        <Link to="/breathing/end">
             <button className="bottom-middle-btn">
                 <div className="button-outer-frame">
                     <div className="button-inner-frame">
