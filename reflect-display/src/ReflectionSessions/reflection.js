@@ -31,7 +31,7 @@ export function ToRandRef() {
     const chosenTheme = 'gratitude';
     const [refs, setRefs] = useState([]);
 
-    console.log('render');
+    console.log('ToRandRef renders');
     // hook only run when there is a change in refs
     useEffect(() => {
         fetch('/data/reflect-reflections.json')
@@ -39,33 +39,33 @@ export function ToRandRef() {
             .then(json => {
                 // Get array of reflection questions based on the theme
                 let refArray = json[chosenTheme];
-                
+                console.log(refArray);
                 // Generate 3 random reflection questions (with individual replacement)
-                let randInds = [];  //to handle when randomly generated index are repeated among generations
-                let randRefs = [];
+                // let randInds = [];  //to handle when randomly generated index are repeated among generations
+                // let randRefs = [];
 
-                for (let i = 0; i < 3; i++) {
-                    let index = getRandomIndex(refArray.length);
-                    // if index is already generated, continue generating new random index
-                    while (randInds.includes(index)) {
-                        index = getRandomIndex(refArray.length)
-                    }
-                    randInds.push(index);
-                    randRefs.push(refArray[index]);
-                }
+                // for (let i = 0; i < 3; i++) {
+                //     let index = getRandomIndex(refArray.length);
+                //     // if the index generated duplicates with one of those already in the randInds, run generator again
+                //     while (randInds.includes(index)) {
+                //         index = getRandomIndex(refArray.length);
+                //     }
+                //     console.log(refArray[index]);
+                //     randInds.push(index);
+                //     randRefs.push(refArray[index]);
+                // }
+                // console.log(randInds);
                 
                 // Update refs
-                setRefs(randRefs);
+                setRefs(refArray);
                 
             })
     }, [refs]);
 
 
     return (
-        <div className="hort-flex heading-frame">
-            <div className='intro-guide-text'>
-                {PromptContentTherapy(refs)}
-            </div>
+        <div>
+            {PromptContentTherapy(refs)}
         </div>
     )
 

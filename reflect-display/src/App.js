@@ -16,7 +16,7 @@ import { FetchJSON, TherapyChoices } from './TherapySessions/TherapyChoices'
 import { BREATHING } from './Breathing/Breathing';
 import { BreathingIntro } from './Breathing/BreathingIntro';
 import { SETTINGS } from './Settings';
-import { REFLECTION, ToRandRef } from './ReflectionSessions/Reflection';
+import { REFLECTION, ToRandRef } from './ReflectionSessions/reflection';
 import { ReflectionWelcome, PromptContentReflect } from './ReflectionSessions/ReflectionWelcome';
 import { ReflectionIntro } from './ReflectionSessions/ReflectionIntro';
 import { BreathingWelcome } from './Breathing/Welcome';
@@ -60,8 +60,8 @@ function App() {
         <Route path="/therapy" element={<THERAPY />}>
           <Route path="" element={<TherapyWelcome/>} />
           <Route path="intro" element={<TherapyIntro/>} />
-          {/* <Route path="therapyTest" element={<PromptContentTherapy/>} /> */}
-          {/* <Route path="session" element ={<ToRandSes/>}/> */}
+          <Route path="therapyTest" element={<PromptContentTherapy/>} />
+          <Route path="session" element ={<ToRandSes/>}/>
         </Route>
 
         <Route path="/reflection" element={<REFLECTION />}>
@@ -102,5 +102,51 @@ export function getRandomIndex(arrayLength) {
     return 0;
   }
   
+}
+
+// NICE-TO-HAVE Improvement: still in the work - endPage is not passed correctly
+// 
+// Because function is used in more than 1 place, intend to create a component so that it's reusable. Problem is the end page for each
+//  feature is different => Still figure out how to pass correctly
+// Displaying the content of an array one by one, progress using a Continue button.
+// Used in: Reflection and Therapy
+// Params:
+// - promptsArray: array to be displayed
+// - endPage: pass the endPage components - specific to each feature
+export function PromptContentDisplay(promptsArray, endPage) {
+  // `prog`: how far the user is progressing in the session (=index of prompt in array)
+  // Initial state: starting from the first prompt
+  const [prog, setProg] = useState(0);
+ 
+  const nextPrompt = () => {
+      setProg(prog + 1);
+  }
+
+  if (prog < promptsArray.length) {
+      return (
+          <div>
+              <div className="hort-flex heading-frame">
+                  <div className='intro-guide-text'>
+                  {promptsArray[prog]}
+                  </div>
+              </div>
+              <button className="bottom-middle-btn" onClick={nextPrompt}>
+                  <div className="button-outer-frame">
+                      <div className="button-inner-frame">
+                          <div className='pink-btn-content'>
+                              <div className='button-text'>continue</div>
+                          </div>
+                      </div>
+                  </div>
+              </button>
+          </div>
+       )
+  } else {
+      return (
+          <div>
+              <endPage/>
+          </div>
+      )
+  }
 }
 

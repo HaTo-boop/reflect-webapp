@@ -1,7 +1,7 @@
 import '../App.css';
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import { ToRandRef } from './Reflection';
+import { ToRandRef } from './reflection';
 
 export function ReflectionIntro(props) {
     return (

@@ -4,7 +4,7 @@ import '../App.css';
 import { Outlet } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { getRandomIndex } from "../App";
+import { getRandomIndex, PromptContentDisplay } from "../App";
 import { DisplayTheme } from "../Checkin";
 import { TherapyEnd } from "./TherapyEnd";
 
@@ -71,7 +71,7 @@ export function ToRandSes() {
     const [sesId, setSesId] = useState(0);  //can be omit since only need to display prompt - will do latre bc low in priority
     const [prompts, setPrompts] = useState([]);
 
-    console.log('render');
+    console.log('ToRandSes renders');
     // hook only run when there is a change in sesId
     useEffect(() => {
         fetch('/data/reflect-exp-therapy.json')
@@ -97,7 +97,7 @@ export function ToRandSes() {
 
     return (
         <div>
-            {PromptContentTherapy(prompts)}
+            {PromptContentDisplay(prompts, TherapyEnd)}
         </div>
     )
 
