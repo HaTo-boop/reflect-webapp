@@ -32,7 +32,37 @@ export function RestWidget(props) {
 }
 
 export function Affirmations(props) {
-  const msg = "\"my baby can feel my peace.\"" 
+  const msg = "\"my baby can feel my peace.\""
+  const chosenTheme = 'gratitude';
+  const [aff, setAff] = useState("my baby can feel my peace.");
+
+  console.log('render');
+  // hook only run when there is a change in 
+  fetch('/data/reflect-affirmations.json')
+      .then(response => response.json())
+      .then(json => {
+          // Get array of reflection questions based on the theme
+          let aaffArray = json[chosenTheme];
+          
+          // Generate 3 random reflection questions (with individual replacement)
+          let randInds = [];  //to handle when randomly generated index are repeated among generations
+          let randRefs = [];
+
+          for (let i = 0; i < 3; i++) {
+              let index = getRandomIndex(refArray.length);
+              // if index is already generated, continue generating new random index
+              while (randInds.includes(index)) {
+                  index = getRandomIndex(refArray.length)
+              }
+              randInds.push(index);
+              randRefs.push(refArray[index]);
+          }
+          
+          // Update refs
+          setRefs(randRefs);
+          
+      })
+
   return (
       <div className="affirmation-frame hort-flex">
         <div className='affirmation'>

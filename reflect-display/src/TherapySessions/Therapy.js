@@ -68,9 +68,7 @@ export function PromptContentTherapy(promptsArray) {
 
 // Handle continue button click in TherapyIntro.js . Displaying info of random
 export function ToRandSes() {
-    const [sesId, setSesId] = useState(0);
-    // const [title, setTitle] = useState("");
-    // const [intention, setIntention] = useState("");
+    const [sesId, setSesId] = useState(0);  //can be omit since only need to display prompt - will do latre bc low in priority
     const [prompts, setPrompts] = useState([]);
 
     console.log('render');
@@ -79,7 +77,7 @@ export function ToRandSes() {
         fetch('/data/reflect-exp-therapy.json')
             .then(response => response.json())
             .then(json => {
-
+                // generate a random index to choose a random session from list of sessions in josn file
                 setSesId(getRandomIndex(json.length));
                 // PRINT to inspect
                 console.log("length: ", json.length);
@@ -90,9 +88,7 @@ export function ToRandSes() {
                 
                 console.log("Chosen session's object: ", chosen);
 
-                // IMPROVE? setState to set multiple state at once
-                // setTitle(chosen.title);
-                // setIntention(chosen.intention);
+                // update prompts to be the array of prompts for the session
                 setPrompts(chosen.prompts);
                 
             })

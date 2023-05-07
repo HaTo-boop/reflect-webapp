@@ -16,7 +16,7 @@ import { FetchJSON, TherapyChoices } from './TherapySessions/TherapyChoices'
 import { BREATHING } from './Breathing/Breathing';
 import { BreathingIntro } from './Breathing/BreathingIntro';
 import { SETTINGS } from './Settings';
-import { REFLECTION } from './ReflectionSessions/Reflection';
+import { REFLECTION, ToRandRef } from './ReflectionSessions/Reflection';
 import { ReflectionWelcome, PromptContentReflect } from './ReflectionSessions/ReflectionWelcome';
 import { ReflectionIntro } from './ReflectionSessions/ReflectionIntro';
 import { BreathingWelcome } from './Breathing/Welcome';
@@ -61,13 +61,14 @@ function App() {
           <Route path="" element={<TherapyWelcome/>} />
           <Route path="intro" element={<TherapyIntro/>} />
           {/* <Route path="therapyTest" element={<PromptContentTherapy/>} /> */}
-          <Route path="session" element ={<ToRandSes/>}/>
+          {/* <Route path="session" element ={<ToRandSes/>}/> */}
         </Route>
 
         <Route path="/reflection" element={<REFLECTION />}>
           <Route path="" element={<ReflectionWelcome/>} />
           <Route path="intro" element={<ReflectionIntro/>} />
           <Route path="reflectionTest" element={<PromptContentReflect/>} />
+          <Route path="questions" element={<ToRandRef/>}/>
         </Route>
 
         <Route path="/breathing" element={<BREATHING />}> {/*first 2 comp - want to have in 2 children*/}

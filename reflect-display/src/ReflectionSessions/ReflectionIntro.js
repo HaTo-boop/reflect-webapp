@@ -1,6 +1,7 @@
 import '../App.css';
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import { ToRandRef } from './Reflection';
 
 export function ReflectionIntro(props) {
     return (
@@ -56,8 +57,8 @@ export function Benefits(){
 
 export function ContinueButton(){
     return (
-        <Link to="/home">
-            <button className="bottom-middle-btn">
+        <Link to="/reflection/questions">
+            <button className="bottom-middle-btn" onClick={ToRandRef}>
                 <div className="button-outer-frame">
                     <div className="button-inner-frame">
                         <div className='pink-btn-content'>
