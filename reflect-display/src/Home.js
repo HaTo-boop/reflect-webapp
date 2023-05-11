@@ -22,19 +22,11 @@ export function HOME(props) {
 
 export function Features(props) {
     return (
-        <div className="home-feature-frame">
-            
-            <button> 
-                {/* <img className='home-ring' src="home_ring.png" /> */}
+        <Link to="/themes">
+            <button className="home-feature-frame">
                 <ImageComponent />
-
-                <Link to="/themes">
-                    <button className="home-intention-frame">
-                        <div className="home-intention-label">monthly intention</div>
-                        <div className="home-intention-text">gratitude</div>
-                    </button>
-                </Link>
-
+                {/* <img className='home-ring' src="home_ring.png" /> */}
+                
                 <Link to="/breathing">
                     <button className="home-breathing-position">
                         <div className="pink-btn-outer-frame">
@@ -73,10 +65,8 @@ export function Features(props) {
                         </div>
                     </button>
                 </Link>
-
-            </button> 
-            
-        </div>
+            </button>   
+        </Link>
     )
 }
 
@@ -113,10 +103,12 @@ class ImageComponent extends Component {
       const { currentImage } = this.state;
   
       return (
-            <button 
-            onMouseEnter={this.handleImageChange} 
-            onMouseLeave={this.handleImageLeave}>
+            <button onMouseEnter={this.handleImageChange} onMouseLeave={this.handleImageLeave}>
                 <img className="home-ring" src={currentImage} alt="Current Image" />
+                <button className="home-intention-frame" onMouseEnter={this.handleImageChange} onMouseLeave={this.handleImageLeave}>
+                    <div className="home-intention-label">monthly intention</div>
+                    <div className="home-intention-text">gratitude</div>
+                </button>
             </button>
       );
     }
