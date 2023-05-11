@@ -69,7 +69,7 @@ export function PromptContentTherapy(promptsArray) {
 // Handle continue button click in TherapyIntro.js . Displaying info of random
 export function ToRandSes() {
     const [sesId, setSesId] = useState(0);  //can be omit since only need to display prompt - will do latre bc low in priority
-    const [prompts, setPrompts] = useState([]);
+    const [prompts, setPrompts] = useState(() => {return []});
 
     console.log('ToRandSes renders');
     // hook only run when there is a change in sesId
@@ -97,7 +97,7 @@ export function ToRandSes() {
 
     return (
         <div>
-            {PromptContentDisplay(prompts, TherapyEnd)}
+            {PromptContentTherapy(prompts)}
         </div>
     )
 
