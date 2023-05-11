@@ -206,19 +206,6 @@ button {
   font-size: 50px;
   line-height: 65px;
 }
-/* .date-time{
-  position: absolute;
-  width: 340px;
-  height: 47px;
-  left: 50px;
-  top: 20px;
-
-  font-family: 'Karla';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 47px;
-} */
 
 .theme-widget{
   display: flex;
@@ -280,13 +267,17 @@ button {
   top: 20px;
 }
 
-#theme {
-  width: 142px;
-  height: 23px;
-
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 23px;
+.theme-question-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 880px;
+  height: 190px;
+  left: 100px;
+  top: 254px;
+  border-radius: 40px;
 }
 
 .material-symbols-outlined {
@@ -312,21 +303,28 @@ button {
 
 /* DAILY CHECKIN*/
 
-.checkin-col{
+.carousel-container{
   position: absolute;
   width: 354px;
   height: 1555px;
   left: 363px;
-  top: 477px;
+  top: 528px;
 }
 
-/* .checkin-col:hover{
-  position:fixed;
+.checkin-col{
+  position: absolute;
+  width: 394px;
+  left: calc(50% - 400px/2);
+  top: 0%;
+  bottom: 7.97%;
+  align-items: center;
+
+  /* position: absolute;
   width: 394px;
   height: 1595px;
-  left: 403px;
-  top: 517px;
-} */
+  left: 363px;
+  top: 477px; */
+}
 
 .checkin-card{
   width: 350px;
@@ -336,14 +334,43 @@ button {
 }
 
 .checkin-card:hover{
-  width: 410px;
-  height: 497px;
+  width: 380px;
+  height: 467px;
   box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(43px);
   border-radius: 40px;
   flex: none;
   order: 0;
   flex-grow: 0;
+}
+/* 
+.carousel-dot-container{
+  position: absolute;
+  top: 200%;
+}
+
+.carousel-dot{
+  width: 25px;
+  height: 25px;
+  background-color: #FFFEFC;
+  border-radius: 50%;
+}
+
+.carousel-dot.active {
+  background-color: #858585;
+} */
+
+.carousel-container .slick-dots li button:before {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #f8f8f8; /* Inactive dot color */
+}
+
+.carousel-container .slick-dots li.slick-active button:before {
+  background-color: #FFFEFC; /* Active dot color */
 }
 
 /* HOME SCREEN STYLING */
@@ -365,7 +392,11 @@ button {
 }
 
 .home-ring:hover{
-  background-image: 'public/home_ring_hover.png';
+  position: absolute;
+  left: 28%;
+  right: 6.61%;
+  top: 5.51%;
+  bottom: 0%;
 }
 
 .home-intention-frame{
@@ -1139,3 +1170,4 @@ button {
     transform: rotate(34.91deg);
   }
 }
+

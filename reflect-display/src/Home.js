@@ -1,7 +1,9 @@
 import { CardButton } from "./Buttons"
 import { Widget } from "./Widget"
 import { Affirmations, RestWidget, Settings } from "./Restmode"
+import React, { useState, Component } from "react";
 import './App.css';
+
 
 import { Link } from 'react-router-dom';
 
@@ -21,9 +23,11 @@ export function HOME(props) {
 export function Features(props) {
     return (
         <div className="home-feature-frame">
+            
+            <button> 
+                {/* <img className='home-ring' src="home_ring.png" /> */}
+                <ImageComponent />
 
-            <button> <img className='home-ring' src="home_ring.png" /> 
-                    
                 <Link to="/themes">
                     <button className="home-intention-frame">
                         <div className="home-intention-label">monthly intention</div>
@@ -70,7 +74,7 @@ export function Features(props) {
                     </button>
                 </Link>
 
-            </button>
+            </button> 
             
         </div>
     )
@@ -91,6 +95,34 @@ export function Exit(props) {
         </Link>   
     )
 }
+
+class ImageComponent extends Component {
+    state = {
+      currentImage: 'home_ring.png',
+    };
+  
+    handleImageChange = () => {
+      this.setState({ currentImage: "home_ring_hover.png" });
+    };
+
+    handleImageLeave = () => {
+        this.setState({ currentImage: "home_ring.png" });
+      };
+  
+    render() {
+      const { currentImage } = this.state;
+  
+      return (
+            <button 
+            onMouseEnter={this.handleImageChange} 
+            onMouseLeave={this.handleImageLeave}>
+                <img className="home-ring" src={currentImage} alt="Current Image" />
+            </button>
+      );
+    }
+  }
+  
+  export default ImageComponent;
 
 /* Old exit button, link back to the home page
 export function Exit(props) {

@@ -1,7 +1,7 @@
 import './App.css';
 
 import { Link } from "react-router-dom"
-import { RestWidget } from './Restmode';
+import { useState } from 'react';
 
 // Carousel 
 import Slider from "react-slick";
@@ -41,30 +41,48 @@ function Greetings(props) {
 }
 
 function Carousel() {
+
+    const [activeSlide, setActiveSlide] = useState(0);
+
     const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 3, 
-      vertical: true
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3, 
+        arrows: false,
+        rtl: false,
+        vertical: true,
+        beforeChange: (current, next) => setActiveSlide(next), 
+        // nextArrow: <NextArrow />,
+        // prevArrow: <PrevArrow />,
+        // customPaging: function (i) {
+        //     return (
+        //         <div className="carousel-dot-container">
+        //             <div className={`carousel-dot ${activeSlide === i ? 'active' : ''}`} />
+        //         </div>
+        //     );
+        // },
+        // afterChange: (current) => setActiveSlide(current),
     };
   
     return (
-      <Slider {...settings} className="checkin-col">
-        <Link to="/home"><button> <img className="checkin-card" src="/checkin/happy.png" /></button></Link>
-        <Link to="/home"><button> <img className="checkin-card" src="/checkin/inspired.png" /> </button></Link>
-        <Link to="/home"><button> <img className="checkin-card" src="/checkin/focused.png" /> </button></Link>
-        <Link to="/home"><button> <img className="checkin-card" src="/checkin/calm.png" /> </button></Link>
-        <Link to="/home"><button> <img className="checkin-card" src="/checkin/fulfilled.png" /> </button></Link>
-        <Link to="/home"><button> <img className="checkin-card" src="/checkin/grateful.png" /> </button></Link>
-        <Link to="/home"><button> <img className="checkin-card" src="/checkin/anxious.png" /> </button></Link>
-        <Link to="/home"><button> <img className="checkin-card" src="/checkin/frustrated.png" /> </button></Link>
-        <Link to="/home"><button> <img className="checkin-card" src="/checkin/fearful.png" /> </button></Link>
-        <Link to="/home"><button> <img className="checkin-card" src="/checkin/sad.png" /> </button></Link>
-        <Link to="/home"><button> <img className="checkin-card" src="/checkin/exhausted.png" /> </button></Link>
-        <Link to="/home"><button> <img className="checkin-card" src="/checkin/confused.png" /> </button></Link>
-      </Slider>
+        <div className="carousel-container">
+            <Slider {...settings} className="checkin-col">
+                <Link to="/home"><button> <img className="checkin-card"src="/checkin/happy.png" /></button></Link>
+                <Link to="/home"><button> <img className="checkin-card" src="/checkin/inspired.png" /> </button></Link>
+                <Link to="/home"><button> <img className="checkin-card" src="/checkin/focused.png" /> </button></Link>
+                <Link to="/home"><button> <img className="checkin-card" src="/checkin/calm.png" /> </button></Link>
+                <Link to="/home"><button> <img className="checkin-card" src="/checkin/fulfilled.png" /> </button></Link>
+                <Link to="/home"><button> <img className="checkin-card" src="/checkin/grateful.png" /> </button></Link>
+                <Link to="/home"><button> <img className="checkin-card" src="/checkin/anxious.png" /> </button></Link>
+                <Link to="/home"><button> <img className="checkin-card" src="/checkin/frustrated.png" /> </button></Link>
+                <Link to="/home"><button> <img className="checkin-card" src="/checkin/fearful.png" /> </button></Link>
+                <Link to="/home"><button> <img className="checkin-card" src="/checkin/sad.png" /> </button></Link>
+                <Link to="/home"><button> <img className="checkin-card" src="/checkin/exhausted.png" /> </button></Link>
+                <Link to="/home"><button> <img className="checkin-card" src="/checkin/confused.png" /> </button></Link>
+            </Slider>
+        </div>
     );
   }
   
@@ -82,4 +100,22 @@ export function Skip(props) {
             </button>
         </Link>
     )
+}
+
+// Supporting functions
+
+export function NextArrow(props) {
+    const { className, onClick } = props;
+    return (
+        <div className={className} onClick={onClick}>
+        </div>
+    );
+}
+  
+export function PrevArrow(props) {
+    const { className, onClick } = props;
+    return (
+        <div className={className} onClick={onClick}>
+        </div>
+    );
 }
