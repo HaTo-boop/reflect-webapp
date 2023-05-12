@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import { getRandomIndex, PromptContentDisplay } from "../App";
 import { DisplayTheme } from "../Checkin";
 import { TherapyEnd } from "./TherapyEnd";
+import { Flower } from "../Breathing/Exercise";
 
 // Shared components for Therapy
 export function THERAPY(props) {
@@ -39,24 +40,47 @@ export function PromptContentTherapy(promptsArray) {
     }
 
     if (prog < promptsArray.length) {
-        return (
-            <div>
-                <div className="hort-flex heading-frame">
-                    <div className='intro-guide-text'>
-                    {promptsArray[prog]}
-                    </div>
-                </div>
-                <button className="bottom-middle-btn" onClick={nextPrompt}>
-                    <div className="button-outer-frame">
-                        <div className="button-inner-frame">
-                            <div className='pink-btn-content'>
-                                <div className='button-text'>continue</div>
-                            </div>
+        // Adding breathing flower from ../Breathing/Exercise.js
+        if (promptsArray[prog].includes("breath in, breath out")) {
+            return (
+                <div>
+                    <div className="hort-flex heading-frame">
+                        <div className='intro-guide-text'>
+                        {promptsArray[prog]}
                         </div>
                     </div>
-                </button>
-            </div>
-         )
+                    <Flower />
+                    <button className="bottom-middle-btn" onClick={nextPrompt}>
+                        <div className="button-outer-frame">
+                            <div className="button-inner-frame">
+                                <div className='pink-btn-content'>
+                                    <div className='button-text'>continue</div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    <div className="hort-flex heading-frame">
+                        <div className='intro-guide-text'>
+                        {promptsArray[prog]}
+                        </div>
+                    </div>
+                    <button className="bottom-middle-btn" onClick={nextPrompt}>
+                        <div className="button-outer-frame">
+                            <div className="button-inner-frame">
+                                <div className='pink-btn-content'>
+                                    <div className='button-text'>continue</div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            )
+        }
     } else {
         return (
             <div>

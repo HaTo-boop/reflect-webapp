@@ -144,7 +144,7 @@ export function PromptContentDisplay(promptsArray, endPage) {
   } else {
       return (
           <div>
-              <endPage/>
+              {endPage}
           </div>
       )
   }
