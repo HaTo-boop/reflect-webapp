@@ -305,19 +305,23 @@ button {
 
 .carousel-container{
   position: absolute;
-  width: 354px;
-  height: 1555px;
-  left: 363px;
+  width: 430px;
+  height: 1611px;
+  left: 303px;
   top: 528px;
+  overflow: visible;
+
 }
 
 .checkin-col{
   position: absolute;
-  width: 394px;
+  width: 430px;
+  height: 1451px;
   left: calc(50% - 400px/2);
   top: 0%;
   bottom: 7.97%;
   align-items: center;
+  overflow: visible;
 
   /* position: absolute;
   width: 394px;
@@ -329,10 +333,12 @@ button {
 .checkin-card{
   width: 350px;
   height: 437px;
+  overflow: visible;
+
 }
 
 .checkin-card:hover{
-  width: 380px;
+  width: 410px;
   height: 467px;
   background: radial-gradient(100% 88.2% at 0% 14.55%, rgba(255, 254, 252, 0.5) 0%, rgba(255, 254, 252, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(81.86% 67.55% at 89.5% 17.95%, #645CAA 0%, rgba(100, 92, 170, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(103% 50.47% at 80.43% 84.15%, #F87A8F 0%, rgba(248, 122, 143, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;  border-radius: 40px;
   backdrop-filter: blur(43px);
@@ -341,6 +347,22 @@ button {
   flex: none;
   order: 0;
   flex-grow: 0;
+  align-items: center;
+  overflow: visible;
+
+}
+
+.checkin-card:active{
+  width: 410px;
+  height: 497px;
+  background: #8C5CAA;
+  box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(43px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 40px;
+  align-items: center;
+  overflow: visible;
+
 }
 /* 
 .carousel-dot-container{

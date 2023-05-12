@@ -37,7 +37,6 @@ export function Flower(){
     return(
         <div className="flower-container">
             <img className="flower-petal" src="/breathing/Flower1.png" alt="Flower petal" />
-            <img className="flower-petal" src="/breathing/Flower2.png" alt="Flower petal" />
         </div>
     )
 }
