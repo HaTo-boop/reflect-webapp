@@ -48,39 +48,41 @@ function Carousel() {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3, 
+        slidesToShow: 1,
+        slidesToScroll: 1, 
         arrows: false,
         rtl: false,
-        vertical: true,
+        vertical: false,
         beforeChange: (current, next) => setActiveSlide(next), 
-        // nextArrow: <NextArrow />,
-        // prevArrow: <PrevArrow />,
-        // customPaging: function (i) {
-        //     return (
-        //         <div className="carousel-dot-container">
-        //             <div className={`carousel-dot ${activeSlide === i ? 'active' : ''}`} />
-        //         </div>
-        //     );
-        // },
-        // afterChange: (current) => setActiveSlide(current),
+
     };
   
     return (
         <div className="carousel-container">
             <Slider {...settings} className="checkin-col">
-                <Link to="/home"><button> <img className="checkin-card"src="/checkin/happy.png" /></button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/checkin/inspired.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/checkin/focused.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/checkin/calm.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/checkin/fulfilled.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/checkin/grateful.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/checkin/anxious.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/checkin/frustrated.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/checkin/fearful.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/checkin/sad.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/checkin/exhausted.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/checkin/confused.png" /> </button></Link>
+                <div className="cards-col">
+                    <Link to="/home"><button> <img className="checkin-card"src="/checkin/happy.png" /></button></Link>
+                    <Link to="/home"><button> <img className="checkin-card" src="/checkin/inspired.png" /> </button></Link>
+                    <Link to="/home"><button> <img className="checkin-card" src="/checkin/focused.png" /> </button></Link>
+                </div>
+
+                <div className="cards-col">
+                    <Link to="/home"><button> <img className="checkin-card" src="/checkin/calm.png" /> </button></Link>
+                    <Link to="/home"><button> <img className="checkin-card" src="/checkin/fulfilled.png" /> </button></Link>
+                    <Link to="/home"><button> <img className="checkin-card" src="/checkin/grateful.png" /> </button></Link>
+                </div>
+
+                <div className="cards-col">
+                    <Link to="/home"><button> <img className="checkin-card" src="/checkin/anxious.png" /> </button></Link>
+                    <Link to="/home"><button> <img className="checkin-card" src="/checkin/frustrated.png" /> </button></Link>
+                    <Link to="/home"><button> <img className="checkin-card" src="/checkin/fearful.png" /> </button></Link>
+                </div>
+
+                <div className="cards-col">
+                    <Link to="/home"><button> <img className="checkin-card" src="/checkin/sad.png" /> </button></Link>
+                    <Link to="/home"><button> <img className="checkin-card" src="/checkin/exhausted.png" /> </button></Link>
+                    <Link to="/home"><button> <img className="checkin-card" src="/checkin/confused.png" /> </button></Link>
+                </div>
             </Slider>
         </div>
     );
@@ -119,3 +121,14 @@ export function PrevArrow(props) {
         </div>
     );
 }
+
+// nextArrow: <NextArrow />,
+// prevArrow: <PrevArrow />,
+// customPaging: function (i) {
+//     return (
+//         <div className="carousel-dot-container">
+//             <div className={`carousel-dot ${activeSlide === i ? 'active' : ''}`} />
+//         </div>
+//     );
+// },
+// afterChange: (current) => setActiveSlide(current),

@@ -322,19 +322,17 @@ button {
   bottom: 7.97%;
   align-items: center;
   overflow: visible;
+}
 
-  /* position: absolute;
-  width: 394px;
-  height: 1595px;
-  left: 363px;
-  top: 477px; */
+.cards-col{
+  display:flex;
+  direction: col;
 }
 
 .checkin-card{
   width: 350px;
   height: 437px;
   overflow: visible;
-
 }
 
 .checkin-card:hover{

@@ -41,35 +41,34 @@ function Carousel() {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3, 
+        slidesToShow: 1,
+        slidesToScroll: 1, 
         rtl: false,
-        vertical: true, 
+        vertical: false, 
         arrows: false,
         beforeChange: (current, next) => setActiveSlide(next), 
-        // nextArrow: <NextArrow />,
-        // prevArrow: <PrevArrow />,
-        // customPaging: function (i) {
-        //     return (
-        //         <div className="carousel-dot-container">
-        //             <div className="carousel-dot"></div>
-        //         </div>
-        //     );
-        // },
     };
   
     return (
         <div className="carousel-container">
             <Slider {...settings} className="checkin-col">
-                <Link to="/home"><button> <img className="checkin-card" src="/themes/balance.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/themes/change.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/themes/confidence.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/themes/gratitude.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/themes/growth.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/themes/health.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/themes/strength.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/themes/truth.png" /> </button></Link>
-                <Link to="/home"><button> <img className="checkin-card" src="/themes/patience.png" /> </button></Link>
+                <div className="cards-col">
+                    <Link to="/home"><button> <img className="checkin-card" src="/themes/balance.png" /> </button></Link>
+                    <Link to="/home"><button> <img className="checkin-card" src="/themes/change.png" /> </button></Link>
+                    <Link to="/home"><button> <img className="checkin-card" src="/themes/confidence.png" /> </button></Link>
+                </div>
+
+                <div className="cards-col">
+                    <Link to="/home"><button> <img className="checkin-card" src="/themes/gratitude.png" /> </button></Link>
+                    <Link to="/home"><button> <img className="checkin-card" src="/themes/growth.png" /> </button></Link>
+                    <Link to="/home"><button> <img className="checkin-card" src="/themes/health.png" /> </button></Link>
+                </div>
+
+                <div className="cards-col">    
+                    <Link to="/home"><button> <img className="checkin-card" src="/themes/strength.png" /> </button></Link>
+                    <Link to="/home"><button> <img className="checkin-card" src="/themes/truth.png" /> </button></Link>
+                    <Link to="/home"><button> <img className="checkin-card" src="/themes/patience.png" /> </button></Link>
+                </div>
             </Slider>
         </div>
     );
