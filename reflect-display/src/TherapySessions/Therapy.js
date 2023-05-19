@@ -4,7 +4,7 @@ import '../App.css';
 import { Outlet } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { getRandomIndex, PromptContentDisplay } from "../App";
+import { getRandomIndex } from "../App";
 import { DisplayTheme } from "../Checkin";
 import { TherapyEnd } from "./TherapyEnd";
 import { Flower } from "../Breathing/Exercise";
@@ -28,6 +28,84 @@ export function DisplayFeature(){
             </div>
         </div>
     )
+}
+
+
+// When Begin button is clicked, fetch the full exposure therapy data 
+export function HandleBeginClick(props) {
+    const [therData, setTherData] = useState([]);
+
+    console.log('HandleBeginClick renders');
+
+    useEffect(() => {
+        fetch('/data/reflect-exp-therapy.json')
+            .then(response => response.json())
+            .then(json => {
+                console.log("json: " ,json);
+                // generate a random index to choose a random session from list of sessions in josn file
+                // 105 - 113: can be in toRandSes
+                
+                setTherData(json);
+                console.log("therData:", therData);
+            });
+        }, []);
+    
+
+    return (
+        <div>
+            {/* <ShowRandomSes data={therData}/> */}
+            {therData}
+        </div>
+    )
+}
+
+// Handle continue button click in TherapyIntro.js . Displaying info of random
+// SOLUTION: Want to move the state that store the data 
+// IMPROVE: Name function based on what it's role on the page - important for debugging
+// => CONSIDER: changing ToRandSes into something more indicative of what it does in the program
+//      - Handle the click of the Begin button
+function ShowRandomSes(data) {
+    const [prompts, setPrompts] = useState([]);
+
+    console.log('ShowRandomSes renders');
+    // hook only run when there is a change in sesId
+    // SOLUTION: Move fetching up to a parent component
+    // "Lifting up state" - moving the state up to a parent component so that it can pass props down to children
+    // => CONSIDER: Moving useEffect (Effect hook is for using data ONLY) onto a parent component - pass down props to ToRandSes
+   
+    let sesId = getRandomIndex(data.length);
+    // PRINT to inspect
+    console.log("length: ", data.length);
+    console.log("Chosen sesId: ", sesId);
+
+    // Declare var to store chosen session data
+    let chosen = data[sesId];
+    
+    console.log("Chosen session's object: ", chosen);
+
+    // update prompts to be the array of prompts for the session
+    setPrompts(chosen.prompts);
+    // ERROR 2: This is where Joel think the Re-rendering error is: would not want to reset   
+    
+
+
+    // ERROR 1: This is where Joel think the Invalid Hook Call error is: calling component as a function is violating the Rule of Hook
+    // Never call component like how you call function
+    // 1. Here, React is callling function using React argument (more expansive than my usual arg - has much more details)
+    // My: prompts
+    // React: prompts + other props for React to be able to display it.
+    // 2. useState is not used in this case
+
+    // If calling it as React Component doesn't work - 
+    // Might work in once case, but might fall
+    
+    // CONSIDER: What parts of the page is my component here. What part of the page is PromptContentTherapy. How it's distinct from ToRandSes 
+    return (
+        <div>
+            <PromptContentTherapy promptsArray={prompts} />
+        </div>
+    )
+
 }
 
 export function PromptContentTherapy(promptsArray) {
@@ -89,58 +167,4 @@ export function PromptContentTherapy(promptsArray) {
         )
     }
 }
-
-// Handle continue button click in TherapyIntro.js . Displaying info of random
-export function ToRandSes() {
-    const [sesId, setSesId] = useState(0);  //can be omit since only need to display prompt - will do latre bc low in priority
-    const [prompts, setPrompts] = useState(() => {return []});
-
-    console.log('ToRandSes renders');
-    // hook only run when there is a change in sesId
-    useEffect(() => {
-        fetch('/data/reflect-exp-therapy.json')
-            .then(response => response.json())
-            .then(json => {
-                // generate a random index to choose a random session from list of sessions in josn file
-                setSesId(getRandomIndex(json.length));
-                // PRINT to inspect
-                console.log("length: ", json.length);
-                console.log("Chosen sesId: ", sesId);
-
-                // Declare var to store chosen session data
-                let chosen = json[sesId];
-                
-                console.log("Chosen session's object: ", chosen);
-
-                // update prompts to be the array of prompts for the session
-                setPrompts(chosen.prompts);
-                
-            })
-    }, [sesId]);
-
-
-    return (
-        <div>
-            {PromptContentTherapy(prompts)}
-        </div>
-    )
-
-}
-
-// export function TherapyWidget(props) {
-//     return (
-//         <div id='rest-widget' className='widget glassmorphism vert-flex'>
-//             <div id="timer">
-//                 timer
-//             </div>
-
-//             <div id='theme'>
-//                 monthly theme
-//                 {/* <CardButton imgSrc="/public/balance_theme.png" content="balance"/> */}
-//                 <div style={{ margin:"10px auto" }}><b style={{ fontSize:"35px" }}>balance</b></div>
-//             </div>
-//         </div>
-//     )
-// }
-
 
