@@ -11,19 +11,19 @@ export function THEMES(props) {
     return (
         <div>
             <DisplayTheme />
-            <DisplayFeature />
+            {/* <DisplayFeature /> */}
             <Outlet/> {/* Letting the program know where to display children's content */}
         </div>
     )
 }
 
-export function DisplayFeature(){
-    return (
-        <div className='current-feature-frame'>
-            <div className='pink-ellipse'>
-                <div className='current-feature-text'>breathing exercise</div>
-            </div>
-        </div>
-    )
-}
+// export function DisplayFeature(){
+//     return (
+//         <div className='current-feature-frame'>
+//             <div className='pink-ellipse'>
+//                 <div className='current-feature-text'>breathing exercise</div>
+//             </div>
+//         </div>
+//     )
+// }
 
