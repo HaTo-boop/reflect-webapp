@@ -9,7 +9,7 @@ import { INTRO_CONT } from './IntroCont';
 import { RESTMODE } from './Restmode';
 import { CHECKIN } from './Checkin';
 import { HOME } from './Home';
-import { THERAPY, PromptContentTherapy} from './TherapySessions/Therapy';
+import { THERAPY, PromptContentTherapy, HandleBeginClickTherapy} from './TherapySessions/Therapy';
 import { TherapyWelcome } from './TherapySessions/TherapyWelcome';
 import { TherapyIntro } from './TherapySessions/TherapyIntro';
 import { FetchJSON, TherapyChoices } from './TherapySessions/TherapyChoices'
@@ -62,8 +62,8 @@ function App() {
         <Route path="/therapy" element={<THERAPY />}>
           <Route path="" element={<TherapyWelcome/>} />
           <Route path="intro" element={<TherapyIntro/>} />
-          <Route path="therapyTest" element={<PromptContentTherapy/>} />
-          {/* <Route path="session" element ={<HandleBeginClickTherapy/>}/> */}
+          {/* <Route path="therapyTest" element={<PromptContentTherapy/>} /> */}
+          <Route path="session" element ={<HandleBeginClickTherapy/>}/>
         </Route>
 
         <Route path="/reflection" element={<REFLECTION />}>

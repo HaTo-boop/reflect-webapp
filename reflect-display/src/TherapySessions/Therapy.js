@@ -125,7 +125,7 @@ export function HandleBeginClickTherapy() {
 //     )
 // }
 
-export function PromptContentTherapy(promptsArray) {
+export function PromptContentTherapy({promptsArray}) {
     // `prog`: how far the user is progressing in the session (=index of prompt in array)
     // Initial state: starting from the first prompt
     const [prog, setProg] = useState(0);
@@ -133,6 +133,8 @@ export function PromptContentTherapy(promptsArray) {
     const nextPrompt = () => {
         setProg(prog + 1);
     }
+
+    console.log(promptsArray.length);
 
     if (prog < promptsArray.length) {
         // Adding breathing flower from ../Breathing/Exercise.js

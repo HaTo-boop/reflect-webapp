@@ -66,8 +66,8 @@ export function HandleBeginClickRef() {
 
     // Static data: Random 3-4 quetions from 'general' in /public/reflect-reflection.json
     const generalRefs = [
-        "what are your lows?",
-        "what are your highs?",
+        "what are some of your low points today?",
+        "what are some of your highlights today?",
         "did you set any goals recently?",
         "what is a recent lesson you've learned?",
         "what have you recently accomplished?",
@@ -100,12 +100,12 @@ export function HandleBeginClickRef() {
     // IMPRPOVE: May need to define their own PromptContent. Using PromptContentTherapy (including TherapyEnd) in TherapySession/Therapy.js for now
     return (
         <div>
-            {PromptContentRef(randRefs)}
+            <PromptContentRef promptsArray={randRefs} />
         </div>
     )
 }
 
-export function PromptContentRef(promptsArray) {
+export function PromptContentRef({promptsArray}) {
     // `prog`: how far the user is progressing in the session (=index of prompt in array)
     // Initial state: starting from the first prompt
     const [prog, setProg] = useState(0);
