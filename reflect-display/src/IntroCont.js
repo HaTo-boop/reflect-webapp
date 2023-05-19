@@ -64,7 +64,7 @@ export function AppOverview(){
 
 export function ContinueButton(props) {
     return (
-        <Link to="/home">
+        <Link to="/checkin">
             <button className="bottom-middle-btn">
                 <div className="button-outer-frame">
                     <div className="button-inner-frame">
