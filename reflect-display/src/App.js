@@ -115,7 +115,7 @@ export function getRandomIndex(arrayLength) {
 // Params:
 // - promptsArray: array to be displayed
 // - endPage: pass the endPage components - specific to each feature
-export function PromptContentDisplay(promptsArray, endPage) {
+export function PromptContentDisplay({promptsArray, endPage}) {
   // `prog`: how far the user is progressing in the session (=index of prompt in array)
   // Initial state: starting from the first prompt
   const [prog, setProg] = useState(0);
