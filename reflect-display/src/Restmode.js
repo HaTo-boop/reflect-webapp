@@ -123,7 +123,7 @@ export function Weather() {
 export function StartButton(props) {
   return (
       <button className="start-btn-frame">
-        <div className="start-btn-text">press<div className='orange-text'> anywhere </div>on<br /> remote to start</div>
+        <div className="start-btn-text">click<div className='orange-text'> here </div><br /> to start</div>
       </button>
   )
 }
