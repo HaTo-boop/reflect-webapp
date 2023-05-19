@@ -6,23 +6,6 @@ import { getRandomIndex } from "../App";
 import { DisplayTheme } from '../Checkin';
 import { PromptContentTherapy } from '../TherapySessions/Therapy';
 
-// Static data: Random 3-4 quetions from 'general' in /public/reflect-reflection.json
-const generalRefs = [
-    "what are your lows?",
-    "what are your highs?",
-    "did you set any goals recently?",
-    "what is a recent lesson you've learned?",
-    "what have you recently accomplished?",
-    "were there any challenges you overcome today (or recently)?",
-    "what are you proud of yourself for?",
-    "what aspects of yourself are you grateful for today?",
-    "how do you show kindness to yourself?",
-    "what do you look forward to tomorrow?",
-    "were there anything that didn't meet your expectations recently?",
-    "what personal strengths have you used recently?",
-    "what sparked joy today?"
-];
-
 // Shared components for Therapy
 export function REFLECTION(props) {
     return (
@@ -78,6 +61,23 @@ export function HandleBeginClickRef() {
                 
     //         })
     // }, [refs]);
+
+    // Static data: Random 3-4 quetions from 'general' in /public/reflect-reflection.json
+    const generalRefs = [
+        "what are your lows?",
+        "what are your highs?",
+        "did you set any goals recently?",
+        "what is a recent lesson you've learned?",
+        "what have you recently accomplished?",
+        "were there any challenges you overcome today (or recently)?",
+        "what are you proud of yourself for?",
+        "what aspects of yourself are you grateful for today?",
+        "how do you show kindness to yourself?",
+        "what do you look forward to tomorrow?",
+        "were there anything that didn't meet your expectations recently?",
+        "what personal strengths have you used recently?",
+        "what sparked joy today?"
+    ];
 
     // Get random 3 refs
     let randInds = [];
