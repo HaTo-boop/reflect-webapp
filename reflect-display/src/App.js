@@ -53,6 +53,9 @@ function App() {
   return (
     <div className="App">
       <Routes>
+        <Route index path="/intro" element={<INTRO />} />
+        <Route index path="/intro-continue" element={<INTRO_CONT />} />
+
         <Route index path="/" element={<RESTMODE />} />
         <Route path="/home" element={<HOME />} />
         <Route path="/checkin" element={<CHECKIN />} />

@@ -1,18 +1,17 @@
 import './App.css';
 import {Time, Weather} from './Restmode';
 import { Link } from 'react-router-dom';
-
+import {RestWidget} from "./Restmode"
 
 
 export function INTRO_CONT(){
     return (
         <div>
-            <Time />
-            <Weather />
+            <RestWidget />
             <Heading />
             <SubHeading />
             <AppOverview />
-            <Button />
+            <ContinueButton />
         </div>
     )
 }
@@ -21,7 +20,8 @@ export function Heading(){
     return(
         <div className="head-intro-frame">
             <div className='intro-guide-text'>
-                i'm here to help you take some <div className='orange-text'>time for yourself</div>
+                i'm here to help you take some <br />
+                <div className='orange-text'>time for yourself</div>
             </div>
         </div>
     )
@@ -29,7 +29,7 @@ export function Heading(){
 
 export function SubHeading(){
     return(
-        <div className="subhead-text subhead-intro-frame">
+        <div className="subhead-intro-frame">
             what you do is up to you 
         </div>
     )
@@ -55,11 +55,27 @@ export function AppOverview(){
             <div className="row-3">
                 <img className="col-1" src="therapy.png" alt="breathing exercise" />
                 <div className="col-2-therapy">
-                    <div className="col-2-title">mirror exposure therapy</div>
+                    <div className="col-2-title col-2-title-therapy">mirror exposure therapy</div>
                     <div className="col-2-text-therapy">build a better relationship with your body using clinically-proven techniques</div>
                 </div>
             </div>
         </div> 
+    )
+}
+
+export function ContinueButton(props) {
+    return (
+        <Link to="/home">
+            <button className="bottom-middle-btn">
+                <div className="button-outer-frame">
+                    <div className="button-inner-frame">
+                        <div className='pink-btn-content'>
+                            <div className='button-text'>continue</div>
+                        </div>
+                    </div>
+                </div>
+            </button>
+        </Link>   
     )
 }
 

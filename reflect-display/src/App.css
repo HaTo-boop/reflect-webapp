@@ -890,6 +890,11 @@ button {
   text-align: left;
 }
 
+.col-2-title-therapy{
+  width: 780px;
+  height: 89px;
+}
+
 .col-2-text{
   width: 737px;
   height: 52px;
@@ -904,6 +909,15 @@ button {
 .col-2-text-therapy{
   width: 737px;
   height: 156px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 52px;
+  text-transform: lowercase;
+  color: #FFFEFC;
+  text-align: left;
+  
 }
 
 .col-2-reflection {
@@ -925,16 +939,24 @@ button {
   gap: 40px;
   width: 737px;
   height: 331px;
+  padding-top: 8%;
 }
 
 
 
 .head-intro-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+  gap: 20px;
+  
   position: absolute;
   width: 880px;
   height: 372px;
   left: 100px;
-  top: 156px;  
+  top: 156px; 
 }
 
 .subhead-intro-frame{
@@ -942,8 +964,16 @@ button {
   width: 700px;
   height: 65px;
   left: 190px;
-  top: 603px;
-}
+  top: 703px;
+  
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+  text-align: center;
+  text-transform: lowercase;
+  }
 
 .current-feature-frame{
   position: absolute;
