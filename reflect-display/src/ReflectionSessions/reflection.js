@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { getRandomIndex } from "../App";
 import { DisplayTheme } from '../Checkin';
 import { PromptContentTherapy } from '../TherapySessions/Therapy';
+import { TherapyEnd } from '../TherapySessions/TherapyEnd';
 
 // Shared components for Therapy
 export function REFLECTION(props) {
@@ -98,8 +99,48 @@ export function HandleBeginClickRef() {
     // IMPRPOVE: May need to define their own PromptContent. Using PromptContentTherapy (including TherapyEnd) in TherapySession/Therapy.js for now
     return (
         <div>
-            {PromptContentTherapy(randRefs)}
+            {PromptContentRef(randRefs)}
         </div>
     )
 
+}
+
+export function PromptContentRef(promptsArray) {
+    // `prog`: how far the user is progressing in the session (=index of prompt in array)
+    // Initial state: starting from the first prompt
+    const [prog, setProg] = useState(0);
+   
+    const nextPrompt = () => {
+        setProg(prog + 1);
+    }
+
+    console.log(promptsArray.length);
+
+    if (prog < promptsArray.length) {
+        return (
+            <div>
+                <div className="hort-flex heading-frame">
+                    <div className='intro-guide-text'>
+                    {promptsArray[prog]}
+                    </div>
+                </div>
+                <button className="bottom-middle-btn" onClick={nextPrompt}>
+                    <div className="button-outer-frame">
+                        <div className="button-inner-frame">
+                            <div className='pink-btn-content'>
+                                <div className='button-text'>continue</div>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                {/* Need to create ReflectionEnd */}
+                <TherapyEnd/>
+            </div>
+        )
+    }
 }
