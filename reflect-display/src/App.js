@@ -9,14 +9,14 @@ import { INTRO_CONT } from './IntroCont';
 import { RESTMODE } from './Restmode';
 import { CHECKIN } from './Checkin';
 import { HOME } from './Home';
-import { THERAPY, PromptContentTherapy, ToRandSes } from './TherapySessions/Therapy';
+import { THERAPY, PromptContentTherapy, HandleBeginClickTherapy } from './TherapySessions/Therapy';
 import { TherapyWelcome } from './TherapySessions/TherapyWelcome';
 import { TherapyIntro } from './TherapySessions/TherapyIntro';
 import { FetchJSON, TherapyChoices } from './TherapySessions/TherapyChoices'
 import { BREATHING } from './Breathing/Breathing';
 import { BreathingIntro } from './Breathing/BreathingIntro';
 import { SETTINGS } from './Settings';
-import { REFLECTION, ToRandRef } from './ReflectionSessions/reflection';
+import { HandleBeginClickRef, REFLECTION } from './ReflectionSessions/reflection';
 import { ReflectionWelcome, PromptContentReflect } from './ReflectionSessions/ReflectionWelcome';
 import { ReflectionIntro } from './ReflectionSessions/ReflectionIntro';
 import { BreathingWelcome } from './Breathing/Welcome';
@@ -61,14 +61,14 @@ function App() {
           <Route path="" element={<TherapyWelcome/>} />
           <Route path="intro" element={<TherapyIntro/>} />
           <Route path="therapyTest" element={<PromptContentTherapy/>} />
-          <Route path="session" element ={<ToRandSes/>}/>
+          <Route path="session" element ={<HandleBeginClickTherapy/>}/>
         </Route>
 
         <Route path="/reflection" element={<REFLECTION />}>
           <Route path="" element={<ReflectionWelcome/>} />
           <Route path="intro" element={<ReflectionIntro/>} />
           <Route path="reflectionTest" element={<PromptContentReflect/>} />
-          <Route path="questions" element={<ToRandRef/>}/>
+          <Route path="questions" element={<HandleBeginClickRef/>}/>
         </Route>
 
         <Route path="/breathing" element={<BREATHING />}> {/*first 2 comp - want to have in 2 children*/}

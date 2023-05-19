@@ -1,7 +1,7 @@
 import '../App.css';
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import { ToRandSes } from "./Therapy";
+import { HandleBeginClickTherapy } from "./Therapy";
 
 export function TherapyIntro(props) {
     return (
@@ -58,7 +58,7 @@ export function Benefits(){
 export function ContinueButton(){
     return (
         <Link to="/therapy/session">
-            <button className="bottom-middle-btn" onClick={ToRandSes}>
+            <button className="bottom-middle-btn" onClick={HandleBeginClickTherapy}>
                 <div className="button-outer-frame">
                     <div className="button-inner-frame">
                         <div className='pink-btn-content'>
