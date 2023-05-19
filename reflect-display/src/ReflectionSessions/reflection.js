@@ -6,6 +6,7 @@ import { getRandomIndex } from "../App";
 import { DisplayTheme } from '../Checkin';
 import { PromptContentTherapy } from '../TherapySessions/Therapy';
 import { TherapyEnd } from '../TherapySessions/TherapyEnd';
+import { ReflectionEnd } from './ReflectionEnd';
 
 // Shared components for Therapy
 export function REFLECTION(props) {
@@ -102,24 +103,42 @@ export function HandleBeginClickRef() {
             {PromptContentRef(randRefs)}
         </div>
     )
-
 }
 
 export function PromptContentRef(promptsArray) {
     // `prog`: how far the user is progressing in the session (=index of prompt in array)
     // Initial state: starting from the first prompt
     const [prog, setProg] = useState(0);
-   
+    const [imageIndex, setImageIndex] = useState(0);
+
     const nextPrompt = () => {
         setProg(prog + 1);
+        setImageIndex(imageIndex + 1);
     }
 
+    //testing purpose
     console.log(promptsArray.length);
+
+    const getImagePath = (index) => {
+        // Define an array of image paths
+        const imagePaths = [
+          "/progress1.png",
+          "/progress2.png",
+          "/progress3.png",
+        ];
+    
+        // Return the image path based on the provided index
+        return imagePaths[index % imagePaths.length];
+      };
 
     if (prog < promptsArray.length) {
         return (
             <div>
-                <div className="hort-flex heading-frame">
+                <div className="image-container">
+                    <img src={getImagePath(imageIndex)}alt="Progress Bar"/>
+                </div>
+
+                <div className="hort-flex reflection-heading-frame">
                     <div className='intro-guide-text'>
                     {promptsArray[prog]}
                     </div>
@@ -139,7 +158,7 @@ export function PromptContentRef(promptsArray) {
         return (
             <div>
                 {/* Need to create ReflectionEnd */}
-                <TherapyEnd/>
+                <ReflectionEnd/>
             </div>
         )
     }
