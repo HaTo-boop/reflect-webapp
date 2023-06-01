@@ -50,48 +50,6 @@ function App() {
   // FURTHER IMPROVE: Change default to something like asking user to choose theme for the first time. More changes in content displayed needed
   const [theme, setTheme] = useState('gratitude');
 
-  function onThemeCardClick(props) {
-    console.log("click");
-  }
-  
-  function ChooseThemeBalance(props) {
-      setTheme('balance');
-  }
-
-  function ChooseThemeChange(props) {
-      setTheme('change');
-  }
-
-  function ChooseThemeConfident(props) {
-      setTheme('confident');
-  }
-
-
-  function ChooseThemeGratitude(props) {
-      setTheme('gratitude');
-  }
-
-  function ChooseThemeGrowth(props) {
-      setTheme('growth');
-  }
-
-  function ChooseThemeHealth(props) {
-      setTheme('health');
-  }
-
-
-  function ChooseThemeStrength(props) {
-      setTheme('strength');
-  }
-
-  function ChooseThemeTruth(props) {
-      setTheme('truth');
-  }
-
-  function ChooseThemePatience(props) {
-      setTheme('patience');
-  }
-
   const allThemeCardClickHandlers = {
     balance: () => setTheme('balance'),
     change: () => setTheme('change'),
@@ -112,7 +70,7 @@ function App() {
         <Route index path="/intro-continue" element={<INTRO_CONT />} />
         <Route index path="/" element={<RESTMODE />} />
         <Route path="/home" element={<HOME currentTheme={theme}/>} />
-        <Route path="/checkin" element={<CHECKIN />} />
+        <Route path="/checkin" element={<CHECKIN currentTheme={theme}/>} />
 
         <Route path="/therapy" element={<THERAPY />}>
           <Route path="" element={<TherapyWelcome/>} />

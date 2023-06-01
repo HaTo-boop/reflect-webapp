@@ -10,10 +10,10 @@ import "slick-carousel/slick/slick-theme.css";
 
 // Components appeared in the daily checkin of the mirror
 
-export function CHECKIN(props) {
+export function CHECKIN({ currentTheme }) {
     return (
         <div>
-            <DisplayTheme />
+            <DisplayTheme currentTheme={currentTheme} />
             <Greetings/>
             <Carousel />
             <Skip/>
@@ -21,12 +21,12 @@ export function CHECKIN(props) {
     )
 }
 
-export function DisplayTheme(){
+export function DisplayTheme({ currentTheme }){
     return (
         <div className="theme-widget hort-flex">
             <div className="theme-widget-label">monthly intention:</div>
             <div className="theme-frame">
-                <div className="theme-text">gratitude</div>
+                <div className="theme-text">{currentTheme}</div>
             </div>
         </div>
     )
