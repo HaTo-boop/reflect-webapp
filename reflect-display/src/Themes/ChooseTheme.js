@@ -18,11 +18,11 @@ import '../App';
 
 // FURTHER IMPROVE: <Carousel> access handling functions defined in <App> is still hard coded
 // - passing object containing all handling functions and call each of them accordingly
-export function ChooseTheme({ theme, allOnClickHandlers }) {
+export function ChooseTheme({ currentTheme, allOnClickHandlers }) {
 
     return (
         <div>
-            <DisplayTheme theme={theme}/>
+            <DisplayTheme theme={currentTheme}/>
             <Ask/>
             <Carousel allOnClickHandlers={allOnClickHandlers} />
             <Skip />

@@ -7,24 +7,24 @@ import './App.css';
 
 import { Link } from 'react-router-dom';
 
-export function HOME(props) {
+export function HOME({ currentTheme }) {
     return (
         <div>
             <div className='affirmation-label'>daily affirmation</div>
             <Affirmations/>
             <RestWidget/>
             {/* <Settings/> */}
-            <Features/>
+            <Features currentTheme={currentTheme}/>
             <Exit/>
         </div>
     )
 }
 
-export function Features(props) {
+export function Features({ currentTheme }) {
     return (
         <Link to="/themes">
             <button className="home-feature-frame">
-                <ImageComponent />
+                <ImageComponent currentTheme={currentTheme}/>
                 {/* <img className='home-ring' src="home_ring.png" /> */}
                 
                 <Link to="/breathing">
@@ -107,7 +107,7 @@ class ImageComponent extends Component {
                 <img className="home-ring" src={currentImage} alt="Current Image" />
                 <button className="home-intention-frame" onMouseEnter={this.handleImageChange} onMouseLeave={this.handleImageLeave}>
                     <div className="home-intention-label">monthly intention</div>
-                    <div className="home-intention-text">gratitude</div>
+                    <div className="home-intention-text">{this.props.currentTheme}</div>
                 </button>
             </button>
       );

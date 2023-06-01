@@ -111,7 +111,7 @@ function App() {
         <Route index path="/intro" element={<INTRO />} />
         <Route index path="/intro-continue" element={<INTRO_CONT />} />
         <Route index path="/" element={<RESTMODE />} />
-        <Route path="/home" element={<HOME />} />
+        <Route path="/home" element={<HOME currentTheme={theme}/>} />
         <Route path="/checkin" element={<CHECKIN />} />
 
         <Route path="/therapy" element={<THERAPY />}>
@@ -139,7 +139,7 @@ function App() {
         
         <Route path="/themes" element={<THEMES />}>
           <Route path="" element={<Intention />} />
-          <Route path="choose-theme" element={<ChooseTheme theme={theme} allOnClickHandlers={allThemeCardClickHandlers}/>} />
+          <Route path="choose-theme" element={<ChooseTheme currentTheme={theme} allOnClickHandlers={allThemeCardClickHandlers}/>} />
         </Route>
 
       </Routes> 
