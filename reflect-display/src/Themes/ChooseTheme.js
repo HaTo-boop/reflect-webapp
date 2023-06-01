@@ -22,7 +22,6 @@ export function ChooseTheme({ currentTheme, allOnClickHandlers }) {
 
     return (
         <div>
-            <DisplayTheme theme={currentTheme}/>
             <Ask/>
             <Carousel allOnClickHandlers={allOnClickHandlers} />
             <Skip />

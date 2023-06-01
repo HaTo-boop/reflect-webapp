@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { useState } from 'react';
 
 import logo from './logo.svg';
@@ -53,7 +53,7 @@ function App() {
   const allThemeCardClickHandlers = {
     balance: () => setTheme('balance'),
     change: () => setTheme('change'),
-    confident: () => setTheme('confident'),
+    confidence: () => setTheme('confidence'),
     gratitude: () => setTheme('gratitude'),
     growth: () => setTheme('growth'),
     health: () => setTheme('health'),
@@ -96,7 +96,8 @@ function App() {
         <Route path="/settings" element={<SETTINGS />} />
         
         <Route path="/themes" element={<THEMES currentTheme={theme}/>}>
-          <Route path="" element={<Intention />} />
+          <Route path="" element={theme==='gratitude'? <Intention /> : <Navigate replace={false} to={"choose-theme"}/>} />
+          {/* <Route path="" element={<Intention />} /> */}
           <Route path="choose-theme" element={<ChooseTheme currentTheme={theme} allOnClickHandlers={allThemeCardClickHandlers}/>} />
         </Route>
 
