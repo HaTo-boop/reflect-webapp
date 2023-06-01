@@ -21,7 +21,7 @@ export function DisplayFeature(){
     return (
         <div className='current-feature-frame'>
             <div className='pink-ellipse'>
-                <div className='current-feature-text'>breathing exercise</div>
+                <div className='current-feature-text'>choose a theme</div>
             </div>
         </div>
     )

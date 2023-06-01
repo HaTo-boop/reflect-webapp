@@ -3,7 +3,7 @@ import '../App.css';
 import { Link } from 'react-router-dom';
 import { useState,useEffect } from 'react';
 
- // React Component: displaying buttons to choose exposure therapy session
+ // Component's purpose: displaying buttons to choose exposure therapy session
  // NOTE: Not used in this project to avoid adding another layer of choice for user
  // - prompts: array of chosen session's prompts
  // - title, intention: strings, chosen session's title and intention
