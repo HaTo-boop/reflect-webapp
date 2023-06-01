@@ -47,7 +47,62 @@ const testJSON = "/data/reflect-exp-therapy.json";
 const testJSON2 = "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json";
 
 function App() {
-  const [theme, setTheme] = useState('general');
+  // FURTHER IMPROVE: Change default to something like asking user to choose theme for the first time. More changes in content displayed needed
+  const [theme, setTheme] = useState('gratitude');
+
+  function onThemeCardClick(props) {
+    console.log("click");
+  }
+  
+  function ChooseThemeBalance(props) {
+      setTheme('balance');
+  }
+
+  function ChooseThemeChange(props) {
+      setTheme('change');
+  }
+
+  function ChooseThemeConfident(props) {
+      setTheme('confident');
+  }
+
+
+  function ChooseThemeGratitude(props) {
+      setTheme('gratitude');
+  }
+
+  function ChooseThemeGrowth(props) {
+      setTheme('growth');
+  }
+
+  function ChooseThemeHealth(props) {
+      setTheme('health');
+  }
+
+
+  function ChooseThemeStrength(props) {
+      setTheme('strength');
+  }
+
+  function ChooseThemeTruth(props) {
+      setTheme('truth');
+  }
+
+  function ChooseThemePatience(props) {
+      setTheme('patience');
+  }
+
+  const allThemeCardClickHandlers = {
+    balance: () => setTheme('balance'),
+    change: () => setTheme('change'),
+    confident: () => setTheme('confident'),
+    gratitude: () => setTheme('gratitude'),
+    growth: () => setTheme('growth'),
+    health: () => setTheme('health'),
+    strength: () => setTheme('strength'),
+    truth: () => setTheme('truth'),
+    patience: () => setTheme('patience')
+  }
 
   // Structure of the main App
   return (
@@ -84,7 +139,7 @@ function App() {
         
         <Route path="/themes" element={<THEMES />}>
           <Route path="" element={<Intention />} />
-          <Route path="choose-theme" element={<ChooseTheme/>} />
+          <Route path="choose-theme" element={<ChooseTheme theme={theme} allOnClickHandlers={allThemeCardClickHandlers}/>} />
         </Route>
 
       </Routes> 
@@ -104,51 +159,5 @@ export function getRandomIndex(arrayLength) {
     return 0;
   }
   
-}
-
-// NICE-TO-HAVE Improvement: still in the work - endPage is not passed correctly
-// 
-// Because function is used in more than 1 place, intend to create a component so that it's reusable. Problem is the end page for each
-//  feature is different => Still figure out how to pass correctly
-// Displaying the content of an array one by one, progress using a Continue button.
-// Used in: Reflection and Therapy
-// Params:
-// - promptsArray: array to be displayed
-// - endPage: pass the endPage components - specific to each feature
-export function PromptContentDisplay({promptsArray, endPage}) {
-  // `prog`: how far the user is progressing in the session (=index of prompt in array)
-  // Initial state: starting from the first prompt
-  const [prog, setProg] = useState(0);
- 
-  const nextPrompt = () => {
-      setProg(prog + 1);
-  }
-
-  if (prog < promptsArray.length) {
-      return (
-          <div>
-              <div className="hort-flex heading-frame">
-                  <div className='intro-guide-text'>
-                  {promptsArray[prog]}
-                  </div>
-              </div>
-              <button className="bottom-middle-btn" onClick={nextPrompt}>
-                  <div className="button-outer-frame">
-                      <div className="button-inner-frame">
-                          <div className='pink-btn-content'>
-                              <div className='button-text'>continue</div>
-                          </div>
-                      </div>
-                  </div>
-              </button>
-          </div>
-       )
-  } else {
-      return (
-          <div>
-              {endPage}
-          </div>
-      )
-  }
 }
 

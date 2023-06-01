@@ -52,6 +52,8 @@ export function DisplayFeature(){
 
 // Handle continue button click in TherapyIntro.js . Displaying info of random
 export function HandleBeginClickTherapy() {
+
+    // Dynamic Data:
     // const [sesId, setSesId] = useState(0);  //can be omit since only need to display prompt - will do latre bc low in priority
     // const [prompts, setPrompts] = useState(() => {console.log('Inside prompt state');return []});
 
@@ -103,7 +105,6 @@ export function HandleBeginClickTherapy() {
     return (
         <div>
             <PromptContentTherapy promptsArray={prompts}/>
-            {/* {PromptContentTherapy(prompts)} */}
         </div>
     )
 
