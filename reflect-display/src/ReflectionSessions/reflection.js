@@ -9,10 +9,10 @@ import { TherapyEnd } from '../TherapySessions/TherapyEnd';
 import { ReflectionEnd } from './ReflectionEnd';
 
 // Shared components for Therapy
-export function REFLECTION(props) {
+export function REFLECTION({currentTheme}) {
     return (
         <div>
-            <DisplayTheme />
+            <DisplayTheme currentTheme={currentTheme}/>
             <DisplayFeature />
             <Outlet/>
         </div>

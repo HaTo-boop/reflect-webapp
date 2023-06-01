@@ -7,10 +7,10 @@ import { Link, Outlet } from 'react-router-dom';
 
 import '../App.css';
 
-export function THEMES(props) {
+export function THEMES({currentTheme}) {
     return (
         <div>
-            <DisplayTheme />
+            <DisplayTheme currentTheme={currentTheme}/>
             <DisplayFeature />
             <Outlet/> {/* Letting the program know where to display children's content */}
         </div>

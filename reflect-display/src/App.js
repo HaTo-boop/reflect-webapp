@@ -72,21 +72,21 @@ function App() {
         <Route path="/home" element={<HOME currentTheme={theme}/>} />
         <Route path="/checkin" element={<CHECKIN currentTheme={theme}/>} />
 
-        <Route path="/therapy" element={<THERAPY />}>
+        <Route path="/therapy" element={<THERAPY currentTheme={theme}/>}>
           <Route path="" element={<TherapyWelcome/>} />
           <Route path="intro" element={<TherapyIntro/>} />
           {/* <Route path="therapyTest" element={<PromptContentTherapy/>} /> */}
           <Route path="session" element ={<HandleBeginClickTherapy/>}/>
         </Route>
 
-        <Route path="/reflection" element={<REFLECTION />}>
+        <Route path="/reflection" element={<REFLECTION currentTheme={theme}/>}>
           <Route path="" element={<ReflectionWelcome/>} />
           <Route path="intro" element={<ReflectionIntro/>} />
           {/* <Route path="reflectionTest" element={<PromptContentReflect/>} /> */}
           <Route path="questions" element={<HandleBeginClickRef/>}/>
         </Route>
 
-        <Route path="/breathing" element={<BREATHING />}> {/*first 2 comp - want to have in 2 children*/}
+        <Route path="/breathing" element={<BREATHING currentTheme={theme}/>}> {/*first 2 comp - want to have in 2 children*/}
           <Route path="" element={<BreathingWelcome />} /> {/* latter 3 comp of BREATHING */}
           <Route path="intro" element={<BreathingIntro />} /> 
           <Route path="exercise" element={<Exercise />} /> 
@@ -95,7 +95,7 @@ function App() {
 
         <Route path="/settings" element={<SETTINGS />} />
         
-        <Route path="/themes" element={<THEMES />}>
+        <Route path="/themes" element={<THEMES currentTheme={theme}/>}>
           <Route path="" element={<Intention />} />
           <Route path="choose-theme" element={<ChooseTheme currentTheme={theme} allOnClickHandlers={allThemeCardClickHandlers}/>} />
         </Route>
