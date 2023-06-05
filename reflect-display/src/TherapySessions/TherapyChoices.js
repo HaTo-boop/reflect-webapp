@@ -1,6 +1,4 @@
 import '../App.css';
-
-import { Link } from 'react-router-dom';
 import { useState,useEffect } from 'react';
 
  // Component's purpose: displaying buttons to choose exposure therapy session

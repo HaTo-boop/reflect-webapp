@@ -2,8 +2,6 @@ import './App.css';
 import {RestWidget} from './Restmode';
 import { Link } from 'react-router-dom';
 
-
-
 export function INTRO_CONT(){
     return (
         <div>

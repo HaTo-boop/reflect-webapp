@@ -1,15 +1,12 @@
-import { CardButton } from "../Buttons";
 import '../App.css';
-
 import { Link } from "react-router-dom"
 import { useState } from 'react';
-
 
 // Carousel 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { NextArrow, PrevArrow, DisplayTheme, Skip } from "../Checkin";
+import { Skip } from "../Checkin";
 import '../App';
 
 // Components appeared in when choosing themes
@@ -19,7 +16,6 @@ import '../App';
 // FURTHER IMPROVE: <Carousel> access handling functions defined in <App> is still hard coded
 // - passing object containing all handling functions and call each of them accordingly
 export function ChooseTheme({ currentTheme, allOnClickHandlers }) {
-
     return (
         <div>
             <Ask/>
@@ -52,7 +48,6 @@ function Carousel({ allOnClickHandlers }) {
         arrows: false,
         beforeChange: (current, next) => setActiveSlide(next), 
     };
-
   
     return (
         <div className="carousel-container">

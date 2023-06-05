@@ -1,14 +1,7 @@
 
-import { CardButton } from "../Buttons"
-import { Widget } from "../Widget"
-import { StartButton, Settings } from "../Restmode"
-import { Exit } from "../Home"
-import { DisplayTheme } from "../Checkin"
-import { Link, Outlet } from 'react-router-dom'
-
+import { Link } from 'react-router-dom'
 import '../App.css';
 
-import { ToRandSes } from "./Therapy";
 
 // Continue button link to a random therapy session
 // toRandSes defined in Therapy.js
@@ -55,15 +48,3 @@ export function Continue(){
         </Link>
      )
 }
-
-// export function Continue(){
-//     return (
-//         <Link to="/session">
-//             <button className="bottom-middle-btn button-outer-frame" onClick={ToRandSes}>
-//                 <div className="button-inner-frame">
-//                     <div className='button-text'>continue</div>
-//                 </div>
-//             </button>
-//         </Link>
-//      )
-// }

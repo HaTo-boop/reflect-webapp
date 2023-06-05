@@ -1,8 +1,7 @@
 import './App.css';
 import {RestWidget} from "./Restmode";
 import { Link } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 
 export function INTRO(){
     return (

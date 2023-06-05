@@ -52,16 +52,6 @@ button {
 }
 
 /* SHARED STYLING */
-/* GLASSMORPHISM - shared among multiple boxes */
-.glassmorphism {
-  background: rgba(0, 0, 0, 0.2);
-
-  box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(43px);
-  /* Note: backdrop-filter has minimal browser support */
-
-  border-radius: 40px;
-}
 
 /* Horizontal Flex Box Style - used at e.g. main buttons, content boxes */
 .horz-flex {
@@ -290,17 +280,6 @@ button {
   color:#FFFEFC;
 }
 
-.settings {
-  position: absolute;
-  width: 133px;
-  height: 113px;
-  left: 20px;
-  top: 848px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* DAILY CHECKIN*/
 
 .carousel-container{
@@ -359,22 +338,6 @@ button {
   align-items: center;
   overflow: visible;
 }
-/* 
-.carousel-dot-container{
-  position: absolute;
-  top: 200%;
-}
-
-.carousel-dot{
-  width: 25px;
-  height: 25px;
-  background-color: #FFFEFC;
-  border-radius: 50%;
-}
-
-.carousel-dot.active {
-  background-color: #858585;
-} */
 
 .carousel-container .slick-dots li button:before {
   content: '';
@@ -472,7 +435,6 @@ button {
   height: 220px;
   left: 430px;
   top: 274px;
-
 }
 
 .home-therapy-position{
@@ -544,27 +506,9 @@ button {
   align-items: flex-start;
   padding: 30px 40px;
   gap: 20px;
-
   width: 310px;
   height: 154px;
-
   border-radius: 40px;
-}
-
-.exit{
-  color:#FFFEFC;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  position: absolute;
-  width: 9%;
-  height: 8%;
-  left: 90%;
-  top: 55%;
-  right: 12%;
-
 }
   
 /*EXPOSURE THERAPY*/
@@ -574,41 +518,17 @@ button {
   height: 470px;
   font-family: 'Karla';
   font-style: normal;
-
   flex: none;
   order: 0;
-
   position: absolute;
   width: 658px;
   height: 530px;
   left: 427px;
   top: 231px;
-
   margin: 50px;
 }
 
-#timer{
-  width: 136px;
-  height: 137px;
-}
-
-/*SETTINGS*/
-/*still need shortening*/
-
-.settings-title{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 40px;
-  gap: 20px;
-  
-  position: absolute;
-  width: 234px;
-  height: 107px;
-  left: 639px;
-  top: 86px;
-}
+/*THEME SETTING*/
 
 .change-theme{
   display: flex;
@@ -617,7 +537,6 @@ button {
   align-items: center;
   padding: 30px 40px;
   gap: 20px;
-
   position: absolute;
   width: 306px;
   height: 154px;
@@ -625,45 +544,7 @@ button {
   top: 597px;
 }
 
-.preg-row{
-  position: flex;
-  width: 672px;
-  height: 157px;
-  left: 420px;
-  top: 288px;
-}
-
-#preg-button{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 40px;
-  gap: 20px;
-  
-  position: absolute;
-  width: 306px;
-  height: 154px;
-  left: 420px;
-  top: 288px;
-  
-}
-
-#postpar-button{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 40px;
-  gap: 20px;
-  
-  position: absolute;
-  width: 306px;
-  height: 154px;
-  left: 786px;
-  top: 291px;
-}
-
+/* not used in the program */
 .therapy-session{
   display: flex;
   flex-direction: row;
@@ -697,13 +578,11 @@ button {
   align-items: center;
   padding: 30px 40px;
   gap: 20px;
-
   position: absolute;
   width: 880px;
   height: 372px;
   left: 100px;
   top: 592px;
-
   border-radius: 40px;
 }
 
@@ -741,7 +620,6 @@ button {
   height: 195px;
   left: 190px;
   top: 782px;
-
   font-style: italic;
   font-weight: 500;
   font-size: 50px;
@@ -944,7 +822,6 @@ button {
   text-transform: lowercase;
   color: #FFFEFC;
   text-align: left;
-  
 }
 
 .col-2-reflection {
@@ -969,8 +846,6 @@ button {
   padding-top: 8%;
 }
 
-
-
 .head-intro-frame {
   display: flex;
   flex-direction: row;
@@ -978,7 +853,6 @@ button {
   align-items: center;
   padding: 30px 40px;
   gap: 20px;
-  
   position: absolute;
   width: 880px;
   height: 372px;
@@ -992,7 +866,6 @@ button {
   height: 65px;
   left: 190px;
   top: 703px;
-  
   font-family: 'DM Sans';
   font-style: italic;
   font-weight: 500;
@@ -1195,7 +1068,6 @@ button {
   height: 65px;
   left: 190px;
   top: 2032px;
-
   font-family: 'DM Sans';
   font-style: italic;
   font-weight: 500;

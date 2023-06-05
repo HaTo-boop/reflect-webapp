@@ -10,7 +10,6 @@ export function End(props) {
             <Heading />
             <img className="right-stars" src="/right_stars.png" alt="stars" />
             <FinishButton />
-            <Flower />
         </div>
     )
 }
@@ -25,14 +24,6 @@ export function Heading(){
                     <br></br>
                 keep up the good work, i’m always here to support you
             </div>
-        </div>
-    )
-}
-
-export function Flower(){
-    return(
-        <div className="center-btn">
-            
         </div>
     )
 }

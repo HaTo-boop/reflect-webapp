@@ -1,7 +1,3 @@
-import { CardButton } from "../Buttons"
-import { Widget } from "../Widget"
-import { StartButton, Settings } from "../Restmode"
-import { Exit } from "../Home"
 import { DisplayTheme } from "../Checkin"
 import { Link, Outlet } from 'react-router-dom';
 

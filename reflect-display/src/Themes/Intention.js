@@ -1,9 +1,4 @@
-import { StartButton, Settings } from "../Restmode"
-import { Exit } from "../Home"
-import { DisplayTheme } from "../Checkin"
-import { DisplayFeature } from "./Themes";
-import { Link, Outlet } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 import '../App.css';
 
 export function Intention(props) {

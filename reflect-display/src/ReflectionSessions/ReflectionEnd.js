@@ -1,6 +1,6 @@
 import '../App.css';
 import { Link } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 
 export function ReflectionEnd(props) {
@@ -21,7 +21,7 @@ export function Heading(){
                 you did it!
                     <br></br>
                     <br></br>
-                    you've just accomplished something amazing: you allowed yourself the time and space for self-awareness and personal understanding!            </div>
+                you've just accomplished something amazing: you allowed yourself the time and space for self-awareness and personal understanding!            </div>
         </div>
     )
 }

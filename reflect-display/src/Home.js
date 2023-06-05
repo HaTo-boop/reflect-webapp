@@ -1,5 +1,3 @@
-import { CardButton } from "./Buttons"
-import { Widget } from "./Widget"
 import { Affirmations, RestWidget, Settings } from "./Restmode"
 import React, { useState, Component } from "react";
 import './App.css';

@@ -12,17 +12,13 @@ import { HOME } from './Home';
 import { THERAPY, PromptContentTherapy, HandleBeginClickTherapy} from './TherapySessions/Therapy';
 import { TherapyWelcome } from './TherapySessions/TherapyWelcome';
 import { TherapyIntro } from './TherapySessions/TherapyIntro';
-import { FetchJSON, TherapyChoices } from './TherapySessions/TherapyChoices'
 import { BREATHING } from './Breathing/Breathing';
 import { BreathingIntro } from './Breathing/BreathingIntro';
-import { SETTINGS } from './Settings';
 import { HandleBeginClickRef, REFLECTION } from './ReflectionSessions/reflection';
 import { ReflectionWelcome, PromptContentReflect } from './ReflectionSessions/ReflectionWelcome';
 import { ReflectionIntro } from './ReflectionSessions/ReflectionIntro';
 import { BreathingWelcome } from './Breathing/Welcome';
-//import { Instruction } from './Breathing/InstructionTrash';
 import { Exercise } from './Breathing/Exercise';
-//import { Explaination } from './Breathing/ExplainationTrash';
 import { End } from './Breathing/End';
 import { THEMES } from './Themes/Themes';
 import { Intention} from './Themes/Intention';
@@ -92,8 +88,6 @@ function App() {
           <Route path="exercise" element={<Exercise />} /> 
           <Route path="end" element={<End />} /> 
         </Route>
-
-        <Route path="/settings" element={<SETTINGS />} />
         
         <Route path="/themes" element={<THEMES currentTheme={theme}/>}>
           <Route path="" element={theme==='gratitude'? <Intention /> : <Navigate replace={false} to={"choose-theme"}/>} />
@@ -102,7 +96,6 @@ function App() {
         </Route>
 
       </Routes> 
-      {/* <PromptContent/> */}
     </div>
   );
 }
@@ -117,6 +110,5 @@ export function getRandomIndex(arrayLength) {
   } else {
     return 0;
   }
-  
 }
 
